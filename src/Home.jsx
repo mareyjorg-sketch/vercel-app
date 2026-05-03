@@ -10,6 +10,7 @@ import { TEL, TEL_DISPLAY, WHATSAPP_URL } from "./siteInfo.js";
 import { leistungen } from "./data/leistungenData.js";
 import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 import PhoneIcon from "./components/PhoneIcon.jsx";
+import TrustTuvBadge from "./components/TrustTuvBadge.jsx";
 
 const gebiete = [
   "Bottrop",
@@ -93,14 +94,7 @@ export default function Home() {
 
           <div className="cert-cards">
             <div className="cert-card">
-              <img
-                className="cert-logo-img"
-                src="/assets/tuev-badge.png"
-                alt="TÜV Rheinland – Zertifizierung"
-                width={200}
-                height={120}
-                loading="lazy"
-              />
+              <TrustTuvBadge variant="light" className="cert-card__trust-badge" />
               <div className="cert-text">
                 <strong>TÜV Rheinland – Zertifizierung</strong>
                 <span>Zertifizierter Fachbetrieb</span>
@@ -128,7 +122,7 @@ export default function Home() {
           </div>
 
           <p className="cert-disclaimer">
-            TÜV Rheinland und IHK sind eingetragene Marken. Die Darstellung erfolgt im Rahmen der jeweiligen Markenrichtlinien; verbindlich sind Ihre Zertifizierungsnachweise.
+            Ohne fremde Marken-Logos – verbindlich sind Ihre ausgestellten Zertifikate. IHK ist eine eingetragene Marke; die Darstellung des IHK-Logos erfolgt im Rahmen der jeweiligen Richtlinien.
           </p>
         </div>
       </section>
