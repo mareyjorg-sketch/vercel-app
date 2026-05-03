@@ -38,9 +38,15 @@ const card = {
   padding: 22,
 };
 
-const TEL_DISPLAY = "0208 123 456 78";
-const TEL_HREF = "tel:+4920812345678";
-const EMAIL = "info@ruhr-protect.de";
+const COMPANY = "Kammerjäger Bergmann";
+const COMPANY_TAG = "Kammerjäger Bergmann – Bottrop & Umgebung";
+const ADDRESS = "Blumenstraße 6, 46236 Bottrop";
+const TEL_DISPLAY = "0163 5276870";
+const TEL_HREF = "tel:+491635276870";
+const WA_HREF = "https://wa.me/491635276870";
+const EMAIL = "info@kammerjaeger-bergmann.de";
+const MAPS_EMBED =
+  "https://www.google.com/maps?q=Blumenstra%C3%9Fe+6,+46236+Bottrop&output=embed";
 
 const services = [
   {
@@ -184,7 +190,7 @@ export default function App() {
     const phone = fd.get("phone") || "";
     const message = fd.get("message") || "";
     const body = `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone}\n\nNachricht:\n${message}`;
-    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Anfrage RUHR-PROTECT")}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Anfrage Kammerjäger Bergmann")}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -202,10 +208,26 @@ export default function App() {
       >
         <div style={{ ...wrap, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, paddingTop: 14, paddingBottom: 14 }}>
           <a href="#hero" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", color: "inherit" }}>
-            <img src="/assets/logo-mark.svg" width={44} height={44} alt="" />
+            <span
+              aria-hidden
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 44,
+                height: 44,
+                borderRadius: 10,
+                background: primary,
+                color: "#fff",
+                fontWeight: 800,
+                fontSize: 18,
+              }}
+            >
+              KB
+            </span>
             <span>
-              <span style={{ display: "block", fontWeight: 800, letterSpacing: "0.06em", fontSize: 15, color: primaryDark }}>RUHR-PROTECT</span>
-              <span style={{ fontSize: 11, color: slate600, textTransform: "uppercase", letterSpacing: "0.04em" }}>Schädlingsbekämpfung</span>
+              <span style={{ display: "block", fontWeight: 800, letterSpacing: "0.02em", fontSize: 16, color: primaryDark }}>{COMPANY}</span>
+              <span style={{ fontSize: 11, color: slate600, letterSpacing: "0.02em" }}>Bottrop &amp; Umgebung</span>
             </span>
           </a>
           <nav style={{ display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }} aria-label="Hauptnavigation" className="desktop-nav">
@@ -284,17 +306,20 @@ export default function App() {
       {/* HERO */}
       <section id="hero" style={{ background: `linear-gradient(135deg, ${slate50} 0%, #fff 50%, #eef6fb 100%)`, borderBottom: "1px solid #e2e8f0" }}>
         <div style={{ ...wrap, padding: "48px 20px 56px" }}>
-          <img src="/assets/logo-full.svg" alt="RUHR-PROTECT" style={{ height: 44, width: "auto", marginBottom: 20 }} />
+          <p style={{ fontSize: 13, fontWeight: 700, color: primaryDark, marginBottom: 6 }}>{COMPANY_TAG}</p>
           <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", color: primary, textTransform: "uppercase", marginBottom: 8 }}>
-            Zertifizierte Schädlingsbekämpfung · Ruhrgebiet
+            Zertifizierte Schädlingsbekämpfung · Bottrop &amp; Umgebung
           </p>
           <p style={{ color: slate600, marginBottom: 16, fontSize: 15 }}>Jetzt erreichbar – Einsatz nach Vereinbarung · Notdienst möglich</p>
           <h1 style={{ fontSize: "clamp(1.5rem, 4vw, 2.25rem)", fontWeight: 700, color: slate800, lineHeight: 1.25, margin: "0 0 16px", maxWidth: 820 }}>
-            Ihr Schädlingsbekämpfer für Duisburg, Oberhausen, Düsseldorf &amp; Umgebung
+            Ihr Schädlingsbekämpfer für Bottrop, Oberhausen, Essen &amp; das Ruhrgebiet
           </h1>
-          <p style={{ color: slate600, maxWidth: 720, marginBottom: 20 }}>
-            <strong style={{ color: slate800 }}>RUHR-PROTECT</strong> – zertifizierter Fachbetrieb gegen Schädlinge aller Art: von Wespen und Nagetieren bis Kakerlaken, Bettwanzen und Marder. Professionell,
+          <p style={{ color: slate600, maxWidth: 720, marginBottom: 12 }}>
+            <strong style={{ color: slate800 }}>{COMPANY}</strong> – zertifizierter Fachbetrieb gegen Schädlinge aller Art: von Wespen und Nagetieren bis Kakerlaken, Bettwanzen und Marder. Professionell,
             nachhaltig und nach aktuellen Standards – für Privathaushalte und Gewerbe.
+          </p>
+          <p style={{ color: slate800, marginBottom: 20, fontWeight: 600 }}>
+            📍 {ADDRESS}
           </p>
           <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px" }}>
             {["Kostenlose Erstberatung", "100 % diskret", "Direkt zum Experten"].map((t) => (
@@ -312,6 +337,25 @@ export default function App() {
             </a>
             <a href="#cert" style={{ color: primary, fontWeight: 600, textDecoration: "none", padding: "8px 4px" }}>
               Qualifikation
+            </a>
+          </div>
+          <div style={{ marginTop: 14 }}>
+            <a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                padding: "12px 22px",
+                background: "#128C7E",
+                color: "#fff",
+                fontWeight: 600,
+                borderRadius: 10,
+                textDecoration: "none",
+                fontSize: 15,
+              }}
+            >
+              WhatsApp schreiben
             </a>
           </div>
         </div>
@@ -493,7 +537,7 @@ export default function App() {
       {/* GARANTIE */}
       <section style={{ padding: "48px 0", borderBottom: "1px solid #e2e8f0" }}>
         <div style={{ ...wrap, maxWidth: 720 }}>
-          <h2 style={{ textAlign: "center", fontSize: 26, marginTop: 0 }}>Die RUHR-PROTECT Qualitätsgarantie</h2>
+          <h2 style={{ textAlign: "center", fontSize: 26, marginTop: 0 }}>Unsere Qualitätsgarantie</h2>
           <ul style={{ listStyle: "none", padding: 0, margin: "24px 0 0" }}>
             {["Kostenlose Erstberatung am Telefon", "Transparente Kostenschätzung vor dem Einsatz", "Persönlicher Service von Anfrage bis Abrechnung"].map((t) => (
               <li key={t} style={{ ...card, display: "flex", gap: 12, alignItems: "flex-start", marginBottom: 12 }}>
@@ -584,15 +628,28 @@ export default function App() {
           <div style={{ textAlign: "center", marginBottom: 28 }}>
             <h2 style={{ margin: "0 0 8px" }}>Kontaktieren Sie uns</h2>
             <p style={{ color: slate600, margin: 0 }}>Unverbindliche Erstberatung – wir melden uns schnell zurück.</p>
+            <p style={{ fontWeight: 600, color: slate800, margin: "12px 0 0" }}>{COMPANY}</p>
+            <p style={{ margin: "8px 0 0", color: slate600 }}>📍 {ADDRESS}</p>
             <p style={{ fontWeight: 700, color: primary, margin: "12px 0 0" }}>Jetzt telefonisch erreichbar</p>
             <p style={{ margin: "12px 0 0" }}>
+              📞{" "}
               <a href={TEL_HREF} style={{ fontSize: 20, fontWeight: 700, color: slate800, textDecoration: "none" }}>
                 {TEL_DISPLAY}
               </a>
             </p>
+            <p style={{ margin: "10px 0 0" }}>
+              <a
+                href={WA_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#128C7E", fontWeight: 700, textDecoration: "none" }}
+              >
+                WhatsApp: {TEL_DISPLAY}
+              </a>
+            </p>
             <p style={{ margin: "8px 0 0" }}>
               <a href={`mailto:${EMAIL}`} style={{ color: primary, fontWeight: 600 }}>
-                {EMAIL}
+                ✉️ {EMAIL}
               </a>
             </p>
           </div>
@@ -623,8 +680,8 @@ export default function App() {
             </form>
             <div style={{ width: "100%" }}>
               <iframe
-                title="Einsatzgebiet Ruhrgebiet"
-                src="https://www.google.com/maps?q=Ruhrgebiet,+Nordrhein-Westfalen&output=embed"
+                title={`Standort ${ADDRESS}`}
+                src={MAPS_EMBED}
                 width="100%"
                 height={300}
                 style={{ border: 0, borderRadius: 12 }}
@@ -641,12 +698,21 @@ export default function App() {
         <div style={wrap}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 32 }}>
             <div>
-              <img src="/assets/logo-full.svg" alt="RUHR-PROTECT" style={{ height: 32, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.95 }} />
-              <p style={{ fontSize: 14, marginTop: 12, color: "#cbd5e1" }}>Ihr Schädlingsbekämpfer im Ruhrgebiet.</p>
-              <p style={{ fontSize: 14, marginTop: 8 }}>
+              <p style={{ fontSize: 17, fontWeight: 800, color: "#fff", margin: "0 0 4px", letterSpacing: "0.02em" }}>{COMPANY}</p>
+              <p style={{ fontSize: 12, color: "#94a3b8", margin: "0 0 12px" }}>Bottrop &amp; Umgebung</p>
+              <p style={{ fontSize: 14, marginTop: 0, color: "#cbd5e1", lineHeight: 1.5 }}>
+                Ihr Schädlingsbekämpfer im Ruhrgebiet.
+                <br />
+                <span style={{ color: "#94a3b8" }}>{ADDRESS}</span>
+              </p>
+              <p style={{ fontSize: 14, marginTop: 12 }}>
                 Tel.:{" "}
                 <a href={TEL_HREF} style={{ color: "#fff", fontWeight: 600 }}>
                   {TEL_DISPLAY}
+                </a>
+                <br />
+                <a href={WA_HREF} target="_blank" rel="noopener noreferrer" style={{ color: "#6ee7b7", fontSize: 13 }}>
+                  WhatsApp
                 </a>
                 <br />
                 <a href={`mailto:${EMAIL}`} style={{ color: "#7dd3fc" }}>
@@ -705,9 +771,22 @@ export default function App() {
               </ul>
             </nav>
             <div>
-              <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", color: "#94a3b8", textTransform: "uppercase", marginTop: 0 }}>Rechtliches</p>
+              <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", color: "#94a3b8", textTransform: "uppercase", marginTop: 0 }}>Impressum (Kurz)</p>
+              <p style={{ fontSize: 13, color: "#cbd5e1", lineHeight: 1.6, margin: "8px 0 12px" }}>
+                Ulrich Bergmann
+                <br />
+                {COMPANY}
+                <br />
+                Blumenstraße 6
+                <br />
+                46236 Bottrop
+                <br />
+                Nordrhein-Westfalen
+              </p>
+              <p style={{ fontSize: 12, color: "#94a3b8", margin: "0 0 8px" }}>
+                Vollständige Impressums- und Datenschutzerklärung sollten rechtskonform ergänzt werden (z.&nbsp;B. mit Rechtsanwalt).
+              </p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 14 }}>
-                <li style={{ marginBottom: 8, color: "#94a3b8" }}>Impressum &amp; Datenschutz: bitte ergänzen</li>
                 <li>
                   <a href="#faq" style={{ color: "#e2e8f0", textDecoration: "none" }}>
                     FAQ
@@ -717,7 +796,7 @@ export default function App() {
             </div>
           </div>
           <p style={{ borderTop: "1px solid #334155", marginTop: 36, paddingTop: 20, textAlign: "center", fontSize: 12, color: "#94a3b8" }}>
-            © {new Date().getFullYear()} RUHR-PROTECT · Ruhrgebiet
+            © {new Date().getFullYear()} {COMPANY} · Bottrop &amp; Umgebung
           </p>
         </div>
       </footer>
