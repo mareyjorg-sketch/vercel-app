@@ -1,21 +1,24 @@
+import { Link } from "react-router-dom";
 import SiteLayout from "./components/SiteLayout.jsx";
 import "./App.css";
 import { TEL, TEL_DISPLAY } from "./siteInfo.js";
 
+/** `bento: "hero"` = große Kachel · `gradient` = stimmungsvoller Platzhalter bis Fotos liegen (z. B. watermarked_img_… in /assets/) */
 const leistungen = [
   {
     title: "Ratten & Mäuse",
     text: "Professionelle & schnelle Bekämpfung von Nagern im Haus, Keller und Außenbereich.",
     image: "/assets/leistung-ratten-maeuse.png",
     imageAlt: "Ratten- und Mäusebekämpfung mit Köderstation – Kammerjäger Bergmann",
+    bento: "hero",
   },
-  { icon: "🐜", title: "Ameisen", text: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher." },
-  { icon: "🐝", title: "Wespen", text: "Sichere Entfernung und Umsiedlung von Wespen- und Hornissennestern." },
-  { icon: "🛏️", title: "Bettwanzen", text: "Sofortige, diskrete Bekämpfung von Bettwanzen – ohne tagelange Abwesenheit." },
-  { icon: "🪳", title: "Kakerlaken", text: "Schaben und Kakerlaken nachhaltig bekämpfen – besonders wichtig im Lebensmittelbereich." },
-  { icon: "🦡", title: "Marder", text: "Vergrämung und Sicherung gegen Marder – schützen Sie Ihr Fahrzeug und Ihr Dach." },
-  { icon: "🛡️", title: "Prävention", text: "Vorbeugung und Monitoring – damit der Schädling erst gar nicht einzieht." },
-  { icon: "💬", title: "Beratung", text: "Kostenlose Erstberatung – wir analysieren Ihr Problem und empfehlen die beste Lösung." },
+  { title: "Ameisen", text: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher.", gradient: "ameisen" },
+  { title: "Wespen", text: "Sichere Entfernung und Umsiedlung von Wespen- und Hornissennestern.", gradient: "wespen" },
+  { title: "Bettwanzen", text: "Sofortige, diskrete Bekämpfung von Bettwanzen – ohne tagelange Abwesenheit.", gradient: "bettwanzen" },
+  { title: "Kakerlaken", text: "Schaben und Kakerlaken nachhaltig bekämpfen – besonders wichtig im Lebensmittelbereich.", gradient: "kakerlaken" },
+  { title: "Marder", text: "Vergrämung und Sicherung gegen Marder – schützen Sie Ihr Fahrzeug und Ihr Dach.", gradient: "marder" },
+  { title: "Prävention", text: "Vorbeugung und Monitoring – damit der Schädling erst gar nicht einzieht.", gradient: "praevention" },
+  { title: "Beratung", text: "Kostenlose Erstberatung – wir analysieren Ihr Problem und empfehlen die beste Lösung.", gradient: "beratung" },
 ];
 
 const gebiete = [
@@ -55,9 +58,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="leistungen">
+      <section className="section section--leistungen" id="leistungen">
         <div className="section-inner">
-          <div className="section-header">
+          <div className="section-header section-header--leistungen">
             <h2>Unsere Leistungen</h2>
             <div className="underline" aria-hidden />
             <p>
@@ -65,19 +68,28 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="leistungen-grid">
+          <div className="leistungen-bento" role="list">
             {leistungen.map((item) => (
-              <div key={item.title} className="leistung-card">
-                {item.image ? (
-                  <img className="leistung-thumb" src={item.image} alt={item.imageAlt ?? item.title} width={1024} height={682} loading="lazy" />
-                ) : (
-                  <span className="leistung-icon" aria-hidden>
-                    {item.icon}
+              <article key={item.title} className={`leistung-card ${item.bento === "hero" ? "leistung-card--hero" : ""}`} role="listitem">
+                <div className="leistung-card__media">
+                  {item.image ? (
+                    <img className="leistung-card__img" src={item.image} alt={item.imageAlt ?? ""} width={1024} height={682} loading="lazy" />
+                  ) : (
+                    <div className={`leistung-card__gradient leistung-card__gradient--${item.gradient}`} />
+                  )}
+                </div>
+                <div className="leistung-card__scrim" aria-hidden />
+                <div className="leistung-card__content">
+                  <span className="leistung-card__badge" aria-hidden>
+                    ✓
                   </span>
-                )}
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
+                  <h3 className="leistung-card__title">{item.title}</h3>
+                  <p className="leistung-card__text">{item.text}</p>
+                  <Link to="/#kontakt" className="leistung-card__cta">
+                    Mehr erfahren →
+                  </Link>
+                </div>
+              </article>
             ))}
           </div>
         </div>

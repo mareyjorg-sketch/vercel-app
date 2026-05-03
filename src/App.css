@@ -272,6 +272,11 @@ nav.main-nav a[aria-current="page"] {
   padding: 70px 24px;
 }
 
+.section--leistungen {
+  padding: 88px 24px 96px;
+  background: linear-gradient(180deg, #fafbf9 0%, #f0f3f0 100%);
+}
+
 .section-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -280,6 +285,10 @@ nav.main-nav a[aria-current="page"] {
 .section-header {
   text-align: center;
   margin-bottom: 50px;
+}
+
+.section-header--leistungen {
+  margin-bottom: 56px;
 }
 
 .section-header h2 {
@@ -306,59 +315,230 @@ nav.main-nav a[aria-current="page"] {
   margin: 14px auto 16px;
 }
 
-.leistungen-grid {
+/* Bento: Ratten & Mäuse prominent */
+.leistungen-bento {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .leistung-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 28px 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 288px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.06),
+    0 12px 28px rgba(0, 0, 0, 0.1);
   transition:
-    border-color 0.2s,
-    box-shadow 0.2s,
-    transform 0.2s;
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.38s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: default;
 }
 
+.leistung-card--hero {
+  grid-column: span 2;
+  min-height: 380px;
+}
+
 .leistung-card:hover {
-  border-color: var(--green);
-  box-shadow: 0 6px 24px rgba(45, 122, 45, 0.12);
-  transform: translateY(-3px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.12),
+    0 28px 56px rgba(0, 0, 0, 0.16);
 }
 
-.leistung-icon {
-  font-size: 32px;
-  margin-bottom: 14px;
-  display: block;
+.leistung-card__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
-.leistung-thumb {
+.leistung-card__img {
   width: 100%;
-  height: 132px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 6px;
-  margin-bottom: 14px;
-  display: block;
-  border: 1px solid var(--border);
+  transform: scale(1.02);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.leistung-card h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 6px;
+.leistung-card:hover .leistung-card__img {
+  transform: scale(1.07);
 }
 
-.leistung-card p {
+.leistung-card__gradient {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.leistung-card__gradient--ameisen {
+  background: linear-gradient(155deg, #142018 0%, #1e4d32 42%, #0a100c 100%);
+}
+
+.leistung-card__gradient--wespen {
+  background: linear-gradient(165deg, #1a1810 0%, #3d3518 40%, #0e0c08 100%);
+}
+
+.leistung-card__gradient--bettwanzen {
+  background: linear-gradient(150deg, #151820 0%, #2a3048 45%, #0a0c12 100%);
+}
+
+.leistung-card__gradient--kakerlaken {
+  background: linear-gradient(160deg, #12100e 0%, #2c2418 48%, #080706 100%);
+}
+
+.leistung-card__gradient--marder {
+  background: linear-gradient(158deg, #101812 0%, #1f3528 44%, #060807 100%);
+}
+
+.leistung-card__gradient--praevention {
+  background: linear-gradient(152deg, #0f1612 0%, #234030 46%, #070a08 100%);
+}
+
+.leistung-card__gradient--beratung {
+  background: linear-gradient(162deg, #141a1c 0%, #2a3840 42%, #080b0d 100%);
+}
+
+.leistung-card__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(6, 10, 8, 0.94) 0%,
+    rgba(10, 18, 14, 0.55) 38%,
+    rgba(12, 20, 16, 0.12) 62%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+.leistung-card__content {
+  position: relative;
+  z-index: 2;
+  padding: 20px 22px 22px;
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0 0 18px 18px;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .leistung-card__content {
+    background: rgba(18, 26, 22, 0.88);
+  }
+}
+
+.leistung-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(45, 122, 45, 0.45);
+}
+
+.leistung-card__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(17px, 2.1vw, 22px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.leistung-card--hero .leistung-card__title {
+  font-size: clamp(22px, 2.8vw, 28px);
+}
+
+.leistung-card__text {
+  font-family: "Lato", sans-serif;
   font-size: 14px;
-  color: var(--muted);
-  line-height: 1.55;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.leistung-card__cta {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #c8f0c8;
+  align-self: flex-start;
+  padding: 8px 0;
+  border-bottom: 2px solid var(--green-mid);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.leistung-card__cta:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
+@media (max-width: 1024px) {
+  .leistungen-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .leistung-card--hero {
+    grid-column: span 2;
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .leistungen-bento {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .leistung-card--hero {
+    grid-column: span 1;
+    min-height: 300px;
+  }
+
+  .leistung-card {
+    min-height: 268px;
+  }
+
+  .leistung-card:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leistung-card,
+  .leistung-card__img {
+    transition: none;
+  }
+
+  .leistung-card:hover {
+    transform: none;
+  }
+
+  .leistung-card:hover .leistung-card__img {
+    transform: scale(1.02);
+  }
 }
 
 /* ===================== ZERTIFIZIERUNGEN ===================== */
