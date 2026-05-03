@@ -32,6 +32,22 @@ export default function App() {
         }}>
           Jetzt Kontakt aufnehmen
         </button>
+        <br />
+        <a
+          href="https://wa.me/491635276870"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            marginTop: "10px",
+            padding: "12px 24px",
+            background: "green",
+            color: "#fff",
+            textDecoration: "none"
+          }}
+        >
+          WhatsApp schreiben
+        </a>
       </section>
 
       {/* SERVICES */}
@@ -64,8 +80,22 @@ export default function App() {
         <h2>Kontakt</h2>
         <p>Kammerjäger Bergmann</p>
         <p>📍 Blumenstraße 6, 46236 Bottrop</p>
-        <p>📞 Telefon: 0123 456789</p>
+        <p>
+          📞 Telefon / Mobil:{" "}
+          <a href="tel:+491635276870" style={{ color: "#111" }}>
+            0163 5276870
+          </a>
+        </p>
         <p>✉️ E-Mail: info@kammerjaeger-bergmann.de</p>
+        <iframe
+          src="https://www.google.com/maps?q=Blumenstraße+6,+46236+Bottrop&output=embed"
+          width="100%"
+          height="300"
+          style={{ border: 0, marginTop: "20px" }}
+          allowFullScreen
+          loading="lazy"
+          title="Standort Kammerjäger Bergmann, Bottrop"
+        />
       </section>
 
       {/* FOOTER */}
