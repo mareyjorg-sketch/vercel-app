@@ -16,9 +16,17 @@ export default function App() {
         top: 0,
         zIndex: 100,
       }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <img src="/assets/logo.png" alt="Kammerjäger Bergmann" style={{ height: "40px", width: "auto" }} />
-          <strong>Kammerjäger Bergmann</strong>
+        <div style={{ display: "flex", alignItems: "center", minWidth: 0 }}>
+          <img
+            src="/assets/logo.png"
+            alt="Kammerjäger Bergmann – Schädlingsbekämpfung"
+            style={{
+              height: "clamp(40px, 10vw, 56px)",
+              width: "auto",
+              maxWidth: "min(100%, 340px)",
+              objectFit: "contain",
+            }}
+          />
         </div>
 
         <a href="tel:+491635276870" style={{
