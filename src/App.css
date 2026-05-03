@@ -751,7 +751,7 @@ nav.main-nav a[aria-current="page"] {
 }
 
 .section-inner {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 
@@ -788,7 +788,7 @@ nav.main-nav a[aria-current="page"] {
   margin: 14px auto 16px;
 }
 
-/* Leistungen: max. 3 pro Reihe (Desktop), Featured span 2 */
+/* Leistungen: bis zu 4 Spalten (großer Desktop), sonst 3 / 1; Featured span 2 */
 .leistungen-bento {
   display: grid;
   grid-template-columns: 1fr;
@@ -806,6 +806,12 @@ nav.main-nav a[aria-current="page"] {
 
   .leistungen-bento > .service-card--featured {
     grid-column: span 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .leistungen-bento {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
