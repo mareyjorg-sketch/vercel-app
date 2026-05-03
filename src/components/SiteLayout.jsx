@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { EMAIL, TEL, TEL_DISPLAY, SITE_NAME } from "../siteInfo.js";
+import { EMAIL, TEL, TEL_DISPLAY, SITE_NAME, SITE_DOMAIN, SITE_ORIGIN, WHATSAPP_URL } from "../siteInfo.js";
+import WhatsAppIcon from "./WhatsAppIcon.jsx";
 
 export default function SiteLayout({ children }) {
   const year = new Date().getFullYear();
@@ -12,16 +13,25 @@ export default function SiteLayout({ children }) {
         Zum Inhalt springen
       </a>
 
-      <div className="topbar">
-        <div className="inner">
-          <span>
-            📧 <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          </span>
-          <span>Mo–Fr 7–19 Uhr | Sa 8–14 Uhr | Notfalldienst 24/7</span>
+      <header className="site-header">
+        <div className="topbar">
+          <div className="inner topbar-inner">
+            <span className="topbar-hours">Mo–Fr 7–19 · Sa 8–14 · Notdienst 24/7</span>
+            <div className="topbar-ctas">
+              <a href={WHATSAPP_URL} className="topbar-cta topbar-cta--wa" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon size={20} aria-hidden="true" />
+                <span>WhatsApp</span>
+              </a>
+              <a href={TEL} className="topbar-cta topbar-cta--phone">
+                <span className="topbar-cta__icon" aria-hidden="true">
+                  📞
+                </span>
+                <span>{TEL_DISPLAY}</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <header>
         <div className="header-inner">
           <div className="logo">
             <Link to="/" title="Zur Startseite">
@@ -35,7 +45,11 @@ export default function SiteLayout({ children }) {
             </Link>
           </div>
 
-          <nav className="main-nav" aria-label="Hauptnavigation">
+          {/*
+            Mobile-Burger (optional): Button mit Klasse main-nav__toggle, aria-controls="site-navigation",
+            aria-expanded + Panel per JS; Styles in App.css (.main-nav__toggle) vorbereitet.
+          */}
+          <nav id="site-navigation" className="main-nav" aria-label="Hauptnavigation">
             <ul>
               <li>
                 <Link to="/#leistungen">Leistungen</Link>
@@ -57,9 +71,15 @@ export default function SiteLayout({ children }) {
             </ul>
           </nav>
 
-          <a href={TEL} className="header-cta">
-            📞 <span>{TEL_DISPLAY}</span>
-          </a>
+          <div className="header-actions">
+            <a href={TEL} className="header-cta">
+              📞 <span>{TEL_DISPLAY}</span>
+            </a>
+            <a href={WHATSAPP_URL} className="header-cta-wa" target="_blank" rel="noopener noreferrer" title="WhatsApp schreiben">
+              <WhatsAppIcon size={20} />
+              <span className="wa-label">WhatsApp</span>
+            </a>
+          </div>
         </div>
       </header>
 
@@ -85,6 +105,11 @@ export default function SiteLayout({ children }) {
               <li>&nbsp;</li>
               <li>
                 <a href={TEL}>{TEL_DISPLAY}</a>
+              </li>
+              <li>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  WhatsApp schreiben
+                </a>
               </li>
               <li>
                 <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
@@ -159,14 +184,28 @@ export default function SiteLayout({ children }) {
         </div>
         <div className="footer-bottom">
           <p>
-            © {year} {SITE_NAME} &nbsp;|&nbsp; Impressum &amp; Datenschutz auf Anfrage
+            © {year} {SITE_NAME} &nbsp;|&nbsp;
+            <a href={SITE_ORIGIN}>{SITE_DOMAIN}</a>
+            &nbsp;|&nbsp; Impressum &amp; Datenschutz auf Anfrage
           </p>
         </div>
       </footer>
 
-      <a href={TEL} className="float-phone" title="Jetzt anrufen" aria-label="Jetzt anrufen">
-        📞
-      </a>
+      <div className="float-actions" aria-label="Schnellkontakt">
+        <a
+          href={WHATSAPP_URL}
+          className="float-wa"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="WhatsApp"
+          aria-label="WhatsApp schreiben"
+        >
+          <WhatsAppIcon size={30} />
+        </a>
+        <a href={TEL} className="float-phone" title="Jetzt anrufen" aria-label="Jetzt anrufen">
+          📞
+        </a>
+      </div>
     </>
   );
 }

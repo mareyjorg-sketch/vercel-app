@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import SiteLayout from "./components/SiteLayout.jsx";
 import "./App.css";
-import { EMAIL, TEL, TEL_DISPLAY } from "./siteInfo.js";
+import { EMAIL, TEL, TEL_DISPLAY, WHATSAPP_URL } from "./siteInfo.js";
 import { sicherheitsdatenblaetter, sdbBasePath } from "./data/sicherheitsdatenblaetterData.js";
 
 const PAGE_TITLE = "Sicherheitsdatenblätter | Kammerjäger Bergmann";
@@ -23,7 +23,11 @@ export default function Sicherheitsdatenblaetter() {
           <p>
             Auf dieser Seite finden Sie die Sicherheitsdatenblätter (SDB) der von uns eingesetzten Produkte. Sie können diese als PDF speichern und ausdrucken. Fehlt ein Dokument noch oder Sie benötigen ein
             Hersteller-SDB, melden Sie sich gern –{" "}
-            <a href={TEL}>{TEL_DISPLAY}</a>, <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <a href={TEL}>{TEL_DISPLAY}</a>,{" "}
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
+            , <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </p>
         </div>
 

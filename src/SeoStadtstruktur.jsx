@@ -2,9 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./SeoStadtstruktur.css";
 import { seoRegions } from "./data/seoStadtstrukturData.js";
-
-const EMAIL = "info@kammerjaeger-bergmann.de";
-const TEL_DISPLAY = "0163 5276870";
+import { EMAIL, TEL_DISPLAY, SITE_ORIGIN } from "./siteInfo.js";
 
 const TITLE = "SEO-Stadtstruktur | Kammerjäger Bergmann";
 const DEFAULT_TITLE = "Kammerjäger Bergmann | Schädlingsbekämpfung Bottrop & Umgebung";
@@ -65,7 +63,7 @@ export default function SeoStadtstruktur() {
             <br />
             <br />
             <code className="url-code">
-              https://kammerjager-bergmann.de/schaedlingsbekaempfung-<strong>[stadt]</strong>/
+              {SITE_ORIGIN}/schaedlingsbekaempfung-<strong>[stadt]</strong>/
             </code>
             <br />
             <br />
@@ -177,6 +175,7 @@ Oder schreiben Sie uns: ${EMAIL}
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Kammerjäger Bergmann",
+  "url": "${SITE_ORIGIN}",
   "description": "Schädlingsbekämpfung in {STADT} und Umgebung",
   "telephone": "+491635276870",
   "areaServed": "{STADT}",

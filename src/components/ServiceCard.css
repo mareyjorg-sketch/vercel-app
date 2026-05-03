@@ -1,0 +1,236 @@
+/* Overlay + Expand · festes Seitenverhältnis · kein Flip · Grün nur am CTA */
+
+.service-card {
+  --svc-radius: 16px;
+  --svc-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --svc-duration: 0.38s;
+  --svc-aspect: 3 / 4;
+
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border-radius: var(--svc-radius);
+  overflow: hidden;
+  background: #0c0c0c;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.14);
+  isolation: isolate;
+  transition:
+    transform var(--svc-duration) var(--svc-ease),
+    box-shadow var(--svc-duration) var(--svc-ease);
+}
+
+.service-card__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--svc-aspect);
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.service-card__media {
+  position: absolute;
+  inset: 0;
+}
+
+.service-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  transform: scale(1);
+  transition: transform calc(var(--svc-duration) + 0.08s) var(--svc-ease);
+  will-change: transform;
+}
+
+.service-card__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.58) 0%,
+    rgba(0, 0, 0, 0.22) 38%,
+    rgba(0, 0, 0, 0) 68%
+  );
+  transition: opacity var(--svc-duration) var(--svc-ease), background var(--svc-duration) var(--svc-ease);
+}
+
+.service-card:not(.service-card--touch):hover .service-card__scrim,
+.service-card--expanded .service-card__scrim {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(12, 22, 18, 0.42) 44%,
+    rgba(0, 0, 0, 0) 74%
+  );
+}
+
+.service-card:not(.service-card--touch):hover .service-card__img,
+.service-card--expanded .service-card__img {
+  transform: scale(1.045);
+}
+
+.service-card:not(.service-card--touch):hover,
+.service-card--touch.service-card--expanded {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18),
+    0 20px 48px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+
+.service-card:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(45, 122, 45, 0.55),
+    0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.service-card--touch {
+  cursor: pointer;
+}
+
+.service-card__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-card__panel-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-card__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.45);
+}
+
+.service-card__summary {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.service-card__hint {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
+}
+
+.service-card__reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--svc-duration) var(--svc-ease);
+}
+
+.service-card:not(.service-card--touch):hover .service-card__reveal,
+.service-card--expanded .service-card__reveal,
+.service-card--reduced-motion .service-card__reveal {
+  grid-template-rows: 1fr;
+}
+
+.service-card__reveal-inner {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 12px;
+}
+
+.service-card__description {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.service-card__cta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(45, 122, 45, 0.85);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.2),
+    0 0 24px rgba(45, 122, 45, 0.22);
+  transition:
+    background var(--svc-duration) var(--svc-ease),
+    border-color var(--svc-duration) var(--svc-ease),
+    box-shadow var(--svc-duration) var(--svc-ease),
+    transform 0.2s var(--svc-ease);
+}
+
+.service-card__cta:hover {
+  background: rgba(45, 122, 45, 0.35);
+  border-color: #3a9a3a;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.15),
+    0 0 28px rgba(58, 154, 58, 0.35);
+  transform: translateY(-1px);
+}
+
+.service-card__cta:focus-visible {
+  outline: 2px solid #e8f5e9;
+  outline-offset: 3px;
+}
+
+.service-card--reduced-motion .service-card__img {
+  transform: none !important;
+}
+
+.service-card--reduced-motion:not(.service-card--touch):hover {
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    --svc-aspect: 4 / 5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card__img,
+  .service-card__scrim,
+  .service-card__reveal {
+    transition: none;
+  }
+
+  .service-card:not(.service-card--touch):hover,
+  .service-card--touch.service-card--expanded {
+    transform: none;
+  }
+}

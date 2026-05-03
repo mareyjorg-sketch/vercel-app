@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Flyer.css";
-import { TEL, TEL_DISPLAY } from "./siteInfo.js";
+import { TEL, TEL_DISPLAY, WHATSAPP_URL, SITE_DOMAIN, SITE_ORIGIN } from "./siteInfo.js";
+import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 
 const PAGE_TITLE = "Flyer | Kammerjäger Bergmann";
 const DEFAULT_TITLE = "Kammerjäger Bergmann | Schädlingsbekämpfung Bottrop & Umgebung";
@@ -37,9 +38,15 @@ export default function Flyer() {
             <li>Schnell vor Ort</li>
             <li>Diskret &amp; zuverlässig</li>
           </ul>
-          <p className="flyer-front__phone">
-            <a href={TEL}>📞 {TEL_DISPLAY}</a>
-          </p>
+          <div className="flyer-front__contacts">
+            <a className="flyer-front__phone" href={TEL}>
+              📞 {TEL_DISPLAY}
+            </a>
+            <a className="flyer-front__wa" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon size={22} />
+              WhatsApp
+            </a>
+          </div>
           <p className="flyer-front__sub">Ihr Ansprechpartner vor Ort</p>
         </div>
       </article>
@@ -72,7 +79,15 @@ export default function Flyer() {
         <div className="flyer-back__footer">
           <p>📍 Bottrop &amp; 100&nbsp;km Umkreis</p>
           <p>
+            🌐 <a href={SITE_ORIGIN}>{SITE_DOMAIN}</a>
+          </p>
+          <p>
             📞 <a href={TEL}>{TEL_DISPLAY}</a>
+          </p>
+          <p>
+            <a className="flyer-back__wa" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon size={18} /> WhatsApp
+            </a>
           </p>
         </div>
       </article>

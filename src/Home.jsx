@@ -1,60 +1,11 @@
-import { Link } from "react-router-dom";
 import SiteLayout from "./components/SiteLayout.jsx";
+import ServiceCard from "./components/ServiceCard.jsx";
 import "./App.css";
-import { TEL, TEL_DISPLAY } from "./siteInfo.js";
-
-/** `bento: "hero"` = große Kachel · optional `gradient` nur wenn kein `image` (Platzhalter) */
-const leistungen = [
-  {
-    title: "Ratten & Mäuse",
-    text: "Professionelle & schnelle Bekämpfung von Nagern im Haus, Keller und Außenbereich.",
-    image: "/assets/leistung-ratten-maeuse.png",
-    imageAlt: "Ratten- und Mäusebekämpfung mit Köderstation – Kammerjäger Bergmann",
-    bento: "hero",
-  },
-  {
-    title: "Ameisen",
-    text: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher.",
-    image: "/assets/leistung-ameisen.png",
-    imageAlt: "Ameisenbekämpfung mit Ködergel und Kammerjäger Bergmann",
-  },
-  {
-    title: "Wespen",
-    text: "Sichere Entfernung und Umsiedlung von Wespen- und Hornissennestern.",
-    image: "/assets/leistung-wespen.png",
-    imageAlt: "Wespennest-Entfernung durch geschützten Kammerjäger – Kammerjäger Bergmann",
-  },
-  {
-    title: "Bettwanzen",
-    text: "Sofortige, diskrete Bekämpfung von Bettwanzen – ohne tagelange Abwesenheit.",
-    image: "/assets/leistung-bettwanzen.png",
-    imageAlt: "Bettwanzenbekämpfung mit Sprühgerät im Schlafzimmer – Kammerjäger Bergmann",
-  },
-  {
-    title: "Kakerlaken",
-    text: "Schaben und Kakerlaken nachhaltig bekämpfen – besonders wichtig im Lebensmittelbereich.",
-    image: "/assets/leistung-kakerlaken.png",
-    imageAlt: "Kakerlakenbekämpfung in gewerblicher Küche – Kammerjäger Bergmann",
-  },
-  {
-    title: "Marder",
-    text: "Vergrämung und Sicherung gegen Marder – schützen Sie Ihr Fahrzeug und Ihr Dach.",
-    image: "/assets/leistung-marder.png",
-    imageAlt: "Mardervergrämung am Fahrzeug mit Schutzkleidung – Kammerjäger Bergmann",
-  },
-  {
-    title: "Prävention",
-    text: "Vorbeugung und Monitoring – damit der Schädling erst gar nicht einzieht.",
-    image: "/assets/leistung-praevention.png",
-    imageAlt: "Monitoring-Station an der Gebäudeaußenseite – Kammerjäger Bergmann",
-  },
-  {
-    title: "Beratung",
-    text: "Kostenlose Erstberatung – wir analysieren Ihr Problem und empfehlen die beste Lösung.",
-    image: "/assets/leistung-beratung.png",
-    imageAlt: "Persönliche Beratung bei Kundin an der Haustür – Kammerjäger Bergmann",
-  },
-];
+/* Sicherstellen, dass Karten-Styles geladen sind (auch wenn die Komponente ausgelagert wird) */
+import "./components/ServiceCard.css";
+import { TEL, TEL_DISPLAY, WHATSAPP_URL } from "./siteInfo.js";
+import { leistungen } from "./data/leistungenData.js";
+import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 
 const gebiete = [
   "Bottrop",
@@ -87,9 +38,15 @@ export default function Home() {
             <span className="hero-badge">✓ Familienbetrieb</span>
             <span className="hero-badge">✓ 24/7 Notdienst</span>
           </div>
-          <a href={TEL} className="btn-hero">
-            📞 Jetzt anrufen
-          </a>
+          <div className="hero-actions">
+            <a href={TEL} className="btn-hero btn-hero--primary">
+              📞 Jetzt anrufen
+            </a>
+            <a href={WHATSAPP_URL} className="btn-hero btn-hero--secondary" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon size={22} />
+              WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
@@ -103,27 +60,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="leistungen-bento" role="list">
+          <div className="leistungen-bento" role="list" data-leistungen-layout="overlay-v2">
             {leistungen.map((item) => (
-              <article key={item.title} className={`leistung-card ${item.bento === "hero" ? "leistung-card--hero" : ""}`} role="listitem">
-                <div className="leistung-card__visual">
-                  {item.image ? (
-                    <img className="leistung-card__img" src={item.image} alt={item.imageAlt ?? ""} width={1024} height={682} loading="lazy" />
-                  ) : (
-                    <div className={`leistung-card__gradient leistung-card__gradient--${item.gradient}`} aria-hidden />
-                  )}
-                </div>
-                <div className="leistung-card__panel">
-                  <span className="leistung-card__badge" aria-hidden>
-                    ✓
-                  </span>
-                  <h3 className="leistung-card__title">{item.title}</h3>
-                  <p className="leistung-card__text">{item.text}</p>
-                  <Link to="/#kontakt" className="leistung-card__cta">
-                    Mehr erfahren →
-                  </Link>
-                </div>
-              </article>
+              <ServiceCard
+                key={item.title}
+                title={item.title}
+                summary={item.summary}
+                description={item.description}
+                image={item.image}
+                imageAlt={item.imageAlt}
+              />
             ))}
           </div>
         </div>
@@ -182,7 +128,7 @@ export default function Home() {
       <section className="about-section" id="ueber-uns">
         <div className="about-inner">
           <div className="about-img">
-            <img src="/assets/team.jpg" alt="Team Kammerjäger Bergmann" />
+            <img src="/assets/team.jpg" alt="Team Kammerjäger Bergmann" width={960} height={640} loading="lazy" decoding="async" />
           </div>
           <div className="about-text">
             <h2>Familienbetrieb aus Bottrop</h2>
@@ -221,10 +167,15 @@ export default function Home() {
         <a href={TEL} className="phone-big">
           📞 {TEL_DISPLAY}
         </a>
-        <br />
-        <a href={TEL} className="btn-white">
-          Jetzt anrufen
-        </a>
+        <div className="cta-actions">
+          <a href={TEL} className="btn-cta btn-cta--primary">
+            Jetzt anrufen
+          </a>
+          <a href={WHATSAPP_URL} className="btn-cta btn-cta--secondary" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon size={22} />
+            WhatsApp
+          </a>
+        </div>
       </section>
     </SiteLayout>
   );

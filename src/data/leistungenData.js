@@ -1,0 +1,59 @@
+/** Leistungskarten: `summary` = eine Zeile auf dem Bild, `description` = erweiterter Text bei Hover/Tap */
+export const leistungen = [
+  {
+    title: "Ratten & Mäuse",
+    summary: "Schnell & diskret – Haus, Keller, Außenbereich",
+    description: "Professionelle und nachhaltige Bekämpfung von Nagern mit dokumentierten Verfahren – für Privat und Gewerbe.",
+    image: "/assets/leistung-ratten-maeuse.png",
+    imageAlt: "Ratten- und Mäusebekämpfung mit Köderstation – Kammerjäger Bergmann",
+  },
+  {
+    title: "Ameisen",
+    summary: "Innen & außen dauerhaft wirksam",
+    description: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher für Familien und Betriebe.",
+    image: "/assets/leistung-ameisen.png",
+    imageAlt: "Ameisenbekämpfung mit Ködergel und Kammerjäger Bergmann",
+  },
+  {
+    title: "Wespen",
+    summary: "Nest-Entfernung fachgerecht & sicher",
+    description: "Sichere Entfernung oder Umsiedlung von Wespen- und Hornissennestern durch geschultes Personal mit Schutzausrüstung.",
+    image: "/assets/leistung-wespen.png",
+    imageAlt: "Wespennest-Entfernung durch geschützten Kammerjäger – Kammerjäger Bergmann",
+  },
+  {
+    title: "Bettwanzen",
+    summary: "Diskret – oft ohne lange Abwesenheit",
+    description: "Sofortige, diskrete Bekämpfung von Bettwanzen mit modernen Methoden – ohne tagelange Auszüge, wo möglich.",
+    image: "/assets/leistung-bettwanzen.png",
+    imageAlt: "Bettwanzenbekämpfung mit Sprühgerät im Schlafzimmer – Kammerjäger Bergmann",
+  },
+  {
+    title: "Kakerlaken",
+    summary: "Besonders für Küche & Gastronomie",
+    description: "Schaben und Kakerlaken nachhaltig bekämpfen – dokumentiert und hygienisch besonders im Lebensmittelbereich.",
+    image: "/assets/leistung-kakerlaken.png",
+    imageAlt: "Kakerlakenbekämpfung in gewerblicher Küche – Kammerjäger Bergmann",
+  },
+  {
+    title: "Marder",
+    summary: "Fahrzeug & Gebäude schützen",
+    description: "Vergrämung und nachhaltige Absicherung gegen Marder – für Dach, Garage und Fahrzeug.",
+    image: "/assets/leistung-marder.png",
+    imageAlt: "Mardervergrämung am Fahrzeug mit Schutzkleidung – Kammerjäger Bergmann",
+  },
+  {
+    title: "Prävention",
+    summary: "Vorbeugen statt nachträglich kämpfen",
+    description: "Vorbeugung und Monitoring – damit Schädlinge erst gar nicht zur Belastung werden.",
+    image: "/assets/leistung-praevention.png",
+    imageAlt: "Monitoring-Station an der Gebäudeaußenseite – Kammerjäger Bergmann",
+  },
+  {
+    title: "Beratung",
+    summary: "Kostenlose Ersteinschätzung",
+    description: "Kostenlose Erstberatung – wir analysieren Ihr Problem und empfehlen die wirtschaftlich sinnvollste Lösung.",
+    image: "/assets/leistung-beratung.png",
+    imageAlt: "Persönliche Beratung bei Kundin an der Haustür – Kammerjäger Bergmann",
+  },
+];
