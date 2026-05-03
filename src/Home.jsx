@@ -48,7 +48,13 @@ export default function Home() {
         <div className="header-inner">
           <div className="logo">
             <Link to="/" title="Zur Startseite">
-              <img className="logo-full" src="/assets/logo.svg" alt="Kammerjäger Bergmann – Schädlingsbekämpfung" />
+              <img
+                className="logo-full"
+                src="/assets/logo.png"
+                width={951}
+                height={507}
+                alt="Kammerjäger Bergmann – Schädlingsbekämpfung"
+              />
             </Link>
           </div>
 

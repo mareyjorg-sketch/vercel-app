@@ -92,10 +92,11 @@ header {
 }
 
 .logo-full {
-  height: 48px;
+  height: 52px;
   width: auto;
-  max-width: min(55vw, 300px);
+  max-width: min(62vw, 340px);
   object-fit: contain;
+  display: block;
 }
 
 nav.main-nav ul {
