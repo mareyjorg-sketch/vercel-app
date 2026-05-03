@@ -122,7 +122,7 @@ export default function Home() {
           </div>
 
           <p className="cert-disclaimer">
-            Ohne fremde Marken-Logos – verbindlich sind Ihre ausgestellten Zertifikate. IHK ist eine eingetragene Marke; die Darstellung des IHK-Logos erfolgt im Rahmen der jeweiligen Richtlinien.
+            TÜV Rheinland und IHK sind eingetragene Marken. Die Darstellung erfolgt im Rahmen der jeweiligen Markenrichtlinien; verbindlich sind Ihre ausgestellten Zertifikate.
           </p>
         </div>
       </section>
