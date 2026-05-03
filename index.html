@@ -1,12 +1,846 @@
-<!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vercel App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>RUHR-PROTECT | Schädlingsbekämpfung &amp; Marderabwehr Duisburg, Mülheim, Ruhrgebiet</title>
+    <meta
+      name="description"
+      content="Zertifizierte Schädlingsbekämpfung im Ruhrpott: Wespen, Ratten, Mäuse, Kakerlaken, Marder u.v.m. TÜV, IHK, Notdienst in Duisburg, Mülheim &amp; Oberhausen."
+    />
+    <meta
+      name="keywords"
+      content="Schädlingsbekämpfung, Marderabwehr, Wespen, Ratten, Duisburg, Mülheim, Oberhausen, Ruhrgebiet, Notdienst, TÜV, IHK"
+    />
+    <meta name="author" content="RUHR-PROTECT" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="theme-color" content="#f8fafc" />
+
+    <link rel="canonical" href="https://www.ruhr-protect.de/" />
+    <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/logo-mark.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="RUHR-PROTECT" />
+    <meta property="og:title" content="RUHR-PROTECT | Schädlingsbekämpfung &amp; Marderabwehr Ruhrgebiet" />
+    <meta
+      property="og:description"
+      content="TÜV-zertifiziert, IHK-geprüft. Wespen bis Marder – professionelle Bekämpfung mit Notdienst im Ruhrpott."
+    />
+    <meta property="og:url" content="https://www.ruhr-protect.de/" />
+    <meta property="og:image" content="https://www.ruhr-protect.de/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="RUHR-PROTECT Schädlingsbekämpfung Ruhrgebiet" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RUHR-PROTECT | Schädlingsbekämpfung Ruhrgebiet" />
+    <meta
+      name="twitter:description"
+      content="Zertifizierte Schädlingsbekämpfung: Duisburg, Mülheim, Oberhausen &amp; Umgebung."
+    />
+    <meta name="twitter:image" content="https://www.ruhr-protect.de/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "Segoe UI", "Roboto", "sans-serif"],
+            },
+            colors: {
+              trust: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "RUHR-PROTECT",
+        "description": "Schädlingsbekämpfung und Marderabwehr im Ruhrgebiet. TÜV-zertifiziert, IHK-geprüft.",
+        "url": "https://www.ruhr-protect.de/",
+        "email": "info@ruhr-protect.de",
+        "telephone": "+49-208-12345678",
+        "areaServed": [
+          { "@type": "City", "name": "Duisburg" },
+          { "@type": "City", "name": "Mülheim an der Ruhr" },
+          { "@type": "City", "name": "Oberhausen" },
+          { "@type": "AdministrativeArea", "name": "Ruhrgebiet" }
+        ],
+        "priceRange": "$$",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+49-208-12345678",
+          "contactType": "customer service",
+          "areaServed": "DE",
+          "availableLanguage": ["German"]
+        }
+      }
+    </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-trust-800 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white focus:shadow-lg"
+      >Zum Hauptinhalt springen</a
+    >
+
+    <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 shadow-sm backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#" class="group flex items-center gap-2.5 sm:gap-3">
+          <img
+            src="assets/logo-mark.svg"
+            width="44"
+            height="44"
+            class="h-10 w-10 shrink-0 transition group-hover:opacity-90 sm:h-11 sm:w-11"
+            alt=""
+            decoding="async"
+          />
+          <span class="flex flex-col leading-tight">
+            <span class="text-sm font-bold tracking-[0.12em] text-trust-900 sm:text-base">RUHR-PROTECT</span>
+            <span class="hidden text-[10px] font-medium uppercase tracking-wider text-slate-500 sm:block">Schädlingsbekämpfung</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-5 lg:gap-6 md:flex" aria-label="Hauptnavigation">
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#hero">Home</a>
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#ueber-uns">Über uns</a>
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#cert">Qualifikation</a>
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#leistungen">Leistungen</a>
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#marder-spezial">Marder</a>
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#kontakt">Kontakt</a>
+          <a class="text-sm font-medium text-slate-600 transition hover:text-trust-800" href="#faq">FAQ</a>
+          <a
+            class="rounded-lg bg-trust-700 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-trust-800 lg:px-4"
+            href="tel:+4920812345678"
+            >0208 123 456 78</a
+          >
+        </nav>
+        <button
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-700 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          id="menu-btn"
+        >
+          <span class="sr-only">Menü öffnen</span>
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-4 py-4 md:hidden">
+        <nav class="flex flex-col gap-3" aria-label="Mobile Navigation">
+          <a class="py-2 text-base font-medium text-slate-700" href="#hero">Home</a>
+          <a class="py-2 text-base font-medium text-slate-700" href="#ueber-uns">Über uns</a>
+          <a class="py-2 text-base font-medium text-slate-700" href="#cert">Qualifikation</a>
+          <a class="py-2 text-base font-medium text-slate-700" href="#leistungen">Leistungen</a>
+          <a class="py-2 text-base font-medium text-slate-700" href="#marder-spezial">Marder</a>
+          <a class="py-2 text-base font-medium text-slate-700" href="#faq">FAQ</a>
+          <a class="py-2 text-base font-medium text-slate-700" href="#kontakt">Kontakt</a>
+          <a
+            class="mt-2 rounded-lg bg-trust-700 py-3 text-center text-base font-semibold text-white"
+            href="tel:+4920812345678"
+            >0208 123 456 78 anrufen</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section
+        id="hero"
+        class="border-b border-slate-200/80 bg-gradient-to-br from-trust-50 via-white to-slate-50"
+        aria-labelledby="hero-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <img
+            src="assets/logo-full.svg"
+            width="260"
+            height="48"
+            class="mb-6 h-10 w-auto max-w-[min(100%,16rem)] sm:mb-8 sm:h-12"
+            alt="RUHR-PROTECT Logo"
+            decoding="async"
+          />
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-trust-700 sm:text-sm">
+            Zertifizierte Schädlingsbekämpfung · Ruhrgebiet
+          </p>
+          <p class="mb-4 text-sm font-medium text-slate-700">Jetzt erreichbar – Einsatz nach Vereinbarung · Notdienst möglich</p>
+          <h1 id="hero-heading" class="max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            Ihr Schädlingsbekämpfer für Duisburg, Oberhausen, Düsseldorf &amp; Umgebung
+          </h1>
+          <p class="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+            <strong class="font-semibold text-slate-800">RUHR-PROTECT</strong> – zertifizierter Fachbetrieb gegen Schädlinge aller Art: von Wespen und Nagetieren bis Kakerlaken, Bettwanzen und Marder. Professionell, nachhaltig und nach aktuellen Standards – für Privathaushalte und Gewerbe.
+          </p>
+          <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-700" role="list">
+            <li class="flex items-center gap-2"><span class="text-trust-600" aria-hidden="true">✓</span> Kostenlose Erstberatung</li>
+            <li class="flex items-center gap-2"><span class="text-trust-600" aria-hidden="true">✓</span> 100&nbsp;% diskret</li>
+            <li class="flex items-center gap-2"><span class="text-trust-600" aria-hidden="true">✓</span> Direkt zum Experten</li>
+          </ul>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a
+              class="inline-flex items-center justify-center rounded-xl bg-trust-700 px-6 py-3.5 text-center text-base font-semibold text-white shadow-md transition hover:bg-trust-800"
+              href="tel:+4920812345678"
+              >Jetzt anrufen: 0208 123 456 78</a
+            >
+            <a
+              class="inline-flex items-center justify-center rounded-xl border-2 border-slate-200 bg-white px-6 py-3.5 text-center text-base font-semibold text-slate-800 transition hover:border-trust-300 hover:bg-trust-50"
+              href="#kontakt"
+              >Termin anfragen</a
+            >
+            <a
+              class="inline-flex items-center justify-center rounded-xl border-2 border-transparent px-2 text-sm font-semibold text-trust-800 underline-offset-4 hover:underline sm:px-4"
+              href="#cert"
+              >Qualifikation</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="ueber-uns" class="border-b border-slate-200 bg-white py-12 sm:py-16" aria-labelledby="ueber-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-2 lg:gap-12">
+            <div>
+              <h2 id="ueber-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Hier sind wir zu Hause</h2>
+              <p class="mt-2 text-sm font-semibold uppercase tracking-wide text-trust-700">Fachbetrieb mit langjähriger Erfahrung</p>
+              <p class="mt-4 text-base leading-relaxed text-slate-600">
+                Qualität entsteht durch Fachwissen, Erfahrung und moderne Methoden. Unsere Teams sind mit aktuellen Technologien vertraut und arbeiten diskret – mit neutraler Kennzeichnung auf Wunsch, damit Ihre Privatsphäre oder Ihr Betrieb geschützt bleibt.
+              </p>
+              <p class="mt-4 text-base leading-relaxed text-slate-600">
+                <strong class="text-slate-800">TÜV- und IHK-geprüfte Qualifikation</strong> – dokumentiert und für Gewerbe sowie Versicherungen nachvollziehbar.
+              </p>
+            </div>
+            <ul class="grid gap-3 sm:grid-cols-2" role="list">
+              <li class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">Innovatives Equipment</li>
+              <li class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">Erfahrene Techniker</li>
+              <li class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">100&nbsp;% diskret</li>
+              <li class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">Saubere Arbeitsweise</li>
+              <li class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">Persönlicher Service</li>
+              <li class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium text-slate-800">Umweltbewusste Methoden</li>
+            </ul>
+          </div>
+          <div class="mt-10 text-center">
+            <a class="inline-flex rounded-xl bg-trust-700 px-8 py-3 text-sm font-semibold text-white hover:bg-trust-800" href="#kontakt">Termin vereinbaren</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-slate-200 bg-slate-100 py-10 sm:py-12" aria-label="Kennzahlen">
+        <div class="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 sm:grid-cols-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <p class="text-3xl font-bold text-trust-800 sm:text-4xl">90</p>
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">% Folgeschäden oft vermeidbar</p>
+            <p class="mt-1 text-[10px] text-slate-400">bei frühem Handeln*</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-trust-800 sm:text-4xl">100</p>
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">% Diskretion</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-trust-800 sm:text-4xl">10×</p>
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">teurer bei spätem Eingriff**</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-bold text-trust-800 sm:text-4xl">99</p>
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">% zufriedene Kunden***</p>
+          </div>
+        </div>
+        <p class="mx-auto mt-6 max-w-3xl px-4 text-center text-[10px] leading-relaxed text-slate-400 sm:text-xs">
+          * Orientierungswert aus der Schädlingsbekämpfungs-Praxis, kein Garantiewert. ** Im Vergleich zu frühzeitiger Beratung. *** Interne Rückmeldungen; keine wissenschaftliche Studie.
+        </p>
+      </section>
+
+      <section id="frueh" class="border-b border-slate-200 bg-white py-12 sm:py-16" aria-labelledby="frueh-heading">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 id="frueh-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Frühe Bekämpfung beugt schweren Folgeschäden vor</h2>
+          <p class="mt-4 text-base leading-relaxed text-slate-600">
+            Viele Probleme beginnen unauffällig: Geräusche in der Nacht, Spuren, einzelne Insekten. Je früher Sie handeln, desto geringer sind oft Kosten und Aufwand für Gebäude, Gesundheit und Betrieb.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-slate-600">
+            Rufen Sie uns an – wir helfen bei der ersten Einschätzung am Telefon und vereinbaren bei Bedarf einen Termin vor Ort.
+          </p>
+          <p class="mt-6">
+            <a class="font-semibold text-trust-800 hover:underline" href="tel:+4920812345678">0208 123 456 78</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="zielgruppen" class="border-b border-slate-200 bg-slate-50 py-12 sm:py-16">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-2 lg:gap-10">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+              <h2 class="flex items-center gap-2 text-xl font-semibold text-slate-900">
+                <span aria-hidden="true">🏠</span> Privatpersonen
+              </h2>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                Ob Wohnung, Haus oder Grundstück – wir bekämpfen Wespen, Mäuse, Schaben, Wanzen und mehr. Einsätze auf Wunsch unauffällig: neutrale Fahrzeuge und dezente Kennzeichnung möglich. Nachhaltige Lösung statt kurzfristiger Symptombekämpfung.
+              </p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+              <h2 class="flex items-center gap-2 text-xl font-semibold text-slate-900">
+                <span aria-hidden="true">🏢</span> Unternehmen
+              </h2>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                Gastronomie, Büro, Praxis, Handel oder Lager: wir handeln schnell und professionell, mit Dokumentation für Hygiene und Versicherung. Präventive Maßnahmen auf Anfrage – mit möglichst wenig Unterbrechung Ihres Betriebs.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cert" class="border-b border-slate-200 bg-white py-12 sm:py-16" aria-labelledby="cert-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header class="mx-auto mb-8 max-w-3xl text-center">
+            <h2 id="cert-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">
+              Qualifikation &amp; Zertifizierung
+            </h2>
+            <p class="mt-3 text-base text-slate-600 sm:text-lg">
+              Transparenz und Nachweisbarkeit – gegenüber Gewerbe, Vermietung und Versicherungen.
+            </p>
+          </header>
+
+          <div class="mb-10 flex flex-col items-center justify-center gap-8 border-b border-slate-200 pb-10 sm:flex-row sm:flex-wrap sm:gap-12 lg:gap-16">
+            <figure class="flex flex-col items-center gap-2">
+              <img
+                src="assets/partners/tuev-rheinland.svg"
+                width="200"
+                height="56"
+                class="h-12 w-auto max-w-[min(100%,16rem)] sm:h-14"
+                alt="TÜV Rheinland – Zertifizierung"
+                decoding="async"
+                loading="lazy"
+              />
+              <figcaption class="max-w-xs text-center text-xs text-slate-500">Zertifizierter Fachbetrieb</figcaption>
+            </figure>
+            <figure class="flex flex-col items-center gap-2">
+              <img
+                src="assets/partners/ihk.svg"
+                width="220"
+                height="56"
+                class="h-12 w-auto max-w-[min(100%,18rem)] sm:h-14"
+                alt="IHK – Sachkunde Schädlingsbekämpfung"
+                decoding="async"
+                loading="lazy"
+              />
+              <figcaption class="max-w-xs text-center text-xs text-slate-500">IHK-geprüfte Qualifikation</figcaption>
+            </figure>
+          </div>
+          <p class="mx-auto mb-10 max-w-3xl text-center text-[11px] leading-relaxed text-slate-400 sm:text-xs">
+            TÜV Rheinland und IHK sind eingetragene Marken. Das TÜV-Logo entspricht der üblichen Darstellung (Wikimedia Commons);
+            verbindlich sind die Markenrichtlinien von TÜV Rheinland und Ihre Zertifizierungsvereinbarung.
+          </p>
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col gap-4 sm:flex-row sm:items-start rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="flex h-14 w-full max-w-[10rem] shrink-0 items-center justify-center rounded-xl bg-white p-2 ring-1 ring-slate-200/80 sm:h-14 sm:w-28" aria-hidden="true">
+                <img src="assets/partners/tuev-rheinland.svg" width="200" height="56" class="h-10 w-auto object-contain" alt="" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-base font-semibold text-slate-900">TÜV-zertifizierter Fachbetrieb</h3>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Extern geprüfte Qualitätssicherung und strukturierte Abläufe.</p>
+              </div>
+            </article>
+            <article class="flex flex-col gap-4 sm:flex-row sm:items-start rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="flex h-14 w-full max-w-[10rem] shrink-0 items-center justify-center rounded-xl bg-white p-2 ring-1 ring-slate-200/80 sm:h-14 sm:w-28" aria-hidden="true">
+                <img src="assets/partners/ihk.svg" width="220" height="56" class="h-10 w-auto object-contain" alt="" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-base font-semibold text-slate-900">IHK · Sachkunde §&nbsp;18 IfSG</h3>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Nachgewiesene Fachkenntnis für Biozide und Schädlingsarten.</p>
+              </div>
+            </article>
+            <article class="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-trust-100 text-trust-800" aria-hidden="true">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"/><path d="M7 21h10"/><path d="M12 3v18"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Gesetzeskonforme Bekämpfung</h3>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Naturschutz, Anwendungsbestimmungen, Dokumentation.</p>
+              </div>
+            </article>
+            <article class="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-trust-100 text-trust-800" aria-hidden="true">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Geschultes Fachpersonal</h3>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Fortbildung zu Methoden, Sicherheit und Hygiene.</p>
+              </div>
+            </article>
+            <article class="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-trust-100 text-trust-800" aria-hidden="true">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Dokumentation &amp; Nachweise</h3>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Protokolle für Gewerbe, Gastronomie und Versicherungen.</p>
+              </div>
+            </article>
+            <article class="flex gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-trust-100 text-trust-800" aria-hidden="true">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Notdienst &amp; Erreichbarkeit</h3>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Schnelle Reaktion: Duisburg, Mülheim, Oberhausen &amp; Umgebung.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="border-b border-slate-200 bg-slate-100 py-3">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <ul class="flex flex-wrap items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-trust-800 sm:text-sm" aria-label="Einsatzgebiet">
+            <li class="rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-slate-200/80">Einsatzgebiet</li>
+            <li class="rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-slate-200/80">Duisburg</li>
+            <li class="rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-slate-200/80">Mülheim</li>
+            <li class="rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-slate-200/80">Oberhausen</li>
+            <li class="rounded-full bg-white px-3 py-1.5 shadow-sm ring-1 ring-slate-200/80">Ruhrpott</li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="leistungen" class="border-b border-slate-200 bg-slate-100 py-12 sm:py-16" aria-labelledby="leistungen-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header class="mx-auto mb-10 max-w-3xl text-center">
+            <h2 id="leistungen-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Leistungsspektrum</h2>
+            <p class="mt-3 text-base text-slate-600 sm:text-lg">
+              Fachgerechte Bekämpfung nach Befallsart – transparent kalkuliert.
+            </p>
+          </header>
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2v3"/><ellipse cx="12" cy="14" rx="4.5" ry="6.5"/><path d="M7.5 8 6 5M16.5 8 18 5"/><path d="M8 10c-2 1-3 3-3 5"/><path d="M16 10c2 1 3 3 3 5"/><path d="M9 20h6"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Wespen &amp; Hornissen</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Nestentfernung und Abwehr unter Beachtung von Naturschutz und Vorschriften.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><ellipse cx="12" cy="14" rx="6" ry="5"/><path d="M6 14H4"/><path d="M20 14h-2"/><path d="M9 18l-1.5 3"/><path d="M15 18l1.5 3"/><path d="M8 10c-1-2.5 1-5 4-5s5 2.5 4 5"/><path d="M7 8 5 6M17 8l2-2"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Ratten</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Integrierte Bekämpfung in Gebäuden, Kanalisation und Außenanlagen.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><ellipse cx="11" cy="15" rx="5" ry="4"/><path d="M6 15H4"/><path d="M18 15h2"/><path d="M9 18l-1 3"/><path d="M13 18l1 3"/><path d="M8 12c-1-2 1-4 3-4s4 2 3 4"/><path d="M6 10 4 8M16 10l2-2"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Mäuse</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Köderkonzepte, Eintrittsstellen, Dokumentation.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3 3 0 0 1 .76-4.12l.12-.06a3 3 0 0 1 3.24 0l.12.06A3 3 0 0 1 14 6.13v1"/><path d="M12 20v-4"/><path d="M6 20h12"/><ellipse cx="12" cy="14" rx="8" ry="5"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Kakerlaken &amp; Schaben</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Küche, Gastronomie, Wohnobjekte – diskret und nach Plan.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4 0 .5-.2 1-.6 1.4-.4.4-.9.6-1.4.6"/><path d="M12 3v4"/><path d="M8 21h8"/><path d="M9 7c-3 2-5 6-5 10h16c0-4-2-8-5-10"/><path d="M9 7 7.5 4"/><path d="M15 7l1.5-3"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Motten</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Lebensmittel- und Textilmotten: Analyse, Behandlung, Vorbeugung.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 4v2"/><path d="M12 18v2"/><circle cx="12" cy="12" r="4"/><path d="M4 12H2"/><path d="M22 12h-2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="m17.66 6.34 1.41-1.41"/><path d="m6.34 17.66-1.41 1.41"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Wanzen</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">u. a. Bettwanzen – Verfahren nach Befallsbild.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><circle cx="8" cy="20" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3"/><path d="M4 15c0-3 2-5 5-5"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Marderabwehr</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Gebäude &amp; Kfz: Sicherung, Geruch, technischer Schutz.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 16s2-3 6-3 6 3 6 3"/><path d="M14 13s1-2 4-2 4 2 4 2"/><path d="M8 13h8"/><path d="M6 19s2-2 6-2 6 2 6 2"/><path d="M4 10c0-2 2-4 4-4h.5"/><path d="M8 6V4"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Silberfische</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Feuchte, Hygiene, langfristige Reduktion.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="7" cy="18" r="1.8"/><circle cx="11" cy="14" r="1.8"/><circle cx="15" cy="10" r="1.8"/><circle cx="18" cy="6" r="1.8"/><path d="M7 18 11 14 15 10 18 6"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Ameisen</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Nestortung, Barrieren, nachhaltige Reduktion.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-trust-200 hover:shadow-md">
+              <div class="mb-4 flex gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Fliegen, Flöhe &amp; mehr</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600">Weitere Arten – Analyse vor Ort, passendes Konzept.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white transition hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="garantie" class="border-b border-slate-200 bg-white py-12 sm:py-16" aria-labelledby="garantie-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 id="garantie-heading" class="text-center text-2xl font-semibold text-slate-900 sm:text-3xl">Die RUHR-PROTECT Qualitätsgarantie</h2>
+          <ul class="mx-auto mt-8 grid max-w-3xl gap-3 sm:grid-cols-1" role="list">
+            <li class="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <span class="text-trust-600" aria-hidden="true">✓</span>
+              <span class="text-sm text-slate-700"><strong class="text-slate-900">Kostenlose Erstberatung</strong> am Telefon</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <span class="text-trust-600" aria-hidden="true">✓</span>
+              <span class="text-sm text-slate-700"><strong class="text-slate-900">Transparente Kostenschätzung</strong> vor dem Einsatz</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <span class="text-trust-600" aria-hidden="true">✓</span>
+              <span class="text-sm text-slate-700"><strong class="text-slate-900">Persönlicher Service</strong> von Anfrage bis Abrechnung</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="schaedling" class="border-b border-slate-200 bg-slate-100 py-12 sm:py-16" aria-labelledby="schaedling-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 id="schaedling-heading" class="text-center text-2xl font-semibold text-slate-900 sm:text-3xl">Welchen Schädling sollen wir bekämpfen?</h2>
+          <p class="mx-auto mt-3 max-w-2xl text-center text-sm text-slate-600">Wählen Sie ein Thema – Sie springen direkt zur passenden Leistung.</p>
+          <div class="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2">
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Ratten</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Mäuse</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Bettwanzen</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Wespen</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Schaben</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Silberfische</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Flöhe</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Ameisen</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#leistungen">Marder</a>
+            <a class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm hover:border-trust-300 hover:bg-trust-50" href="#kontakt">Andere / unsicher</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="gebiete" class="border-b border-slate-200 bg-white py-12 sm:py-16" aria-labelledby="gebiete-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 id="gebiete-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Einsatzgebiete</h2>
+          <p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            Wir sind im Ruhrgebiet und angrenzend für Sie unterwegs, u. a. in:
+          </p>
+          <ul class="mt-6 flex flex-wrap gap-2 text-sm text-slate-700" role="list">
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Oberhausen</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Duisburg</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Mülheim</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Düsseldorf</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Essen</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Bottrop</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Bochum</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Dortmund</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Dinslaken</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Alpen</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">Krefeld</li>
+            <li class="rounded-lg bg-slate-100 px-3 py-1.5">und Umgebung</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="border-b border-slate-200 bg-slate-50 py-12 sm:py-16" aria-labelledby="faq-heading">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <h2 id="faq-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Häufige Fragen (FAQ)</h2>
+          <div class="mt-8 space-y-3">
+            <details class="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer list-none font-medium text-slate-900 after:float-right after:text-slate-400 after:content-['+'] group-open:after:content-['−']">Wie lange dauert eine Schädlingsbekämpfung?</summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Das hängt von Art und Ausmaß des Befalls ab. Nach der Besichtigung nennen wir Ihnen eine realistische Einschätzung.</p>
+            </details>
+            <details class="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer list-none font-medium text-slate-900 after:float-right after:text-slate-400 after:content-['+'] group-open:after:content-['−']">Was tun im Notfall?</summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Rufen Sie uns an – wir klären die Dringlichkeit und vereinbaren einen Termin oder Notdienst nach Absprache.</p>
+            </details>
+            <details class="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer list-none font-medium text-slate-900 after:float-right after:text-slate-400 after:content-['+'] group-open:after:content-['−']">Können Schädlinge zurückkehren?</summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Ohne Ursachenbeseitigung möglich. Wir beraten zu Nachkontrolle und Vorbeugung.</p>
+            </details>
+            <details class="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer list-none font-medium text-slate-900 after:float-right after:text-slate-400 after:content-['+'] group-open:after:content-['−']">Ist die Behandlung sicher für Kinder und Haustiere?</summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Wir wählen Mittel und Vorgehen nach Lage und informieren Sie über erforderliche Vorsichtsmaßnahmen.</p>
+            </details>
+            <details class="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+              <summary class="cursor-pointer list-none font-medium text-slate-900 after:float-right after:text-slate-400 after:content-['+'] group-open:after:content-['−']">Muss ich die Wohnung verlassen?</summary>
+              <p class="mt-3 text-sm leading-relaxed text-slate-600">Nur wenn es für das gewählte Verfahren erforderlich ist – das besprechen wir vorab transparent.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="marder-spezial" class="border-b border-slate-200 bg-slate-100 py-12 sm:py-16" aria-labelledby="marder-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header class="mb-8 max-w-3xl">
+            <h2 id="marder-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Schwerpunkt Marderabwehr – Gebäude &amp; Fahrzeug</h2>
+            <p class="mt-3 text-base text-slate-600 sm:text-lg">
+              Bauliche Sicherung, Geruchsbeseitigung und Marderschutz am Fahrzeug.
+            </p>
+          </header>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="mb-3 flex gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Dachboden-Check</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm text-slate-600">Inspektion, Verschluss von Zugängen, Abdichtung.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="mb-3 flex gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Geruchsneutralisierung</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm text-slate-600">Reduktion von Markierungsduften.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="mb-3 flex gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.5-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Kfz-Schutz</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm text-slate-600">Beratung und Montage von Marderschutz.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="mb-3 flex gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-trust-50 text-trust-700" aria-hidden="true">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-slate-900">Notdienst</h3>
+              </div>
+              <p class="mb-6 flex-1 text-sm text-slate-600">Kurzfristige Termine nach Absprache.</p>
+              <a class="mt-auto inline-flex justify-center rounded-xl bg-trust-700 py-3 text-sm font-semibold text-white hover:bg-trust-800" href="tel:+4920812345678">Beratung anfragen</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="bg-white py-12 sm:py-16" aria-labelledby="kontakt-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 id="kontakt-heading" class="text-2xl font-semibold text-slate-900 sm:text-3xl">Kontaktieren Sie uns</h2>
+            <p class="mt-4 text-base text-slate-600">
+              Unverbindliche Erstberatung – wir melden uns schnell zurück.
+            </p>
+            <p class="mt-2 text-sm font-medium text-trust-800">Jetzt telefonisch erreichbar</p>
+            <p class="mt-4">
+              <a class="text-lg font-semibold text-slate-900 hover:text-trust-800" href="tel:+4920812345678">0208 123 456 78</a>
+            </p>
+            <p class="mt-2 text-sm text-slate-600">
+              <a class="text-trust-800 hover:underline" href="mailto:info@ruhr-protect.de">info@ruhr-protect.de</a>
+            </p>
+          </div>
+          <form id="contact-form" class="mx-auto mt-10 max-w-xl space-y-4" action="#" method="post" novalidate>
+            <div>
+              <label for="cf-name" class="mb-1 block text-left text-sm font-medium text-slate-700">Name</label>
+              <input
+                type="text"
+                id="cf-name"
+                name="name"
+                autocomplete="name"
+                required
+                class="w-full rounded-lg border border-slate-200 px-4 py-3 text-slate-900 shadow-sm focus:border-trust-500 focus:outline-none focus:ring-2 focus:ring-trust-200"
+              />
+            </div>
+            <div>
+              <label for="cf-email" class="mb-1 block text-left text-sm font-medium text-slate-700">E-Mail</label>
+              <input
+                type="email"
+                id="cf-email"
+                name="email"
+                autocomplete="email"
+                required
+                class="w-full rounded-lg border border-slate-200 px-4 py-3 text-slate-900 shadow-sm focus:border-trust-500 focus:outline-none focus:ring-2 focus:ring-trust-200"
+              />
+            </div>
+            <div>
+              <label for="cf-phone" class="mb-1 block text-left text-sm font-medium text-slate-700">Rückrufnummer</label>
+              <input
+                type="tel"
+                id="cf-phone"
+                name="phone"
+                autocomplete="tel"
+                class="w-full rounded-lg border border-slate-200 px-4 py-3 text-slate-900 shadow-sm focus:border-trust-500 focus:outline-none focus:ring-2 focus:ring-trust-200"
+              />
+            </div>
+            <div>
+              <label for="cf-msg" class="mb-1 block text-left text-sm font-medium text-slate-700">Nachricht</label>
+              <textarea
+                id="cf-msg"
+                name="message"
+                rows="4"
+                required
+                class="w-full rounded-lg border border-slate-200 px-4 py-3 text-slate-900 shadow-sm focus:border-trust-500 focus:outline-none focus:ring-2 focus:ring-trust-200"
+                placeholder="Art des Befalls, Ort, gewünschter Zeitraum …"
+              ></textarea>
+            </div>
+            <p class="text-left text-xs text-slate-500">
+              Mit dem Absenden willigen Sie in die Verarbeitung Ihrer Angaben zur Bearbeitung der Anfrage ein. Ein Backend für den Versand kann später ergänzt werden; aktuell öffnet sich Ihr E-Mail-Programm.
+            </p>
+            <button type="submit" class="w-full rounded-xl bg-trust-700 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-trust-800 sm:w-auto sm:px-10">
+              Anfrage senden
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-slate-100 py-12" role="contentinfo">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
+          <div>
+            <img src="assets/logo-full.svg" width="200" height="36" class="mx-auto h-8 w-auto opacity-90 sm:mx-0" alt="RUHR-PROTECT" decoding="async" loading="lazy" />
+            <p class="mt-3 text-sm text-slate-600">Ihr Schädlingsbekämpfer im Ruhrgebiet.</p>
+            <p class="mt-2 text-sm text-slate-700">
+              Tel.: <a class="font-medium text-trust-800 hover:underline" href="tel:+4920812345678">0208 123 456 78</a><br />
+              <a class="text-trust-800 hover:underline" href="mailto:info@ruhr-protect.de">info@ruhr-protect.de</a>
+            </p>
+          </div>
+          <nav aria-label="Footer Navigation">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Menü</p>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a class="text-slate-700 hover:text-trust-800" href="#hero">Startseite</a></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#ueber-uns">Über uns</a></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#leistungen">Leistungen</a></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#kontakt">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Themen">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Schädlinge</p>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a class="text-slate-700 hover:text-trust-800" href="#leistungen">Bettwanzen</a></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#leistungen">Wespen</a></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#leistungen">Ameisen</a></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#marder-spezial">Marder</a></li>
+            </ul>
+          </nav>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Rechtliches</p>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><span class="text-slate-500">Impressum &amp; Datenschutz: bitte ergänzen</span></li>
+              <li><a class="text-slate-700 hover:text-trust-800" href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-10 border-t border-slate-200 pt-6 text-center text-xs text-slate-500">© <span id="year"></span> RUHR-PROTECT · Ruhrgebiet</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      var menuBtn = document.getElementById("menu-btn");
+      var mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", function () {
+          var open = !mobileMenu.classList.contains("hidden");
+          if (open) {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.setAttribute("hidden", "");
+            menuBtn.setAttribute("aria-expanded", "false");
+          } else {
+            mobileMenu.classList.remove("hidden");
+            mobileMenu.removeAttribute("hidden");
+            menuBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+        document.querySelectorAll("#mobile-menu a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.setAttribute("hidden", "");
+            menuBtn.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+      var form = document.getElementById("contact-form");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var name = (document.getElementById("cf-name") || {}).value || "";
+          var email = (document.getElementById("cf-email") || {}).value || "";
+          var phone = (document.getElementById("cf-phone") || {}).value || "";
+          var message = (document.getElementById("cf-msg") || {}).value || "";
+          var body =
+            "Name: " +
+            name +
+            "\nE-Mail: " +
+            email +
+            "\nTelefon: " +
+            phone +
+            "\n\nNachricht:\n" +
+            message;
+          var mailto =
+            "mailto:info@ruhr-protect.de?subject=" +
+            encodeURIComponent("Anfrage RUHR-PROTECT") +
+            "&body=" +
+            encodeURIComponent(body);
+          window.location.href = mailto;
+        });
+      }
+    </script>
   </body>
 </html>
