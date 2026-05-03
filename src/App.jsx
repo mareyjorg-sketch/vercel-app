@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const primary = "#005b8c";
-const primaryDark = "#004670";
+const primary = "#2e7d32";
+const primaryDark = "#1b5e20";
+const accentGreen = "#4caf50";
 const slate800 = "#1e293b";
 const slate600 = "#475569";
 const slate100 = "#f1f5f9";
@@ -27,7 +28,7 @@ const btnSecondary = {
   ...btnPrimary,
   background: "#fff",
   color: primary,
-  border: `2px solid ${primary}`,
+  border: `2px solid ${accentGreen}`,
 };
 
 const card = {
@@ -304,7 +305,7 @@ export default function App() {
       `}</style>
 
       {/* HERO */}
-      <section id="hero" style={{ background: `linear-gradient(135deg, ${slate50} 0%, #fff 50%, #eef6fb 100%)`, borderBottom: "1px solid #e2e8f0" }}>
+      <section id="hero" style={{ background: `linear-gradient(135deg, ${slate50} 0%, #fff 50%, #e8f5e9 100%)`, borderBottom: "1px solid #e2e8f0" }}>
         <div style={{ ...wrap, padding: "48px 20px 56px" }}>
           <p style={{ fontSize: 13, fontWeight: 700, color: primaryDark, marginBottom: 6 }}>{COMPANY_TAG}</p>
           <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", color: primary, textTransform: "uppercase", marginBottom: 8 }}>
@@ -361,8 +362,78 @@ export default function App() {
         </div>
       </section>
 
-      {/* ÜBER UNS */}
+      {/* LEISTUNGEN – Übersicht (3 Spalten) */}
+      <section id="leistungen-overview" style={{ padding: "48px 0", background: "#f5f5f5", borderBottom: "1px solid #e2e8f0" }}>
+        <div style={wrap}>
+          <h2 style={{ textAlign: "center", color: primary, fontSize: 28, marginTop: 0 }}>Unsere Leistungen</h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 32,
+              marginTop: 32,
+            }}
+          >
+            <div>
+              <h3 style={{ color: primaryDark, marginTop: 0 }}>Bekämpfung &amp; Abwehr</h3>
+              <ul style={{ paddingLeft: 18, color: slate600, lineHeight: 1.8 }}>
+                <li>✔ Ratten &amp; Mäuse</li>
+                <li>✔ Ameisen</li>
+                <li>✔ Wespen</li>
+                <li>✔ Bettwanzen</li>
+                <li>✔ Kakerlaken</li>
+                <li>✔ Marder</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style={{ color: primaryDark, marginTop: 0 }}>Für wen?</h3>
+              <ul style={{ paddingLeft: 18, color: slate600, lineHeight: 1.8 }}>
+                <li>✔ Privathaushalte</li>
+                <li>✔ Unternehmen</li>
+                <li>✔ Gastronomie</li>
+                <li>✔ Immobilien</li>
+                <li>✔ Kommunen</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style={{ color: primaryDark, marginTop: 0 }}>Service</h3>
+              <ul style={{ paddingLeft: 18, color: slate600, lineHeight: 1.8 }}>
+                <li>✔ Beratung</li>
+                <li>✔ Monitoring</li>
+                <li>✔ Dokumentation</li>
+                <li>✔ Prävention</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAMILIENBETRIEB – Story */}
       <section id="ueber-uns" style={{ padding: "48px 0", borderBottom: "1px solid #e2e8f0" }}>
+        <div style={wrap}>
+          <h2 style={{ fontSize: 28, marginTop: 0, color: slate800 }}>Über uns</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28, alignItems: "center", marginTop: 20 }}>
+            <div>
+              <p style={{ color: slate600, marginBottom: 16, maxWidth: 800 }}>
+                Kammerjäger Bergmann ist ein familiengeführter Betrieb aus Bottrop. Seit vielen Jahren stehen wir für zuverlässige, diskrete und schnelle Hilfe bei Schädlingsproblemen.
+              </p>
+              <p style={{ color: slate600, maxWidth: 800 }}>
+                Unser Ziel ist es, unseren Kunden nicht nur kurzfristig zu helfen, sondern langfristige Lösungen zu bieten. Persönlicher Kontakt und Vertrauen stehen bei uns an erster Stelle.
+              </p>
+            </div>
+            <div>
+              <img src="/assets/team.jpg" alt="Team Kammerjäger Bergmann" style={{ width: "100%", borderRadius: 10, display: "block", boxShadow: "0 4px 20px rgba(0,0,0,.08)" }} />
+            </div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 28 }}>
+            <img src="/assets/einsatz.jpg" alt="Einsatz vor Ort" style={{ width: "100%", borderRadius: 10, objectFit: "cover", maxHeight: 220 }} />
+            <img src="/assets/fahrzeug.jpg" alt="Fahrzeug unterwegs" style={{ width: "100%", borderRadius: 10, objectFit: "cover", maxHeight: 220 }} />
+          </div>
+        </div>
+      </section>
+
+      {/* STÄRKEN – vorher „Hier sind wir zu Hause“ */}
+      <section id="staerken" style={{ padding: "48px 0", borderBottom: "1px solid #e2e8f0" }}>
         <div style={wrap}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 40, alignItems: "start" }}>
             <div>
@@ -688,6 +759,36 @@ export default function App() {
                 loading="lazy"
                 allowFullScreen
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section aria-label="Jetzt anrufen" style={{ background: "#263238", color: "#fff", textAlign: "center", padding: "48px 20px" }}>
+        <h2 style={{ margin: 0, fontSize: 22, fontWeight: 700 }}>Jetzt anrufen und informieren!</h2>
+        <p style={{ margin: "14px 0 0", fontSize: "clamp(1.75rem, 5vw, 2.5rem)", fontWeight: 800, lineHeight: 1.2 }}>
+          <a href={TEL_HREF} style={{ color: "#fff", textDecoration: "none" }}>
+            {TEL_DISPLAY}
+          </a>
+        </p>
+      </section>
+
+      {/* VERTRAUEN */}
+      <section style={{ padding: "56px 0", background: "#fafafa", borderTop: "1px solid #e8f5e9" }}>
+        <div style={wrap}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 36, textAlign: "center" }}>
+            <div>
+              <h3 style={{ color: primaryDark, marginTop: 0 }}>Kompetente Beratung</h3>
+              <p style={{ color: slate600, marginBottom: 0 }}>Schnelle Hilfe &amp; persönliche Betreuung</p>
+            </div>
+            <div>
+              <h3 style={{ color: primaryDark, marginTop: 0 }}>Regelmäßiges Monitoring</h3>
+              <p style={{ color: slate600, marginBottom: 0 }}>Nachhaltige Schädlingskontrolle</p>
+            </div>
+            <div>
+              <h3 style={{ color: primaryDark, marginTop: 0 }}>Effektive Methoden</h3>
+              <p style={{ color: slate600, marginBottom: 0 }}>Moderne &amp; sichere Verfahren</p>
             </div>
           </div>
         </div>
