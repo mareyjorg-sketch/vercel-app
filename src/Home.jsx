@@ -3,7 +3,12 @@ import "./App.css";
 import { TEL, TEL_DISPLAY } from "./siteInfo.js";
 
 const leistungen = [
-  { icon: "🐀", title: "Ratten & Mäuse", text: "Professionelle & schnelle Bekämpfung von Nagern im Haus, Keller und Außenbereich." },
+  {
+    title: "Ratten & Mäuse",
+    text: "Professionelle & schnelle Bekämpfung von Nagern im Haus, Keller und Außenbereich.",
+    image: "/assets/leistung-ratten-maeuse.png",
+    imageAlt: "Ratten- und Mäusebekämpfung mit Köderstation – Kammerjäger Bergmann",
+  },
   { icon: "🐜", title: "Ameisen", text: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher." },
   { icon: "🐝", title: "Wespen", text: "Sichere Entfernung und Umsiedlung von Wespen- und Hornissennestern." },
   { icon: "🛏️", title: "Bettwanzen", text: "Sofortige, diskrete Bekämpfung von Bettwanzen – ohne tagelange Abwesenheit." },
@@ -63,9 +68,13 @@ export default function Home() {
           <div className="leistungen-grid">
             {leistungen.map((item) => (
               <div key={item.title} className="leistung-card">
-                <span className="leistung-icon" aria-hidden>
-                  {item.icon}
-                </span>
+                {item.image ? (
+                  <img className="leistung-thumb" src={item.image} alt={item.imageAlt ?? item.title} width={1024} height={682} loading="lazy" />
+                ) : (
+                  <span className="leistung-icon" aria-hidden>
+                    {item.icon}
+                  </span>
+                )}
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
