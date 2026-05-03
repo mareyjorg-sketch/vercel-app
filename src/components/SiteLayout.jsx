@@ -14,24 +14,6 @@ export default function SiteLayout({ children }) {
       </a>
 
       <header className="site-header">
-        <div className="topbar">
-          <div className="inner topbar-inner">
-            <span className="topbar-hours">Mo–Fr 7–19 · Sa 8–14 · Notdienst 24/7</span>
-            <div className="topbar-ctas">
-              <a href={WHATSAPP_URL} className="topbar-cta topbar-cta--wa" target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon size={20} aria-hidden="true" />
-                <span>WhatsApp</span>
-              </a>
-              <a href={TEL} className="topbar-cta topbar-cta--phone">
-                <span className="topbar-cta__icon" aria-hidden="true">
-                  📞
-                </span>
-                <span>{TEL_DISPLAY}</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
         <div className="header-inner">
           <div className="logo">
             <Link to="/" title="Zur Startseite">
@@ -72,12 +54,21 @@ export default function SiteLayout({ children }) {
           </nav>
 
           <div className="header-actions">
+            <a
+              href={WHATSAPP_URL}
+              className="header-cta-wa"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Foto schicken & sofort Einschätzung erhalten"
+              aria-label="Foto schicken und sofort Einschätzung erhalten"
+            >
+              <WhatsAppIcon size={20} />
+              <span className="wa-label" aria-hidden="true">
+                Foto schicken &amp; sofort Einschätzung erhalten
+              </span>
+            </a>
             <a href={TEL} className="header-cta">
               📞 <span>{TEL_DISPLAY}</span>
-            </a>
-            <a href={WHATSAPP_URL} className="header-cta-wa" target="_blank" rel="noopener noreferrer" title="WhatsApp schreiben">
-              <WhatsAppIcon size={20} />
-              <span className="wa-label">WhatsApp</span>
             </a>
           </div>
         </div>
@@ -108,7 +99,7 @@ export default function SiteLayout({ children }) {
               </li>
               <li>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                  WhatsApp schreiben
+                  Foto schicken &amp; sofort Einschätzung erhalten
                 </a>
               </li>
               <li>
@@ -186,22 +177,35 @@ export default function SiteLayout({ children }) {
           <p>
             © {year} {SITE_NAME} &nbsp;|&nbsp;
             <a href={SITE_ORIGIN}>{SITE_DOMAIN}</a>
-            &nbsp;|&nbsp; Impressum &amp; Datenschutz auf Anfrage
+            &nbsp;|&nbsp;
+            <a href="/impressum.html">Impressum</a>
+            &nbsp;·&nbsp;
+            <a href="/datenschutz.html">Datenschutz</a>
+            &nbsp;·&nbsp;
+            <a href="/agb.html">AGB</a>
           </p>
         </div>
       </footer>
 
       <div className="float-actions" aria-label="Schnellkontakt">
-        <a
-          href={WHATSAPP_URL}
-          className="float-wa"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="WhatsApp"
-          aria-label="WhatsApp schreiben"
-        >
-          <WhatsAppIcon size={30} />
-        </a>
+        <div className="float-wa-wrap">
+          <span className="float-wa-badge" aria-hidden="true">
+            Online
+          </span>
+          <span className="float-wa-hover-tip" aria-hidden="true">
+            Wir antworten meist in wenigen Minuten
+          </span>
+          <a
+            href={WHATSAPP_URL}
+            className="float-wa"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Foto schicken & sofort Einschätzung erhalten"
+            aria-label="Foto schicken und sofort Einschätzung erhalten"
+          >
+            <WhatsAppIcon size={32} />
+          </a>
+        </div>
         <a href={TEL} className="float-phone" title="Jetzt anrufen" aria-label="Jetzt anrufen">
           📞
         </a>
