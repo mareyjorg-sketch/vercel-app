@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom";
+import SiteLayout from "./components/SiteLayout.jsx";
 import "./App.css";
-
-const TEL = "tel:+491635276870";
-const TEL_DISPLAY = "0163 5276870";
-const EMAIL = "info@kammerjaeger-bergmann.de";
+import { TEL, TEL_DISPLAY } from "./siteInfo.js";
 
 const leistungen = [
   { icon: "🐀", title: "Ratten & Mäuse", text: "Professionelle & schnelle Bekämpfung von Nagern im Haus, Keller und Außenbereich." },
@@ -31,56 +28,8 @@ const gebiete = [
 ];
 
 export default function Home() {
-  const year = new Date().getFullYear();
-
   return (
-    <>
-      <div className="topbar">
-        <div className="inner">
-          <span>
-            📧 <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          </span>
-          <span>Mo–Fr 7–19 Uhr | Sa 8–14 Uhr | Notfalldienst 24/7</span>
-        </div>
-      </div>
-
-      <header>
-        <div className="header-inner">
-          <div className="logo">
-            <Link to="/" title="Zur Startseite">
-              <img
-                className="logo-full"
-                src="/assets/logo.png"
-                width={951}
-                height={507}
-                alt="Kammerjäger Bergmann – Schädlingsbekämpfung"
-              />
-            </Link>
-          </div>
-
-          <nav className="main-nav" aria-label="Hauptnavigation">
-            <ul>
-              <li>
-                <a href="#leistungen">Leistungen</a>
-              </li>
-              <li>
-                <a href="#zertifizierung">Zertifizierung</a>
-              </li>
-              <li>
-                <a href="#ueber-uns">Über uns</a>
-              </li>
-              <li>
-                <a href="#kontakt">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-
-          <a href={TEL} className="header-cta">
-            📞 <span>{TEL_DISPLAY}</span>
-          </a>
-        </div>
-      </header>
-
+    <SiteLayout>
       <section className="hero">
         <div className="hero-content">
           <h1>
@@ -222,101 +171,6 @@ export default function Home() {
           Jetzt anrufen
         </a>
       </section>
-
-      <footer>
-        <div className="footer-inner">
-          <div className="footer-col">
-            <div className="footer-logo-text">
-              <strong>Kammerjäger Bergmann</strong>
-            </div>
-            <p>Professionelle Schädlingsbekämpfung für Privathaushalte, Gewerbe, Industrie und Gastronomie im Ruhrgebiet.</p>
-            <br />
-            <p>Effizient, zuverlässig und kompetent.</p>
-          </div>
-          <div className="footer-col">
-            <h4>Kontakt</h4>
-            <ul>
-              <li>Kammerjäger Bergmann</li>
-              <li>Bottrop &amp; Umgebung</li>
-              <li>&nbsp;</li>
-              <li>
-                <a href={TEL}>{TEL_DISPLAY}</a>
-              </li>
-              <li>
-                <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-              </li>
-              <li>&nbsp;</li>
-              <li>
-                <a href="#kontakt">Kontakt</a>
-              </li>
-              <li>
-                <Link to="/seo-stadtstruktur">SEO-Stadtstruktur</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h4>Einsatzgebiet</h4>
-            <ul>
-              <li>
-                <a href="#gebiete-heading">Bottrop</a>
-              </li>
-              <li>
-                <a href="#gebiete-heading">Oberhausen</a>
-              </li>
-              <li>
-                <a href="#gebiete-heading">Gelsenkirchen</a>
-              </li>
-              <li>
-                <a href="#gebiete-heading">Essen</a>
-              </li>
-              <li>
-                <a href="#gebiete-heading">Gladbeck</a>
-              </li>
-              <li>
-                <a href="#gebiete-heading">Dorsten</a>
-              </li>
-              <li>
-                <a href="#gebiete-heading">andere Gebiete auf Anfrage</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h4>Leistungen</h4>
-            <ul>
-              <li>
-                <a href="#leistungen">Ratten &amp; Mäuse</a>
-              </li>
-              <li>
-                <a href="#leistungen">Ameisen</a>
-              </li>
-              <li>
-                <a href="#leistungen">Wespen</a>
-              </li>
-              <li>
-                <a href="#leistungen">Bettwanzen</a>
-              </li>
-              <li>
-                <a href="#leistungen">Kakerlaken</a>
-              </li>
-              <li>
-                <a href="#leistungen">Marder</a>
-              </li>
-              <li>
-                <a href="#leistungen">Prävention</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>
-            © {year} Kammerjäger Bergmann &nbsp;|&nbsp; Impressum &amp; Datenschutz auf Anfrage
-          </p>
-        </div>
-      </footer>
-
-      <a href={TEL} className="float-phone" title="Jetzt anrufen" aria-label="Jetzt anrufen">
-        📞
-      </a>
-    </>
+    </SiteLayout>
   );
 }
