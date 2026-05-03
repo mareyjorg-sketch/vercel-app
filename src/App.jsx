@@ -107,6 +107,71 @@ export default function App() {
       </section>
 
 
+      {/* TÜV & IHK */}
+      <section
+        id="qualifikation"
+        style={{
+          padding: "48px clamp(16px, 4vw, 40px)",
+          background: "#fff",
+          borderTop: "1px solid #eee",
+        }}
+      >
+        <h2 style={{ textAlign: "center", marginTop: 0, fontSize: "clamp(1.25rem, 3vw, 1.5rem)" }}>
+          Qualifikation &amp; Zertifizierung
+        </h2>
+        <p style={{ textAlign: "center", color: "#555", maxWidth: 560, margin: "12px auto 0", lineHeight: 1.5 }}>
+          Extern geprüfte Qualität – für Ihr Vertrauen und nachvollziehbare Standards bei Gewerbe &amp; Versicherung.
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
+            gap: 24,
+            marginTop: 32,
+            maxWidth: 920,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <figure
+            style={{
+              margin: 0,
+              border: "1px solid #e5e5e5",
+              borderRadius: 14,
+              overflow: "hidden",
+              background: "#fafafa",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
+            }}
+          >
+            <img
+              src="/assets/tuev-badge.png"
+              alt="TÜV Rheinland – Zertifizierung: zertifizierter Fachbetrieb, regelmäßige Überwachung der Qualitätsstandards"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </figure>
+          <figure
+            style={{
+              margin: 0,
+              border: "1px solid #e5e5e5",
+              borderRadius: 14,
+              overflow: "hidden",
+              background: "#fafafa",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
+            }}
+          >
+            <img
+              src="/assets/ihk-badge.png"
+              alt="IHK: Sachkunde § 18 IfSG, geprüfte Qualifikation für professionelle Schädlingsbekämpfung"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </figure>
+        </div>
+        <p style={{ fontSize: 11, color: "#888", textAlign: "center", marginTop: 20, maxWidth: 640, marginLeft: "auto", marginRight: "auto", lineHeight: 1.45 }}>
+          TÜV Rheinland und IHK sind eingetragene Marken. Die Darstellung erfolgt im Rahmen der jeweiligen Markenrichtlinien; verbindlich sind Ihre Zertifizierungsnachweise.
+        </p>
+      </section>
+
+
       {/* ABOUT */}
       <section style={{ padding: "60px clamp(16px, 4vw, 40px)" }}>
         <h2 style={{ marginTop: 0 }}>Familienbetrieb aus Bottrop</h2>
