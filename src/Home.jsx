@@ -3,7 +3,7 @@ import SiteLayout from "./components/SiteLayout.jsx";
 import "./App.css";
 import { TEL, TEL_DISPLAY } from "./siteInfo.js";
 
-/** `bento: "hero"` = große Kachel · `gradient` = stimmungsvoller Platzhalter bis Fotos liegen (z. B. watermarked_img_… in /assets/) */
+/** `bento: "hero"` = große Kachel · optional `gradient` nur wenn kein `image` (Platzhalter) */
 const leistungen = [
   {
     title: "Ratten & Mäuse",
@@ -12,13 +12,48 @@ const leistungen = [
     imageAlt: "Ratten- und Mäusebekämpfung mit Köderstation – Kammerjäger Bergmann",
     bento: "hero",
   },
-  { title: "Ameisen", text: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher.", gradient: "ameisen" },
-  { title: "Wespen", text: "Sichere Entfernung und Umsiedlung von Wespen- und Hornissennestern.", gradient: "wespen" },
-  { title: "Bettwanzen", text: "Sofortige, diskrete Bekämpfung von Bettwanzen – ohne tagelange Abwesenheit.", gradient: "bettwanzen" },
-  { title: "Kakerlaken", text: "Schaben und Kakerlaken nachhaltig bekämpfen – besonders wichtig im Lebensmittelbereich.", gradient: "kakerlaken" },
-  { title: "Marder", text: "Vergrämung und Sicherung gegen Marder – schützen Sie Ihr Fahrzeug und Ihr Dach.", gradient: "marder" },
-  { title: "Prävention", text: "Vorbeugung und Monitoring – damit der Schädling erst gar nicht einzieht.", gradient: "praevention" },
-  { title: "Beratung", text: "Kostenlose Erstberatung – wir analysieren Ihr Problem und empfehlen die beste Lösung.", gradient: "beratung" },
+  {
+    title: "Ameisen",
+    text: "Wirksame Bekämpfung von Ameisennestern – innen wie außen, dauerhaft und sicher.",
+    image: "/assets/leistung-ameisen.png",
+    imageAlt: "Ameisenbekämpfung mit Ködergel und Kammerjäger Bergmann",
+  },
+  {
+    title: "Wespen",
+    text: "Sichere Entfernung und Umsiedlung von Wespen- und Hornissennestern.",
+    image: "/assets/leistung-wespen.png",
+    imageAlt: "Wespennest-Entfernung durch geschützten Kammerjäger – Kammerjäger Bergmann",
+  },
+  {
+    title: "Bettwanzen",
+    text: "Sofortige, diskrete Bekämpfung von Bettwanzen – ohne tagelange Abwesenheit.",
+    image: "/assets/leistung-bettwanzen.png",
+    imageAlt: "Bettwanzenbekämpfung mit Sprühgerät im Schlafzimmer – Kammerjäger Bergmann",
+  },
+  {
+    title: "Kakerlaken",
+    text: "Schaben und Kakerlaken nachhaltig bekämpfen – besonders wichtig im Lebensmittelbereich.",
+    image: "/assets/leistung-kakerlaken.png",
+    imageAlt: "Kakerlakenbekämpfung in gewerblicher Küche – Kammerjäger Bergmann",
+  },
+  {
+    title: "Marder",
+    text: "Vergrämung und Sicherung gegen Marder – schützen Sie Ihr Fahrzeug und Ihr Dach.",
+    image: "/assets/leistung-marder.png",
+    imageAlt: "Mardervergrämung am Fahrzeug mit Schutzkleidung – Kammerjäger Bergmann",
+  },
+  {
+    title: "Prävention",
+    text: "Vorbeugung und Monitoring – damit der Schädling erst gar nicht einzieht.",
+    image: "/assets/leistung-praevention.png",
+    imageAlt: "Monitoring-Station an der Gebäudeaußenseite – Kammerjäger Bergmann",
+  },
+  {
+    title: "Beratung",
+    text: "Kostenlose Erstberatung – wir analysieren Ihr Problem und empfehlen die beste Lösung.",
+    image: "/assets/leistung-beratung.png",
+    imageAlt: "Persönliche Beratung bei Kundin an der Haustür – Kammerjäger Bergmann",
+  },
 ];
 
 const gebiete = [
