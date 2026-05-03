@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Kammerjäger Bergmann Schädlingsbekämpfung</title>
+  <desc id="logoDesc">Flaches Vektor-Emblem: grüner Schild, Kammerjäger-Silhouette, vier Schädlings-Symbole, dreizeiliger Schriftzug.</desc>
+
+  <defs>
+    <style type="text/css">
+      .green-stroke { fill: none; stroke: #2d6a2d; stroke-linecap: round; stroke-linejoin: round; }
+      .green-fill { fill: #2d6a2d; }
+      .ink { fill: #1a1a1a; }
+      .line-green { stroke: #2d6a2d; stroke-width: 3; fill: none; }
+      .txt-small { fill: #2d6a2d; font-family: system-ui, "Segoe UI", Arial, sans-serif; font-weight: 600; letter-spacing: 0.42em; font-size: 12px; }
+      .txt-name { fill: #1a1a1a; font-family: system-ui, "Segoe UI", Arial, sans-serif; font-weight: 800; letter-spacing: 0.06em; font-size: 48px; }
+      .txt-sub { fill: #1a1a1a; font-family: system-ui, "Segoe UI", Arial, sans-serif; font-weight: 600; letter-spacing: 0.26em; font-size: 10.5px; }
+    </style>
+  </defs>
+
+  <!-- Ground curve -->
+  <path class="green-stroke" stroke-width="3" d="M 110 162 Q 460 148 810 162" />
+
+  <!-- Mouse (left outer) -->
+  <circle class="green-stroke" cx="178" cy="112" r="32" stroke-width="3" />
+  <g class="ink" transform="translate(178 112)">
+    <ellipse cx="-3" cy="3" rx="13" ry="9" />
+    <path d="M 9 5 Q 20 7 24 2" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" />
+    <circle cx="-12" cy="-1" r="2.5" />
+  </g>
+
+  <!-- Ant (left inner) -->
+  <circle class="green-stroke" cx="268" cy="112" r="32" stroke-width="3" />
+  <g class="ink" transform="translate(268 112)">
+    <ellipse cx="0" cy="7" rx="9" ry="7" />
+    <ellipse cx="-5" cy="-5" rx="6" ry="5" />
+    <ellipse cx="5" cy="-5" rx="6" ry="5" />
+    <path d="M -5 -11 L -9 -21 M 5 -11 L 9 -21" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <line x1="-7" y1="12" x2="-10" y2="20" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="0" y1="14" x2="0" y2="22" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="7" y1="12" x2="10" y2="20" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+  </g>
+
+  <!-- Shield -->
+  <path class="green-stroke" stroke-width="4" fill="#ffffff" d="
+    M 460 34
+    L 518 48
+    L 518 124
+    C 518 162 492 194 460 208
+    C 428 194 402 162 402 124
+    L 402 48
+    Z" />
+
+  <!-- Technician -->
+  <g class="ink" transform="translate(460 0)">
+    <path d="M -26 76 L 0 60 L 26 76 L 24 86 L -24 86 Z" />
+    <rect x="-20" y="86" width="40" height="20" rx="3" />
+    <rect x="-10" y="104" width="20" height="10" />
+    <path d="M -30 114 L 30 114 L 26 168 L -26 168 Z" />
+    <ellipse cx="-36" cy="134" rx="12" ry="26" />
+    <rect x="-42" y="108" width="14" height="7" rx="2" />
+    <path d="M 26 122 L 54 116 L 58 106" fill="none" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="58" y1="106" x2="68" y2="96" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" />
+    <circle cx="70" cy="94" r="3.5" />
+    <path d="M -16 168 L -18 188 M 16 168 L 18 188" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round" />
+  </g>
+
+  <!-- Beetle (right inner) -->
+  <circle class="green-stroke" cx="652" cy="112" r="32" stroke-width="3" />
+  <g class="ink" transform="translate(652 112)">
+    <ellipse cx="0" cy="3" rx="15" ry="9" />
+    <line x1="-17" y1="-2" x2="-24" y2="-10" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="17" y1="-2" x2="24" y2="-10" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-11" y1="-7" x2="-16" y2="-15" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="11" y1="-7" x2="16" y2="-15" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" />
+  </g>
+
+  <!-- Wasp (right outer) -->
+  <circle class="green-stroke" cx="742" cy="112" r="32" stroke-width="3" />
+  <g class="ink" transform="translate(742 112)">
+    <ellipse cx="3" cy="1" rx="11" ry="7" />
+    <ellipse cx="-9" cy="-1" rx="9" ry="5" />
+    <ellipse cx="15" cy="-3" rx="7" ry="11" />
+    <ellipse cx="15" cy="7" rx="7" ry="11" />
+    <line x1="-7" y1="5" x2="-14" y2="12" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Wordmark: top small -->
+  <g transform="translate(460 228)">
+    <line x1="-188" y1="0" x2="-108" y2="0" class="line-green" />
+    <text class="txt-small" text-anchor="middle" x="0" y="4">KAMMERJÄGER</text>
+    <line x1="108" y1="0" x2="188" y2="0" class="line-green" />
+  </g>
+
+  <!-- Dominant name -->
+  <text class="txt-name" text-anchor="middle" x="460" y="258">BERGMANN</text>
+
+  <!-- Bottom line -->
+  <g transform="translate(460 284)">
+    <line x1="-198" y1="0" x2="-118" y2="0" class="line-green" />
+    <text class="txt-sub" text-anchor="middle" x="0" y="3">SCHÄDLINGSBEKÄMPFUNG</text>
+    <line x1="118" y1="0" x2="198" y2="0" class="line-green" />
+  </g>
+</svg>

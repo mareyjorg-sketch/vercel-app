@@ -18,7 +18,7 @@ export default function App() {
       }}>
         <div style={{ display: "flex", alignItems: "center", minWidth: 0 }}>
           <img
-            src="/assets/logo.png"
+            src="/assets/logo.svg"
             alt="Kammerjäger Bergmann – Schädlingsbekämpfung"
             style={{
               height: "clamp(40px, 10vw, 56px)",
