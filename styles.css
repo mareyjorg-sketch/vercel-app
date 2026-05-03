@@ -1,2 +1,0 @@
-/* Nicht mehr aktiv: Das Layout nutzt Tailwind CSS (CDN) in index.html.
-   Bei Bedarf: npm install tailwindcss && npx tailwindcss -i ./src/input.css -o ./dist/output.css */
