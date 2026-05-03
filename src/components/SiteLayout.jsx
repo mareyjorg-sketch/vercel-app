@@ -97,6 +97,9 @@ export default function SiteLayout({ children }) {
                 <Link to="/sicherheitsdatenblaetter">Sicherheitsdatenblätter</Link>
               </li>
               <li>
+                <Link to="/flyer">Flyer (Vorder- &amp; Rückseite)</Link>
+              </li>
+              <li>
                 <Link to="/seo-stadtstruktur">SEO-Stadtstruktur</Link>
               </li>
             </ul>

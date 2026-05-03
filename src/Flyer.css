@@ -1,0 +1,309 @@
+/* Flyer / Info-Karte – Vorder- & Rückseite, bildschirm- & druckoptimiert */
+
+.flyer-app {
+  --flyer-green: #2d7a2d;
+  --flyer-green-light: #3a9a3a;
+  --flyer-dark: #0f1410;
+  min-height: 100vh;
+  background: #1a1f1c;
+}
+
+.flyer-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  background: rgba(15, 20, 16, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.flyer-toolbar a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.flyer-toolbar a:hover {
+  color: #fff;
+}
+
+.flyer-toolbar button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--flyer-green-light);
+  background: var(--flyer-green);
+  color: #fff;
+  cursor: pointer;
+}
+
+.flyer-toolbar button:hover {
+  background: #256b25;
+}
+
+.flyer-page {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+@media print {
+  .flyer-app {
+    background: #fff;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .flyer-page {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+
+  .flyer-page:last-of-type {
+    page-break-after: auto;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+}
+
+/* ——— Vorderseite ——— */
+.flyer-page--front {
+  position: relative;
+  min-height: min(88vh, 900px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--flyer-dark) url("/assets/flyer-familie-van.png") center / cover no-repeat;
+}
+
+.flyer-page--front::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 14, 10, 0.92) 0%,
+    rgba(8, 14, 10, 0.55) 38%,
+    rgba(8, 14, 10, 0.15) 62%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.flyer-front__inner {
+  position: relative;
+  z-index: 1;
+  padding: 40px 36px 48px;
+  max-width: 520px;
+}
+
+.flyer-front__kicker {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8e6b8;
+  margin-bottom: 10px;
+}
+
+.flyer-front__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.flyer-front__title em {
+  font-style: normal;
+  color: #c8f5c8;
+}
+
+.flyer-front__lead {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(15px, 2.2vw, 18px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 22px;
+}
+
+.flyer-front__list {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.flyer-front__list li {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #fff;
+  padding: 6px 0;
+  padding-left: 28px;
+  position: relative;
+}
+
+.flyer-front__list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--flyer-green-light);
+  font-weight: 700;
+}
+
+.flyer-front__phone {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(20px, 3.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.flyer-front__phone a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.flyer-front__phone a:hover {
+  text-decoration: underline;
+}
+
+.flyer-front__sub {
+  margin-top: 14px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ——— Rückseite ——— */
+.flyer-page--back {
+  background: linear-gradient(165deg, #f7faf7 0%, #eef4ee 100%);
+  border: 1px solid #d8e5d8;
+  min-height: min(88vh, 900px);
+  padding: 44px 40px 48px;
+  font-family: "Lato", sans-serif;
+  color: #222;
+}
+
+.flyer-back__head {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--flyer-green);
+  margin-bottom: 8px;
+}
+
+.flyer-back__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(22px, 3.5vw, 28px);
+  font-weight: 700;
+  color: var(--flyer-dark);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 3px solid var(--flyer-green);
+}
+
+.flyer-back__section {
+  margin-bottom: 28px;
+}
+
+.flyer-back__section h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--flyer-green);
+  margin-bottom: 12px;
+}
+
+.flyer-back__section ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.75;
+  font-size: 15px;
+  color: #333;
+}
+
+.flyer-back__checks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flyer-back__checks li {
+  position: relative;
+  padding: 6px 0 6px 28px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.flyer-back__checks li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--flyer-green);
+  font-weight: 700;
+}
+
+.flyer-back__footer {
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid #cde2cd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.8;
+  color: var(--flyer-dark);
+}
+
+.flyer-back__footer a {
+  color: var(--flyer-green);
+  text-decoration: none;
+}
+
+.flyer-back__footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .flyer-page--front {
+    min-height: 520px;
+  }
+
+  .flyer-front__inner {
+    padding: 28px 22px 36px;
+  }
+
+  .flyer-page--back {
+    padding: 32px 22px 36px;
+    min-height: auto;
+  }
+}
