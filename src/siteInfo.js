@@ -7,7 +7,7 @@ export const SITE_NAME = "Kammerjäger Bergmann";
 export const SITE_DOMAIN = "kammerjaeger-bergmann.com";
 export const SITE_ORIGIN = `https://${SITE_DOMAIN}`;
 
-/** E.164 ohne + für wa.me */
+/** wa.me – eine zentrale URL für alle WhatsApp-Buttons */
 const WA_E164 = "491635276870";
-const waPrefill = encodeURIComponent("Guten Tag, ich melde mich bezüglich Schädlingsbekämpfung.");
+const waPrefill = encodeURIComponent("Hallo, ich habe ein Problem mit Schädlingen und brauche Hilfe.");
 export const WHATSAPP_URL = `https://wa.me/${WA_E164}?text=${waPrefill}`;

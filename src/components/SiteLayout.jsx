@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { EMAIL, TEL, TEL_DISPLAY, SITE_NAME, SITE_DOMAIN, SITE_ORIGIN, WHATSAPP_URL } from "../siteInfo.js";
 import WhatsAppIcon from "./WhatsAppIcon.jsx";
+import PhoneIcon from "./PhoneIcon.jsx";
 
 export default function SiteLayout({ children }) {
   const year = new Date().getFullYear();
@@ -68,7 +69,8 @@ export default function SiteLayout({ children }) {
               </span>
             </a>
             <a href={TEL} className="header-cta">
-              📞 <span>{TEL_DISPLAY}</span>
+              <PhoneIcon size={18} className="header-cta__phone-ic" aria-hidden />
+              <span>{TEL_DISPLAY}</span>
             </a>
           </div>
         </div>
@@ -189,12 +191,6 @@ export default function SiteLayout({ children }) {
 
       <div className="float-actions" aria-label="Schnellkontakt">
         <div className="float-wa-wrap">
-          <span className="float-wa-badge" aria-hidden="true">
-            Online
-          </span>
-          <span className="float-wa-hover-tip" aria-hidden="true">
-            Wir antworten meist in wenigen Minuten
-          </span>
           <a
             href={WHATSAPP_URL}
             className="float-wa"
@@ -203,11 +199,17 @@ export default function SiteLayout({ children }) {
             title="Foto schicken & sofort Einschätzung erhalten"
             aria-label="Foto schicken und sofort Einschätzung erhalten"
           >
+            <span className="float-wa-badge" aria-hidden="true">
+              Online
+            </span>
             <WhatsAppIcon size={32} />
           </a>
+          <span className="float-wa-hover-tip" aria-hidden="true">
+            Wir antworten meist in wenigen Minuten
+          </span>
         </div>
         <a href={TEL} className="float-phone" title="Jetzt anrufen" aria-label="Jetzt anrufen">
-          📞
+          <PhoneIcon size={26} className="float-phone__ic" aria-hidden />
         </a>
       </div>
     </>

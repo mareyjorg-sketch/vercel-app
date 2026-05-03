@@ -1,24 +1,25 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { TEL, WHATSAPP_URL } from "../siteInfo.js";
 import "./ServiceCard.css";
 
-function useTouchExpandMode() {
-  const [touchExpand, setTouchExpand] = useState(() =>
-    typeof window !== "undefined" ? !window.matchMedia("(hover: hover) and (pointer: fine)").matches : false,
+function useFinePointer() {
+  const [fine, setFine] = useState(() =>
+    typeof window !== "undefined" ? window.matchMedia("(hover: hover) and (pointer: fine)").matches : true,
   );
 
   useEffect(() => {
     const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const sync = () => setTouchExpand(!mq.matches);
+    const sync = () => setFine(mq.matches);
     sync();
     mq.addEventListener("change", sync);
     return () => mq.removeEventListener("change", sync);
   }, []);
 
-  return touchExpand;
+  return fine;
 }
 
-function usePrefersReducedMotion() {
+function useReducedMotion() {
   const [reduced, setReduced] = useState(() =>
     typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false,
   );
@@ -34,87 +35,113 @@ function usePrefersReducedMotion() {
   return reduced;
 }
 
-/**
- * @param {object} props
- * @param {string} props.title
- * @param {string} props.summary – eine kurze Zeile auf dem Bild
- * @param {string} props.description – erweiterter Text (Hover / Tap)
- * @param {string} props.image
- * @param {string} [props.imageAlt]
- * @param {string} [props.ctaTo]
- */
-export default function ServiceCard({ title, summary, description, image, imageAlt, ctaTo = "/#kontakt" }) {
-  const touchExpand = useTouchExpandMode();
-  const reducedMotion = usePrefersReducedMotion();
-  const [isExpanded, setIsExpanded] = useState(false);
+export default function ServiceCard({
+  title,
+  summary,
+  description,
+  bullets,
+  image,
+  imageAlt,
+  ctaTo = "/#kontakt",
+  helpTagline = "Soforthilfe möglich",
+  featured = false,
+}) {
+  const finePointer = useFinePointer();
+  const reducedMotion = useReducedMotion();
+  const [flipped, setFlipped] = useState(false);
+
+  const flip3d = finePointer && !reducedMotion;
+  const expandMode = !flip3d;
 
   useEffect(() => {
-    if (!touchExpand) setIsExpanded(false);
-  }, [touchExpand]);
+    setFlipped(false);
+  }, [flip3d]);
 
-  const toggleExpanded = useCallback(
+  const toggle = useCallback(() => setFlipped((v) => !v), []);
+
+  const onFrontClick = useCallback(
     (e) => {
-      if (!touchExpand || reducedMotion) return;
-      if (e.target.closest("a")) return;
-      setIsExpanded((v) => !v);
+      if (e.target.closest("a, button")) return;
+      toggle();
     },
-    [touchExpand, reducedMotion],
+    [toggle],
   );
 
-  const onKeyDown = useCallback(
-    (e) => {
-      if (!touchExpand || reducedMotion) return;
-      if (e.target.closest("a")) return;
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        setIsExpanded((v) => !v);
-      }
-    },
-    [touchExpand, reducedMotion],
-  );
+  const onFlipBtn = useCallback((e) => {
+    e.stopPropagation();
+    toggle();
+  }, [toggle]);
 
-  const expanded = touchExpand ? isExpanded : false;
-  const showRevealAlways = reducedMotion;
+  const closePanel = useCallback((e) => {
+    e.stopPropagation();
+    setFlipped(false);
+  }, []);
 
   const rootClass = [
     "service-card",
-    touchExpand ? "service-card--touch" : "",
-    expanded || showRevealAlways ? "service-card--expanded" : "",
+    flip3d ? "service-card--flip3d" : "service-card--expand-mode",
+    flipped ? "service-card--flipped" : "",
     reducedMotion ? "service-card--reduced-motion" : "",
+    featured ? "service-card--featured" : "",
   ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <article
-      className={rootClass}
-      role="listitem"
-      onClick={touchExpand && !reducedMotion ? toggleExpanded : undefined}
-      onKeyDown={touchExpand && !reducedMotion ? onKeyDown : undefined}
-      tabIndex={touchExpand && !reducedMotion ? 0 : undefined}
-      aria-expanded={touchExpand ? expanded : undefined}
-    >
-      <div className="service-card__frame">
-        <div className="service-card__media">
-          <img className="service-card__img" src={image} alt={imageAlt ?? ""} width={800} height={1067} loading="lazy" decoding="async" />
-          <div className="service-card__scrim" aria-hidden="true" />
-        </div>
-
-        <div className="service-card__panel">
-          <div className="service-card__panel-head">
-            <h3 className="service-card__title">{title}</h3>
-            <p className="service-card__summary">{summary}</p>
-            {touchExpand && !reducedMotion ? (
-              <span className="service-card__hint">{expanded ? "Schließen" : "Mehr anzeigen"}</span>
-            ) : null}
+    <article className={rootClass} role="listitem" aria-expanded={flipped}>
+      <div className="service-card__shell">
+        <div className="service-card__inner">
+          <div className="service-card__face service-card__face--front" onClick={onFrontClick}>
+            <div className="service-card__media">
+              <img className="service-card__img" src={image} alt={imageAlt ?? ""} width={800} height={1000} loading="lazy" decoding="async" />
+              <div className="service-card__scrim" aria-hidden="true" />
+            </div>
+            <div className="service-card__front-bottom">
+              <p className="service-card__interaction-hint service-card__interaction-hint--corner" aria-hidden="true">
+                <span className="service-card__hint service-card__hint--coarse">Tippen für Details</span>
+                <span className="service-card__hint service-card__hint--fine">Problem lösen →</span>
+              </p>
+              <div className="service-card__front-actions">
+                <button type="button" className="service-card__btn-flip" onClick={onFlipBtn}>
+                  Jetzt Hilfe ansehen
+                </button>
+              </div>
+              <p className="service-card__summary">{summary}</p>
+              <div className="service-card__front-caption">
+                <p className="service-card__help-tag">{helpTagline}</p>
+                <h3 className="service-card__title">{title}</h3>
+              </div>
+            </div>
           </div>
 
-          <div className="service-card__reveal">
-            <div className="service-card__reveal-inner">
-              <p className="service-card__description">{description}</p>
-              <Link to={ctaTo} className="service-card__cta" onClick={(e) => e.stopPropagation()}>
-                Mehr erfahren
-              </Link>
+          <div className="service-card__face service-card__face--back">
+            <div className="service-card__back-inner">
+              <h3 className="service-card__back-title">{title}</h3>
+              <div className="service-card__back-ctas">
+                <a href={WHATSAPP_URL} className="service-card__cta service-card__cta--wa" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  Foto schicken &amp; sofort Einschätzung erhalten
+                </a>
+                <a href={TEL} className="service-card__cta service-card__cta--call" onClick={(e) => e.stopPropagation()}>
+                  Jetzt anrufen
+                </a>
+                <Link to={ctaTo} className="service-card__cta service-card__cta--inquiry" onClick={(e) => e.stopPropagation()}>
+                  Jetzt anfragen
+                </Link>
+              </div>
+              <ul className="service-card__trust">
+                <li>Antwort meist innerhalb weniger Minuten</li>
+                <li>Kostenlose Ersteinschätzung</li>
+                <li>Diskret &amp; schnell vor Ort</li>
+              </ul>
+              <ul className="service-card__bullets">
+                {bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+              <p className="service-card__back-desc">{description}</p>
+              <button type="button" className="service-card__btn-back" onClick={closePanel}>
+                Zurück
+              </button>
             </div>
           </div>
         </div>
