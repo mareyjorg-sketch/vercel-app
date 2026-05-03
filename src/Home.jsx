@@ -106,15 +106,14 @@ export default function Home() {
           <div className="leistungen-bento" role="list">
             {leistungen.map((item) => (
               <article key={item.title} className={`leistung-card ${item.bento === "hero" ? "leistung-card--hero" : ""}`} role="listitem">
-                <div className="leistung-card__media">
+                <div className="leistung-card__visual">
                   {item.image ? (
                     <img className="leistung-card__img" src={item.image} alt={item.imageAlt ?? ""} width={1024} height={682} loading="lazy" />
                   ) : (
-                    <div className={`leistung-card__gradient leistung-card__gradient--${item.gradient}`} />
+                    <div className={`leistung-card__gradient leistung-card__gradient--${item.gradient}`} aria-hidden />
                   )}
                 </div>
-                <div className="leistung-card__scrim" aria-hidden />
-                <div className="leistung-card__content">
+                <div className="leistung-card__panel">
                   <span className="leistung-card__badge" aria-hidden>
                     ✓
                   </span>
