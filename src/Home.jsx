@@ -94,15 +94,20 @@ export default function Home() {
 
           <div className="cert-cards cert-cards--partner">
             <div className="cert-card cert-card--partner-strip">
-              <img
-                className="cert-partner-strip-img"
-                src={PARTNER_STRIP_SRC}
-                alt="TÜV SÜD – Geprüfte Qualität und Sicherheit; IHK-Mitgliedsbetrieb; Zertifikat"
-                width={720}
-                height={320}
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="cert-partner-strip-media">
+                <img
+                  className="cert-partner-strip-img"
+                  src={PARTNER_STRIP_SRC}
+                  alt="TÜV SÜD, IHK-Mitgliedsbetrieb und Zertifikat – Übersichtsgrafik"
+                  width={720}
+                  height={320}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p className="cert-partner-strip-subline" aria-hidden="true">
+                  Geprüfte Qualität &amp; Sicherheit · IHK-Mitgliedsbetrieb
+                </p>
+              </div>
               <div className="cert-text">
                 <strong>TÜV SÜD &amp; IHK – Qualifikation</strong>
                 <span>Geprüfte Qualität &amp; Sicherheit (TÜV SÜD) · IHK-Mitgliedsbetrieb</span>

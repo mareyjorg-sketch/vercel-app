@@ -35,15 +35,20 @@ export default function HeroTrustStrip() {
     <ul className="hero-trust" aria-label="Qualifikation und Service">
       <li className="hero-trust__tile hero-trust__tile--partners">
         <div className="hero-trust__partners-panel">
-          <img
-            className="hero-trust__partners-img"
-            src={PARTNER_STRIP_SRC}
-            alt="TÜV SÜD – Geprüfte Qualität und Sicherheit; IHK-Mitgliedsbetrieb; Zertifikat"
-            width={640}
-            height={280}
-            loading="eager"
-            decoding="async"
-          />
+          <div className="hero-trust__partners-media">
+            <img
+              className="hero-trust__partners-img"
+              src={PARTNER_STRIP_SRC}
+              alt="TÜV SÜD, IHK-Mitgliedsbetrieb und Zertifikat – Übersichtsgrafik"
+              width={640}
+              height={280}
+              loading="eager"
+              decoding="async"
+            />
+            <p className="hero-trust__partners-subline" aria-hidden="true">
+              Geprüfte Qualität &amp; Sicherheit · IHK-Mitgliedsbetrieb
+            </p>
+          </div>
         </div>
       </li>
       <li className="hero-trust__tile hero-trust__tile--icon">
