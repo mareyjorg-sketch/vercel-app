@@ -10,7 +10,7 @@ import { TEL, TEL_DISPLAY, WHATSAPP_URL } from "./siteInfo.js";
 import { leistungen } from "./data/leistungenData.js";
 import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 import PhoneIcon from "./components/PhoneIcon.jsx";
-import TrustTuvBadge from "./components/TrustTuvBadge.jsx";
+import { PARTNER_STRIP_SRC } from "./partnerAssets.js";
 
 const gebiete = [
   "Bottrop",
@@ -92,37 +92,30 @@ export default function Home() {
             <p>Extern geprüfte Qualität – für Ihr Vertrauen und nachvollziehbare Standards bei Gewerbe &amp; Versicherung.</p>
           </div>
 
-          <div className="cert-cards">
-            <div className="cert-card">
-              <TrustTuvBadge variant="light" className="cert-card__trust-badge" />
-              <div className="cert-text">
-                <strong>TÜV Rheinland – Zertifizierung</strong>
-                <span>Zertifizierter Fachbetrieb</span>
-                <span>Regelmäßige Überwachung und Prüfung unserer Arbeits- und Qualitätsstandards.</span>
-                <span className="cert-check">✔ Nachgewiesen</span>
-              </div>
-            </div>
-
-            <div className="cert-card">
+          <div className="cert-cards cert-cards--partner">
+            <div className="cert-card cert-card--partner-strip">
               <img
-                className="cert-logo-img"
-                src="/assets/ihk-badge.png"
-                alt="IHK – Sachkunde § 18 IfSG"
-                width={200}
-                height={120}
+                className="cert-partner-strip-img"
+                src={PARTNER_STRIP_SRC}
+                alt="TÜV SÜD – Geprüfte Qualität und Sicherheit; IHK-Mitgliedsbetrieb; Zertifikat"
+                width={720}
+                height={320}
                 loading="lazy"
+                decoding="async"
               />
               <div className="cert-text">
-                <strong>Industrie- und Handelskammer</strong>
-                <span>Sachkunde § 18 IfSG</span>
-                <span>IHK-geprüfte Qualifikation für die professionelle Schädlingsbekämpfung.</span>
+                <strong>TÜV SÜD &amp; IHK – Qualifikation</strong>
+                <span>Geprüfte Qualität &amp; Sicherheit (TÜV SÜD) · IHK-Mitgliedsbetrieb</span>
+                <span>
+                  Sachkunde nach § 18 IfSG und nachvollziehbare Standards für Gewerbe &amp; Versicherung – inkl. ausgestellter Zertifikate.
+                </span>
                 <span className="cert-check">✔ Nachgewiesen</span>
               </div>
             </div>
           </div>
 
           <p className="cert-disclaimer">
-            TÜV Rheinland und IHK sind eingetragene Marken. Die Darstellung erfolgt im Rahmen der jeweiligen Markenrichtlinien; verbindlich sind Ihre ausgestellten Zertifikate.
+            TÜV SÜD und IHK sind eingetragene Marken. Die Darstellung erfolgt im Rahmen der jeweiligen Markenrichtlinien; verbindlich sind Ihre ausgestellten Zertifikate.
           </p>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import TrustTuvBadge from "./TrustTuvBadge.jsx";
+import { PARTNER_STRIP_SRC } from "../partnerAssets.js";
 
 function Icon24h({ className = "" }) {
   return (
@@ -33,19 +33,18 @@ function IconFamily({ className = "" }) {
 export default function HeroTrustStrip() {
   return (
     <ul className="hero-trust" aria-label="Qualifikation und Service">
-      <li className="hero-trust__tile hero-trust__tile--badge">
-        <TrustTuvBadge variant="hero" />
-      </li>
-      <li className="hero-trust__tile">
-        <img
-          className="hero-trust__brand hero-trust__brand--ihk"
-          src="/assets/partners/ihk.svg"
-          alt="IHK – Sachkunde nach § 18 IfSG"
-          width={100}
-          height={64}
-          loading="eager"
-          decoding="async"
-        />
+      <li className="hero-trust__tile hero-trust__tile--partners">
+        <div className="hero-trust__partners-panel">
+          <img
+            className="hero-trust__partners-img"
+            src={PARTNER_STRIP_SRC}
+            alt="TÜV SÜD – Geprüfte Qualität und Sicherheit; IHK-Mitgliedsbetrieb; Zertifikat"
+            width={640}
+            height={280}
+            loading="eager"
+            decoding="async"
+          />
+        </div>
       </li>
       <li className="hero-trust__tile hero-trust__tile--icon">
         <Icon24h className="hero-trust__glyph" />

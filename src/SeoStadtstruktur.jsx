@@ -110,7 +110,7 @@ export default function SeoStadtstruktur() {
           <div className="content-block">
             <h4>🔍 Meta-Description (155 Zeichen)</h4>
             <div className="meta-example">
-              {`Schädlingsbekämpfung in {STADT} ✓ Schnell vor Ort ✓ Ratten, Bettwanzen, Wespen & mehr. Kammerjäger Bergmann – TÜV-zertifiziert. Jetzt anrufen: ${TEL_DISPLAY}`}
+              {`Schädlingsbekämpfung in {STADT} ✓ Schnell vor Ort ✓ Ratten, Bettwanzen, Wespen & mehr. Kammerjäger Bergmann – TÜV SÜD-geprüft. Jetzt anrufen: ${TEL_DISPLAY}`}
             </div>
           </div>
 
@@ -126,7 +126,7 @@ export default function SeoStadtstruktur() {
               {"{PLZ_BEREICH}"}-Gebiet. Ob Ratten, Mäuse, Bettwanzen, Kakerlaken, Ameisen oder Wespen: Wir bekämpfen Ihren Schädlingsbefall professionell, diskret und nachhaltig.
               <br />
               <br />
-              Unser Betrieb ist TÜV Rheinland zertifiziert und IHK-geprüft nach § 18 IfSG. Von Bottrop aus erreichen wir {"{STADT}"} in ca. {"{ENTFERNUNG}"} – schnelle Hilfe ist garantiert, oft noch am
+              Unser Betrieb ist TÜV SÜD-geprüft und IHK-geprüft nach § 18 IfSG. Von Bottrop aus erreichen wir {"{STADT}"} in ca. {"{ENTFERNUNG}"} – schnelle Hilfe ist garantiert, oft noch am
               selben Tag.
             </p>
           </div>
@@ -180,7 +180,7 @@ Oder schreiben Sie uns: ${EMAIL}
   "telephone": "+491635276870",
   "areaServed": "{STADT}",
   "priceRange": "€€",
-  "hasCredential": ["TÜV Rheinland", "IHK § 18 IfSG"]
+  "hasCredential": ["TÜV SÜD", "IHK § 18 IfSG"]
 }`}</div>
           </div>
         </div>
