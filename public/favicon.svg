@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="402 34 116 174" role="img" aria-labelledby="kbgFaviconTitle">
+  <title id="kbgFaviconTitle">Kammerjäger Bergmann</title>
+  <defs>
+    <style>
+      .green-stroke { fill: none; stroke: #2d6a2d; stroke-linecap: round; stroke-linejoin: round; }
+      .ink { fill: #1a1a1a; }
+    </style>
+  </defs>
+
+  <!-- Shield (aus logo.svg, mark-only) -->
+  <path class="green-stroke" stroke-width="4" fill="#ffffff" d="
+    M 460 34
+    L 518 48
+    L 518 124
+    C 518 162 492 194 460 208
+    C 428 194 402 162 402 124
+    L 402 48
+    Z" />
+
+  <!-- Technician (aus logo.svg, mark-only) -->
+  <g class="ink" transform="translate(460 0)">
+    <path d="M -26 76 L 0 60 L 26 76 L 24 86 L -24 86 Z" />
+    <rect x="-20" y="86" width="40" height="20" rx="3" />
+    <rect x="-10" y="104" width="20" height="10" />
+    <path d="M -30 114 L 30 114 L 26 168 L -26 168 Z" />
+    <ellipse cx="-36" cy="134" rx="12" ry="26" />
+    <rect x="-42" y="108" width="14" height="7" rx="2" />
+    <path d="M 26 122 L 54 116 L 58 106" fill="none" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="58" y1="106" x2="68" y2="96" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" />
+    <circle cx="70" cy="94" r="3.5" />
+    <path d="M -16 168 L -18 188 M 16 168 L 18 188" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round" />
+  </g>
+</svg>
+
