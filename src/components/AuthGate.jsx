@@ -75,7 +75,7 @@ export default function AuthGate({ children }) {
     <div className="auth-gate" role="dialog" aria-label="Login erforderlich">
       <div className="auth-card">
         <div className="auth-card__brand">
-          <img src="/favicon.svg" alt="" width={44} height={44} aria-hidden="true" />
+          <img className="auth-brand-icon" src="/favicon.png" alt="" width={44} height={44} aria-hidden="true" />
           <div>
             <div className="auth-card__title">Zugriff geschützt</div>
             <div className="auth-card__sub">Bitte anmelden, um die Seite zu öffnen.</div>
