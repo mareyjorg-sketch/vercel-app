@@ -10,7 +10,7 @@ import { TEL, TEL_DISPLAY, WHATSAPP_URL } from "./siteInfo.js";
 import { leistungen } from "./data/leistungenData.js";
 import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 import PhoneIcon from "./components/PhoneIcon.jsx";
-import { PARTNER_STRIP_SRC } from "./partnerAssets.js";
+import CertQualificationCards from "./components/CertQualificationCards.jsx";
 
 const gebiete = [
   "Bottrop",
@@ -92,32 +92,7 @@ export default function Home() {
             <p>Extern geprüfte Qualität – für Ihr Vertrauen und nachvollziehbare Standards bei Gewerbe &amp; Versicherung.</p>
           </div>
 
-          <div className="cert-cards cert-cards--partner">
-            <div className="cert-card cert-card--partner-strip">
-              <div className="cert-partner-strip-media">
-                <img
-                  className="cert-partner-strip-img"
-                  src={PARTNER_STRIP_SRC}
-                  alt="TÜV SÜD, IHK-Mitgliedsbetrieb und Zertifikat – Übersichtsgrafik"
-                  width={720}
-                  height={320}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <p className="cert-partner-strip-subline" aria-hidden="true">
-                  Geprüfte Qualität &amp; Sicherheit · IHK-Mitgliedsbetrieb
-                </p>
-              </div>
-              <div className="cert-text">
-                <strong>TÜV SÜD &amp; IHK – Qualifikation</strong>
-                <span>Geprüfte Qualität &amp; Sicherheit (TÜV SÜD) · IHK-Mitgliedsbetrieb</span>
-                <span>
-                  Sachkunde nach § 18 IfSG und nachvollziehbare Standards für Gewerbe &amp; Versicherung – inkl. ausgestellter Zertifikate.
-                </span>
-                <span className="cert-check">✔ Nachgewiesen</span>
-              </div>
-            </div>
-          </div>
+          <CertQualificationCards />
 
           <p className="cert-disclaimer">
             TÜV SÜD und IHK sind eingetragene Marken. Die Darstellung erfolgt im Rahmen der jeweiligen Markenrichtlinien; verbindlich sind Ihre ausgestellten Zertifikate.
