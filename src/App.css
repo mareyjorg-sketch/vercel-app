@@ -639,6 +639,15 @@ nav.main-nav a[aria-current="page"] {
   line-height: 1.35;
 }
 
+.hero-price-hint {
+  margin: 16px 0 0;
+  max-width: 36ch;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: left;
+}
+
 .hero-social-proof {
   margin: 22px 0 0;
   font-size: 15px;
@@ -683,6 +692,12 @@ nav.main-nav a[aria-current="page"] {
   .hero-trust__partners-subline {
     font-size: 12px;
     margin-top: 10px;
+  }
+
+  .hero-price-hint {
+    margin-top: 14px;
+    font-size: 12px;
+    max-width: 100%;
   }
 
   .hero-social-proof {

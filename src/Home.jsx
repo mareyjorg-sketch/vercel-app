@@ -11,6 +11,7 @@ import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 import PhoneIcon from "./components/PhoneIcon.jsx";
 import CertQualificationCards from "./components/CertQualificationCards.jsx";
 import LeistungenSection from "./components/LeistungenSection.jsx";
+import AnfahrtSection from "./components/AnfahrtSection.jsx";
 
 export default function Home() {
   return (
@@ -36,11 +37,16 @@ export default function Home() {
               Jetzt anrufen
             </a>
           </div>
+          <p className="hero-price-hint">
+            Anfahrt ab 29 € · Preis vorab unverbindlich am Telefon · Keine versteckten Kosten
+          </p>
           <p className="hero-social-proof">Viele zufriedene Kunden vertrauen uns</p>
         </div>
       </section>
 
       <LeistungenSection />
+
+      <AnfahrtSection />
 
       <TeamTraditionSection />
 
