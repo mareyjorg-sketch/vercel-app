@@ -3,7 +3,10 @@ function CertChecklist({ items }) {
     <ul className="cert-glass-card__checks">
       {items.map((text) => (
         <li key={text} className="cert-glass-card__check">
-          ✓ {text}
+          <span className="cert-glass-card__check-mark" aria-hidden="true">
+            ✓
+          </span>
+          <span>{text}</span>
         </li>
       ))}
     </ul>
@@ -22,7 +25,7 @@ function TuvSuedBadge() {
 function IhkBadge() {
   return (
     <div className="cert-badge cert-badge--ihk" role="img" aria-label="IHK">
-      <span className="cert-badge__main cert-badge__main--ihk">IHK</span>
+      <span className="cert-badge__main">IHK</span>
     </div>
   );
 }
