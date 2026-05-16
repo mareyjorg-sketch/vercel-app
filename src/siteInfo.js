@@ -3,8 +3,8 @@ export const TEL_DISPLAY = "0163 5276870";
 export const EMAIL = "info@kammerjaeger-bergmann.de";
 export const SITE_NAME = "Kammerjäger Bergmann";
 
-/** Öffentliche Website (Canonical, Footer, Drucksachen) */
-export const SITE_DOMAIN = "kammerjaeger-bergmann.com";
+/** Öffentliche Website (Canonical, Footer, Drucksachen, SEO) */
+export const SITE_DOMAIN = "kammerjager-bergmann.de";
 export const SITE_ORIGIN = `https://${SITE_DOMAIN}`;
 
 /** wa.me – eine zentrale URL für alle WhatsApp-Buttons */

@@ -1,47 +1,52 @@
-import { TUV_SUED_LOGO_SRC, IHK_LOGO_SRC } from "../partnerAssets.js";
+function CertChecklist({ items }) {
+  return (
+    <ul className="cert-glass-card__checks">
+      {items.map((text) => (
+        <li key={text} className="cert-glass-card__check">
+          ✓ {text}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function TuvSuedBadge() {
+  return (
+    <div className="cert-badge cert-badge--tuv" role="img" aria-label="TÜV SÜD">
+      <span className="cert-badge__main">TÜV</span>
+      <span className="cert-badge__sub">SÜD</span>
+    </div>
+  );
+}
+
+function IhkBadge() {
+  return (
+    <div className="cert-badge cert-badge--ihk" role="img" aria-label="IHK">
+      <span className="cert-badge__main cert-badge__main--ihk">IHK</span>
+    </div>
+  );
+}
+
+const TUV_CHECKS = ["Zertifizierter Fachbetrieb", "Regelmäßige Qualitätsprüfung", "Geprüfte Arbeitsstandards"];
+
+const IHK_CHECKS = ["IHK-Mitgliedsbetrieb", "Sachkunde § 18 IfSG", "Behördlich anerkannte Qualifikation"];
 
 export default function CertQualificationCards() {
   return (
     <div className="cert-glass-grid">
       <article className="cert-glass-card">
-        <div className="cert-glass-card__logo-wrap cert-glass-card__logo-wrap--tuv">
-          <img
-            className="cert-glass-card__logo-img"
-            src={TUV_SUED_LOGO_SRC}
-            alt="TÜV SÜD"
-            width={120}
-            height={80}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
+        <TuvSuedBadge />
         <div className="cert-glass-card__body">
           <h3 className="cert-glass-card__title">TÜV Süd – Zertifizierung</h3>
-          <span className="cert-glass-card__pill">✓ Zertifizierter Fachbetrieb</span>
-          <p className="cert-glass-card__sub">
-            Regelmäßige Überwachung und Prüfung unserer Arbeits- und Qualitätsstandards.
-          </p>
+          <CertChecklist items={TUV_CHECKS} />
         </div>
       </article>
 
       <article className="cert-glass-card">
-        <div className="cert-glass-card__logo-wrap cert-glass-card__logo-wrap--ihk">
-          <img
-            className="cert-glass-card__logo-img"
-            src={IHK_LOGO_SRC}
-            alt="IHK"
-            width={200}
-            height={56}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
+        <IhkBadge />
         <div className="cert-glass-card__body">
           <h3 className="cert-glass-card__title">Industrie- und Handelskammer</h3>
-          <span className="cert-glass-card__pill">✓ IHK-Mitgliedsbetrieb</span>
-          <p className="cert-glass-card__sub">
-            IHK-geprüfte Qualifikation für die professionelle Schädlingsbekämpfung.
-          </p>
+          <CertChecklist items={IHK_CHECKS} />
         </div>
       </article>
     </div>

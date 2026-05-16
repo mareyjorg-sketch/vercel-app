@@ -2,6 +2,7 @@ import SiteLayout from "./components/SiteLayout.jsx";
 import TeamTraditionSection from "./components/TeamTraditionSection.jsx";
 import HeroTrustStrip from "./components/HeroTrustStrip.jsx";
 import AboutFamilySection from "./components/AboutFamilySection.jsx";
+import EinsatzgebietNrwSection from "./components/EinsatzgebietNrwSection.jsx";
 import "./App.css";
 /* Sicherstellen, dass Karten-Styles geladen sind (auch wenn die Komponente ausgelagert wird) */
 import "./components/ServiceCard.css";
@@ -10,20 +11,6 @@ import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 import PhoneIcon from "./components/PhoneIcon.jsx";
 import CertQualificationCards from "./components/CertQualificationCards.jsx";
 import LeistungenSection from "./components/LeistungenSection.jsx";
-
-const gebiete = [
-  "Bottrop",
-  "Oberhausen",
-  "Gelsenkirchen",
-  "Essen",
-  "Gladbeck",
-  "Dorsten",
-  "Recklinghausen",
-  "Marl",
-  "Herne",
-  "Bochum",
-  "andere Gebiete auf Anfrage",
-];
 
 export default function Home() {
   return (
@@ -75,17 +62,7 @@ export default function Home() {
 
       <AboutFamilySection />
 
-      <section className="gebiete-section" aria-labelledby="gebiete-heading">
-        <h2 id="gebiete-heading">Einsatzgebiet</h2>
-        <div className="underline" aria-hidden />
-        <div className="gebiete-pills">
-          {gebiete.map((g) => (
-            <span key={g} className="pill">
-              {g}
-            </span>
-          ))}
-        </div>
-      </section>
+      <EinsatzgebietNrwSection />
 
       <section className="cta-banner" id="kontakt">
         <h2>Sofort Hilfe – schreiben Sie uns</h2>

@@ -1,0 +1,93 @@
+.impressum-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  background: #fff;
+}
+
+.impressum-dev-warning {
+  background: #fdecea;
+  border: 1px solid #e53935;
+  border-radius: 8px;
+  color: #b71c1c;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+  margin-bottom: 32px;
+  padding: 14px 18px;
+}
+
+.impressum-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.impressum-header h1 {
+  color: var(--dark, #1a1a1a);
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(32px, 5vw, 42px);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.impressum-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.impressum-block {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.impressum-block--last {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.impressum-block h2 {
+  color: #2d7a2d;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.impressum-block__body p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.impressum-block__body a {
+  color: #2d7a2d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.impressum-block__body a:hover {
+  color: #1e5c1e;
+}
+
+.impressum-placeholder {
+  background: #fff8e1;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  color: #856404;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+  padding: 8px 14px;
+}
+
+@media (max-width: 640px) {
+  .impressum-page {
+    padding: 56px 20px;
+  }
+}

@@ -35,13 +35,13 @@ export default function SiteLayout({ children }) {
           <nav id="site-navigation" className="main-nav" aria-label="Hauptnavigation">
             <ul>
               <li>
-                <Link to="/#leistungen">Leistungen</Link>
+                <Link to="/leistungen/">Leistungen</Link>
               </li>
               <li>
-                <Link to="/#zertifizierung">Zertifizierung</Link>
+                <Link to="/zertifizierung/">Zertifizierung</Link>
               </li>
               <li>
-                <Link to="/#ueber-uns">Über uns</Link>
+                <Link to="/ueber-uns/">Über uns</Link>
               </li>
               <li>
                 <Link to="/sicherheitsdatenblaetter" aria-current={isSdb ? "page" : undefined} className={isSdb ? "nav-active" : undefined}>
@@ -49,7 +49,12 @@ export default function SiteLayout({ children }) {
                 </Link>
               </li>
               <li>
-                <Link to="/#kontakt">Kontakt</Link>
+                <Link to="/impressum/" aria-current={pathname.startsWith("/impressum") ? "page" : undefined}>
+                  Impressum
+                </Link>
+              </li>
+              <li>
+                <Link to="/kontakt/">Kontakt</Link>
               </li>
             </ul>
           </nav>
@@ -109,7 +114,7 @@ export default function SiteLayout({ children }) {
               </li>
               <li>&nbsp;</li>
               <li>
-                <Link to="/#kontakt">Kontakt</Link>
+                <Link to="/kontakt/">Kontakt</Link>
               </li>
               <li>
                 <Link to="/sicherheitsdatenblaetter">Sicherheitsdatenblätter</Link>
@@ -126,25 +131,25 @@ export default function SiteLayout({ children }) {
             <h4>Einsatzgebiet</h4>
             <ul>
               <li>
-                <Link to="/#gebiete-heading">Bottrop</Link>
+                <Link to="/schaedlingsbekaempfung-bottrop/">Bottrop</Link>
               </li>
               <li>
-                <Link to="/#gebiete-heading">Oberhausen</Link>
+                <Link to="/schaedlingsbekaempfung-oberhausen/">Oberhausen</Link>
               </li>
               <li>
-                <Link to="/#gebiete-heading">Gelsenkirchen</Link>
+                <Link to="/schaedlingsbekaempfung-gelsenkirchen/">Gelsenkirchen</Link>
               </li>
               <li>
-                <Link to="/#gebiete-heading">Essen</Link>
+                <Link to="/schaedlingsbekaempfung-essen/">Essen</Link>
               </li>
               <li>
-                <Link to="/#gebiete-heading">Gladbeck</Link>
+                <Link to="/schaedlingsbekaempfung-gladbeck/">Gladbeck</Link>
               </li>
               <li>
-                <Link to="/#gebiete-heading">Dorsten</Link>
+                <Link to="/schaedlingsbekaempfung-dorsten/">Dorsten</Link>
               </li>
               <li>
-                <Link to="/#gebiete-heading">andere Gebiete auf Anfrage</Link>
+                <Link to="/schaedlingsbekaempfung-duesseldorf/">weitere Städte in NRW</Link>
               </li>
             </ul>
           </div>
@@ -152,25 +157,25 @@ export default function SiteLayout({ children }) {
             <h4>Leistungen</h4>
             <ul>
               <li>
-                <Link to="/#leistungen">Ratten &amp; Mäuse</Link>
+                <Link to="/leistungen/">Ratten &amp; Mäuse</Link>
               </li>
               <li>
-                <Link to="/#leistungen">Ameisen</Link>
+                <Link to="/leistungen/">Ameisen</Link>
               </li>
               <li>
-                <Link to="/#leistungen">Wespen</Link>
+                <Link to="/leistungen/">Wespen</Link>
               </li>
               <li>
-                <Link to="/#leistungen">Bettwanzen</Link>
+                <Link to="/leistungen/">Bettwanzen</Link>
               </li>
               <li>
-                <Link to="/#leistungen">Kakerlaken</Link>
+                <Link to="/leistungen/">Kakerlaken</Link>
               </li>
               <li>
-                <Link to="/#leistungen">Marder</Link>
+                <Link to="/leistungen/">Marder</Link>
               </li>
               <li>
-                <Link to="/#leistungen">Prävention</Link>
+                <Link to="/leistungen/">Prävention</Link>
               </li>
             </ul>
           </div>
@@ -180,7 +185,7 @@ export default function SiteLayout({ children }) {
             © {year} {SITE_NAME} &nbsp;|&nbsp;
             <a href={SITE_ORIGIN}>{SITE_DOMAIN}</a>
             &nbsp;|&nbsp;
-            <a href="/impressum.html">Impressum</a>
+            <Link to="/impressum/">Impressum</Link>
             &nbsp;·&nbsp;
             <a href="/datenschutz.html">Datenschutz</a>
             &nbsp;·&nbsp;

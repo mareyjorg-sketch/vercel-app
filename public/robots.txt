@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kammerjager-bergmann.de/sitemap.xml

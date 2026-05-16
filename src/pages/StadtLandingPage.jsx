@@ -1,23 +1,17 @@
-import { useEffect } from "react";
 import SiteLayout from "../components/SiteLayout.jsx";
 import LeistungenSection from "../components/LeistungenSection.jsx";
 import PhoneIcon from "../components/PhoneIcon.jsx";
+import { PageHead } from "../components/PageHead.jsx";
+import { buildCityMeta, buildCitySchemaGraph } from "../seo/siteSeo.js";
 import { TEL, TEL_DISPLAY } from "../siteInfo.js";
-
-const DEFAULT_TITLE = "Kammerjäger Bergmann | Schädlingsbekämpfung Bottrop & Umgebung";
 
 export default function StadtLandingPage({ city }) {
   const { name, distanceLabel } = city;
-
-  useEffect(() => {
-    document.title = `Schädlingsbekämpfung ${name} | Kammerjäger Bergmann`;
-    return () => {
-      document.title = DEFAULT_TITLE;
-    };
-  }, [name]);
+  const seo = buildCityMeta(city);
 
   return (
     <SiteLayout>
+      <PageHead seo={seo} jsonLd={buildCitySchemaGraph(city)} />
       <section className="hero hero--stadt">
         <div className="hero-content">
           <h1>Schädlingsbekämpfung in {name}</h1>

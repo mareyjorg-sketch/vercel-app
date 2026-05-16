@@ -956,45 +956,46 @@ nav.main-nav a[aria-current="page"] {
   transform: translateY(-3px);
 }
 
-.cert-glass-card__logo-wrap {
-  flex-shrink: 0;
-  overflow: hidden;
+.cert-badge {
   display: flex;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.cert-badge--tuv {
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 12px;
-  padding: 8px 12px;
+  border: 3px solid #003399;
 }
 
-.cert-glass-card__logo-wrap--tuv {
-  width: 112px;
-  height: 80px;
+.cert-badge--ihk {
+  align-items: center;
+  justify-content: center;
+  background: #0057a8;
 }
 
-.cert-glass-card__logo-wrap--ihk {
-  width: 200px;
-  height: 56px;
+.cert-badge__main {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #003399;
+  line-height: 1;
 }
 
-.cert-glass-card__logo-wrap--tuv .cert-glass-card__logo-img {
-  width: auto;
-  height: 118px;
-  max-width: none;
-  margin-left: -6px;
-  margin-top: -18px;
-  object-fit: none;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+.cert-badge__main--ihk {
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-.cert-glass-card__logo-wrap--ihk .cert-glass-card__logo-img {
-  width: auto;
-  height: 118px;
-  max-width: none;
-  margin-left: -230px;
-  margin-top: -32px;
-  object-fit: none;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+.cert-badge__sub {
+  font-size: 10px;
+  font-weight: 700;
+  color: #003399;
+  letter-spacing: 1px;
 }
 
 .cert-glass-card__body {
@@ -1011,24 +1012,25 @@ nav.main-nav a[aria-current="page"] {
   color: #fff;
 }
 
-.cert-glass-card__pill {
-  display: inline-block;
-  margin-bottom: 12px;
-  padding: 3px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.35;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.cert-glass-card__checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.cert-glass-card__sub {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.65);
+.cert-glass-card__check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d7a2d;
+  line-height: 1.35;
+}
+
+.cert-glass-card__check:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
@@ -1036,19 +1038,45 @@ nav.main-nav a[aria-current="page"] {
     padding: 24px 22px;
     min-width: min(100%, 280px);
   }
+}
 
-  .cert-glass-card__logo-wrap--tuv {
-    width: 96px;
-    height: 72px;
-  }
+/* ===================== EINSATZGEBIET NRW (SEO) ===================== */
+.einsatzgebiet-nrw {
+  background: #f7f7f7;
+  padding: 48px 32px;
+}
 
-  .cert-glass-card__logo-wrap--ihk {
-    width: 168px;
-    height: 50px;
+.einsatzgebiet-nrw__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.einsatzgebiet-nrw h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--dark);
+  font-family: "Oswald", sans-serif;
+}
+
+.einsatzgebiet-nrw p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.einsatzgebiet-nrw p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .einsatzgebiet-nrw {
+    padding: 40px 20px;
   }
 }
 
-/* ===================== EINZUGSGEBIET ===================== */
+/* ===================== EINZUGSGEBIET (legacy) ===================== */
 .gebiete-section {
   background: var(--dark);
   color: var(--white);
