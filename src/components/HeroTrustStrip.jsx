@@ -18,14 +18,23 @@ function Icon24h({ className = "" }) {
   );
 }
 
-function IconFamily({ className = "" }) {
+function IconHouseHeart({ className = "" }) {
   return (
     <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M8 30c0-6 6-10 16-10s16 4 16 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M16 22c0-3.3 2.2-6 5-6s5 2.7 5 6M27 22c0-2.8 1.8-5 4-5s4 2.2 4 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
-      <circle cx="21" cy="14" r="3.5" fill="currentColor" />
-      <circle cx="31" cy="15" r="3" fill="currentColor" />
-      <circle cx="14" cy="16" r="2.8" fill="currentColor" />
+      <path
+        d="M10 22.5 24 11l14 11.5V38H10V22.5Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+      />
+      <path
+        d="M24 29.2c-2.65-2.05-5.2-1.1-5.2 1.25 0 1.95 2.35 3.4 5.2 5.75 2.85-2.35 5.2-3.8 5.2-5.75 0-2.35-2.55-3.3-5.2-1.25Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="0.75"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -56,7 +65,7 @@ export default function HeroTrustStrip() {
         <span className="hero-trust__label">24/7 Notdienst</span>
       </li>
       <li className="hero-trust__tile hero-trust__tile--icon">
-        <IconFamily className="hero-trust__glyph" />
+        <IconHouseHeart className="hero-trust__glyph" />
         <span className="hero-trust__label">Familienbetrieb</span>
       </li>
     </ul>
