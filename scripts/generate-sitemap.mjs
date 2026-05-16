@@ -1,7 +1,10 @@
 import { writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { getAllCitySlugKeys } from "../src/data/cityLookup.js";
+import {
+  getAllCitySlugKeys,
+  getAllDistrictSlugKeys,
+} from "../src/data/cityLookup.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(__dirname, "..", "public");
@@ -25,28 +28,46 @@ const staticPages = [
 ];
 
 const citySlugs = getAllCitySlugKeys();
-const cityEntries = citySlugs.map((slug) =>
-  urlEntry(`${ORIGIN}/${slug}/`, { priority: "0.7", changefreq: "monthly" }),
+const districtSlugs = getAllDistrictSlugKeys();
+
+const staticEntries = staticPages.map((p) =>
+  urlEntry(`${ORIGIN}${p.path}`, { priority: p.priority, changefreq: p.changefreq }),
 );
 
-const urls = [
-  ...staticPages.map((p) => urlEntry(`${ORIGIN}${p.path}`, p)),
-  ...cityEntries,
-].join("\n");
+const cityEntries = citySlugs.map((slug) =>
+  urlEntry(`${ORIGIN}/${slug}/`, { priority: "0.8", changefreq: "monthly" }),
+);
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const districtEntries = districtSlugs.map((slug) =>
+  urlEntry(`${ORIGIN}/${slug}/`, { priority: "0.6", changefreq: "monthly" }),
+);
+
+const mainSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
+${staticEntries.join("\n")}
+</urlset>
+`;
+
+const citiesSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${[...cityEntries, ...districtEntries].join("\n")}
 </urlset>
 `;
 
 const robots = `User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 Sitemap: ${ORIGIN}/sitemap.xml
+Sitemap: ${ORIGIN}/sitemap-cities.xml
 `;
 
-writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap, "utf8");
+writeFileSync(path.join(publicDir, "sitemap.xml"), mainSitemap, "utf8");
+writeFileSync(path.join(publicDir, "sitemap-cities.xml"), citiesSitemap, "utf8");
 writeFileSync(path.join(publicDir, "robots.txt"), robots, "utf8");
 
-console.log(`Wrote sitemap.xml (${staticPages.length + citySlugs.length} URLs) and robots.txt`);
+const totalGeo = citySlugs.length + districtSlugs.length;
+console.log(
+  `Wrote sitemap.xml (${staticPages.length} URLs), sitemap-cities.xml (${totalGeo} geo URLs), robots.txt`,
+);

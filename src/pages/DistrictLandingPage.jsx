@@ -3,43 +3,38 @@ import LeistungenSection from "../components/LeistungenSection.jsx";
 import PhoneIcon from "../components/PhoneIcon.jsx";
 import { PageHead } from "../components/PageHead.jsx";
 import {
-  CityDistrictsSection,
-  CityFaqSection,
-  CityHeroIntro,
   CityInternalLinksSection,
-  CityNearbySection,
-  CitySeoTextSection,
+  DistrictIntro,
 } from "../components/city/CityPageSections.jsx";
-import { buildCityMeta, buildCitySchemaGraph } from "../seo/siteSeo.js";
+import { buildDistrictMeta, buildDistrictSchemaGraph } from "../seo/siteSeo.js";
 import { TEL, TEL_DISPLAY } from "../siteInfo.js";
 
-/** @param {{ city: import("../data/geoLookup.js").CityPage }} props */
-export default function StadtLandingPage({ city }) {
-  const seo = buildCityMeta(city);
+/** @param {{ district: import("../data/geoLookup.js").DistrictPage }} props */
+export default function DistrictLandingPage({ district }) {
+  const parent = district.parentCity;
+  const seo = buildDistrictMeta(district);
 
   return (
     <SiteLayout>
-      <PageHead seo={seo} jsonLd={buildCitySchemaGraph(city)} />
+      <PageHead seo={seo} jsonLd={buildDistrictSchemaGraph(district)} />
       <section className="hero hero--stadt">
         <div className="hero-content">
-          <h1>Kammerjäger {city.name}</h1>
-          <p className="hero-lead">Schädlingsbekämpfung in {city.name} – schnell vor Ort</p>
+          <h1>Kammerjäger {district.districtName}</h1>
+          <p className="hero-lead">
+            Schädlingsbekämpfung in {district.districtName} – Stadtteil von {parent.name}
+          </p>
           <a href={TEL} className="btn-hero btn-hero--call btn-hero--stadt">
             Jetzt anrufen: {TEL_DISPLAY}
           </a>
         </div>
       </section>
 
-      <CityHeroIntro city={city} />
-      <LeistungenSection cityName={city.name} sectionId="leistungen" />
-      <CityDistrictsSection city={city} />
-      <CityNearbySection city={city} />
-      <CitySeoTextSection city={city} />
-      <CityFaqSection city={city} />
+      <DistrictIntro district={district} />
+      <LeistungenSection cityName={`${district.districtName}, ${parent.name}`} sectionId="leistungen" />
 
       <section className="cta-banner" id="kontakt">
-        <h2>Sofort Hilfe in {city.name}</h2>
-        <p>Jetzt anrufen – wir koordinieren den schnellsten Weg zu Ihnen.</p>
+        <h2>Sofort Hilfe in {district.districtName}</h2>
+        <p>Kammerjäger Bergmann – schnell in {district.districtName} und ganz {parent.name}.</p>
         <a href={TEL} className="phone-big">
           <PhoneIcon className="phone-big__icon" size={40} aria-hidden />
           <span className="phone-big__num">{TEL_DISPLAY}</span>

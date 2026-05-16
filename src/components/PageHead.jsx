@@ -79,7 +79,10 @@ export function PageHead({ seo, jsonLd }) {
 
     if (seo.geo !== false) {
       upsertMeta(`meta[name="geo.region"][${MANAGED_ATTR}]`, { name: "geo.region", content: GEO.region });
-      upsertMeta(`meta[name="geo.placename"][${MANAGED_ATTR}]`, { name: "geo.placename", content: GEO.placename });
+      upsertMeta(`meta[name="geo.placename"][${MANAGED_ATTR}]`, {
+        name: "geo.placename",
+        content: seo.geoPlacename ?? GEO.placename,
+      });
       upsertMeta(`meta[name="geo.position"][${MANAGED_ATTR}]`, { name: "geo.position", content: GEO.position });
       upsertMeta(`meta[name="ICBM"][${MANAGED_ATTR}]`, { name: "ICBM", content: GEO.icbm });
     }

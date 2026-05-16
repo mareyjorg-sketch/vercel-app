@@ -1,13 +1,14 @@
 import { Link, useParams } from "react-router-dom";
-import { getCityBySlugParam } from "../data/cityLookup.js";
+import { getGeoPageBySlugParam } from "../data/cityLookup.js";
 import SiteLayout from "../components/SiteLayout.jsx";
 import StadtLandingPage from "./StadtLandingPage.jsx";
+import DistrictLandingPage from "./DistrictLandingPage.jsx";
 
 export default function CitySlugPage() {
   const { slug } = useParams();
-  const city = getCityBySlugParam(slug);
+  const page = getGeoPageBySlugParam(slug);
 
-  if (!city) {
+  if (!page) {
     return (
       <SiteLayout>
         <section className="section section--stadt-intro">
@@ -25,5 +26,9 @@ export default function CitySlugPage() {
     );
   }
 
-  return <StadtLandingPage city={city} />;
+  if (page.pageType === "district") {
+    return <DistrictLandingPage district={page} />;
+  }
+
+  return <StadtLandingPage city={page} />;
 }

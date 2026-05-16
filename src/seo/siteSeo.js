@@ -198,20 +198,49 @@ export function buildHomeSchemaGraph() {
   };
 }
 
-/** @param {{ name: string, slugKey: string, distanceKm: string }} city */
+function cityFaqEntities(city) {
+  const km = city.km ?? city.distanceKm;
+  return [
+    {
+      "@type": "Question",
+      name: `Wie schnell kommt der Kammerjäger nach ${city.name}?`,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `Von Bottrop nach ${city.name} sind es ca. ${km} km. In der Regel sind wir innerhalb weniger Stunden, oft noch am selben Tag bei Ihnen.`,
+      },
+    },
+    {
+      "@type": "Question",
+      name: `Was kostet ein Kammerjäger in ${city.name}?`,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: `Die Anfahrt nach ${city.name} berechnen wir ab 29 €. Den genauen Preis nennen wir Ihnen vorab und unverbindlich am Telefon.`,
+      },
+    },
+    {
+      "@type": "Question",
+      name: `Welche Schädlinge bekämpfen Sie in ${city.name}?`,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Alle: Ratten, Mäuse, Bettwanzen, Wespen, Hornissen, Kakerlaken, Ameisen, Marder und mehr.",
+      },
+    },
+  ];
+}
+
+/** @param {{ name: string, slugKey: string, km?: number, distanceKm?: string }} city */
 export function buildCityMeta(city) {
   const path = `/${city.slugKey}/`;
-  const distancePhrase =
-    city.distanceKm === "0"
-      ? "direkt aus Bottrop – schnell vor Ort"
-      : `nur ${city.distanceKm} km entfernt`;
+  const km = city.km ?? city.distanceKm ?? "0";
+  const distancePhrase = km === 0 || km === "0" ? "direkt aus Bottrop" : `nur ${km} km entfernt`;
 
   return {
-    title: `Kammerjäger ${city.name} | Schädlingsbekämpfung ☎ ${TEL_DISPLAY}`,
-    description: `Kammerjäger in ${city.name} gesucht? Bergmann aus Bottrop – ${distancePhrase}. TÜV-zertifiziert ✓ Schnell vor Ort ✓ 24/7 Notdienst ☎ ${TEL_DISPLAY}`,
+    title: `Kammerjäger ${city.name} | Schädlingsbekämpfung ☎ ${TEL_DISPLAY} – Bergmann`,
+    description: `Kammerjäger in ${city.name} gesucht? ✓ Bergmann aus Bottrop – ${distancePhrase} ✓ TÜV-zertifiziert ✓ IHK § 18 IfSG ✓ 24/7 Notdienst ✓ Anfahrt ab 29€ ☎ ${TEL_DISPLAY}`,
     keywords: `Kammerjäger ${city.name}, Schädlingsbekämpfung ${city.name}, Kammerjäger NRW, ${SEO_KEYWORDS}`,
     canonical: `${SITE_ORIGIN}${path}`,
     robots: "index, follow, max-snippet:-1, max-image-preview:large",
+    geoPlacename: city.name,
     og: {
       type: "website",
       title: `Kammerjäger Bergmann – ${city.name}`,
@@ -223,9 +252,10 @@ export function buildCityMeta(city) {
   };
 }
 
-/** @param {{ name: string, slugKey: string }} city */
+/** @param {{ name: string, slugKey: string, km?: number }} city */
 export function buildCitySchemaGraph(city) {
   const pageUrl = `${SITE_ORIGIN}/${city.slugKey}/`;
+  const mapQuery = encodeURIComponent(`Kammerjäger Bergmann ${city.name}`);
 
   return {
     "@context": "https://schema.org",
@@ -234,13 +264,72 @@ export function buildCitySchemaGraph(city) {
         "@id": `${pageUrl}#business`,
         name: `Kammerjäger Bergmann – ${city.name}`,
         url: pageUrl,
+        description: `Schädlingsbekämpfung in ${city.name}`,
         areaServed: [{ "@type": "City", name: city.name }],
+        hasMap: `https://maps.google.com/?q=${mapQuery}`,
       }),
       {
         "@type": "WebPage",
         "@id": `${pageUrl}#webpage`,
         url: pageUrl,
         name: `Schädlingsbekämpfung ${city.name} | Kammerjäger Bergmann`,
+        inLanguage: "de-DE",
+        isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: cityFaqEntities(city),
+      },
+    ],
+  };
+}
+
+/** @param {{ districtName: string, slugKey: string, parentCity: { name: string, slug: string } }} district */
+export function buildDistrictMeta(district) {
+  const path = `/${district.slugKey}/`;
+  const parentName = district.parentCity.name;
+
+  return {
+    title: `Kammerjäger ${district.districtName} (${parentName}) | Schädlingsbekämpfung ☎ ${TEL_DISPLAY}`,
+    description: `Kammerjäger in ${district.districtName}, ${parentName} gesucht? Bergmann aus Bottrop – schnell vor Ort ✓ TÜV-zertifiziert ✓ 24/7 Notdienst ✓ Anfahrt ab 29€ ☎ ${TEL_DISPLAY}`,
+    keywords: `Kammerjäger ${district.districtName}, Schädlingsbekämpfung ${parentName}, Kammerjäger ${parentName}, ${SEO_KEYWORDS}`,
+    canonical: `${SITE_ORIGIN}${path}`,
+    robots: "index, follow, max-snippet:-1, max-image-preview:large",
+    geoPlacename: `${district.districtName}, ${parentName}`,
+    og: {
+      type: "website",
+      title: `Kammerjäger ${district.districtName} – ${parentName}`,
+      description: `Schädlingsbekämpfung in ${district.districtName} (${parentName}). TÜV-zertifiziert, 24/7 Notdienst.`,
+      url: `${SITE_ORIGIN}${path}`,
+      locale: "de_DE",
+      image: OG_IMAGE,
+    },
+  };
+}
+
+/** @param {{ districtName: string, slugKey: string, parentCity: { name: string } }} district */
+export function buildDistrictSchemaGraph(district) {
+  const pageUrl = `${SITE_ORIGIN}/${district.slugKey}/`;
+  const label = `${district.districtName}, ${district.parentCity.name}`;
+  const mapQuery = encodeURIComponent(`Kammerjäger Bergmann ${label}`);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      localBusinessBase({
+        "@id": `${pageUrl}#business`,
+        name: `Kammerjäger Bergmann – ${district.districtName}`,
+        url: pageUrl,
+        description: `Schädlingsbekämpfung in ${district.districtName} (${district.parentCity.name})`,
+        areaServed: [{ "@type": "Place", name: label }],
+        hasMap: `https://maps.google.com/?q=${mapQuery}`,
+      }),
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `Kammerjäger ${district.districtName} | Schädlingsbekämpfung`,
         inLanguage: "de-DE",
         isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
       },

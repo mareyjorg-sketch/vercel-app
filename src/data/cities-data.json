@@ -1,0 +1,1058 @@
+{
+  "cities": [
+    {
+      "name": "Bottrop",
+      "slug": "bottrop",
+      "km": 0,
+      "plz": "46236",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Kirchhellen",
+        "Boy",
+        "Batenbrock",
+        "Eigen",
+        "Fuhlenbrock"
+      ]
+    },
+    {
+      "name": "Gladbeck",
+      "slug": "gladbeck",
+      "km": 8,
+      "plz": "45964",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Brauck",
+        "Rentfort",
+        "Zweckel",
+        "Rosenhügel"
+      ]
+    },
+    {
+      "name": "Oberhausen",
+      "slug": "oberhausen",
+      "km": 8,
+      "plz": "46045",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Sterkrade",
+        "Osterfeld",
+        "Stadtmitte",
+        "Schmachtendorf",
+        "Holten",
+        "Lirich"
+      ]
+    },
+    {
+      "name": "Gelsenkirchen",
+      "slug": "gelsenkirchen",
+      "km": 10,
+      "plz": "45879",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Buer",
+        "Horst",
+        "Erle",
+        "Schalke",
+        "Ückendorf",
+        "Hassel",
+        "Beckhausen"
+      ]
+    },
+    {
+      "name": "Herne",
+      "slug": "herne",
+      "km": 14,
+      "plz": "44623",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Wanne-Eickel",
+        "Sodingen",
+        "Eickel",
+        "Baukau",
+        "Horsthausen"
+      ]
+    },
+    {
+      "name": "Dorsten",
+      "slug": "dorsten",
+      "km": 14,
+      "plz": "46282",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Hervest",
+        "Wulfen",
+        "Lembeck",
+        "Deuten",
+        "Rhade"
+      ]
+    },
+    {
+      "name": "Essen",
+      "slug": "essen",
+      "km": 12,
+      "plz": "45127",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Altenessen",
+        "Katernberg",
+        "Stoppenberg",
+        "Karnap",
+        "Schonnebeck",
+        "Steele",
+        "Werden",
+        "Kettwig",
+        "Kupferdreh",
+        "Rüttenscheid",
+        "Holsterhausen",
+        "Frohnhausen"
+      ]
+    },
+    {
+      "name": "Marl",
+      "slug": "marl",
+      "km": 16,
+      "plz": "45768",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Hüls",
+        "Drewer",
+        "Sinsen",
+        "Polsum",
+        "Lenkerbeck"
+      ]
+    },
+    {
+      "name": "Recklinghausen",
+      "slug": "recklinghausen",
+      "km": 18,
+      "plz": "45657",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Suderwich",
+        "Hochlarmark",
+        "Hillerheide",
+        "Speckhorn",
+        "Röllinghausen"
+      ]
+    },
+    {
+      "name": "Dinslaken",
+      "slug": "dinslaken",
+      "km": 12,
+      "plz": "46535",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Lohberg",
+        "Hiesfeld",
+        "Bruch",
+        "Eppinghoven"
+      ]
+    },
+    {
+      "name": "Duisburg",
+      "slug": "duisburg",
+      "km": 17,
+      "plz": "47051",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Rheinhausen",
+        "Homberg",
+        "Walsum",
+        "Hamborn",
+        "Meiderich",
+        "Marxloh",
+        "Hochfeld",
+        "Neudorf",
+        "Wedau",
+        "Bissingheim"
+      ]
+    },
+    {
+      "name": "Mülheim an der Ruhr",
+      "slug": "muelheim-an-der-ruhr",
+      "km": 15,
+      "plz": "45468",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Saarn",
+        "Mintard",
+        "Styrum",
+        "Heißen",
+        "Dümpten",
+        "Speldorf"
+      ]
+    },
+    {
+      "name": "Haltern am See",
+      "slug": "haltern-am-see",
+      "km": 22,
+      "plz": "45721",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Sythen",
+        "Lippramsdorf",
+        "Flaesheim",
+        "Hullern",
+        "Hamm-Bossendorf"
+      ]
+    },
+    {
+      "name": "Castrop-Rauxel",
+      "slug": "castrop-rauxel",
+      "km": 19,
+      "plz": "44575",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Henrichenburg",
+        "Bladenhorst",
+        "Ickern",
+        "Frohlinde"
+      ]
+    },
+    {
+      "name": "Voerde",
+      "slug": "voerde",
+      "km": 16,
+      "plz": "46562",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Friedrichsfeld",
+        "Spellen",
+        "Mehrum",
+        "Götterswickerhamm"
+      ]
+    },
+    {
+      "name": "Waltrop",
+      "slug": "waltrop",
+      "km": 20,
+      "plz": "45731",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Dülberg",
+        "Leveringhausen"
+      ]
+    },
+    {
+      "name": "Schermbeck",
+      "slug": "schermbeck",
+      "km": 20,
+      "plz": "46514",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Gahlen",
+        "Bricht"
+      ]
+    },
+    {
+      "name": "Hünxe",
+      "slug": "huenxe",
+      "km": 18,
+      "plz": "46569",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Drevenack",
+        "Bruckhausen",
+        "Krudenburg"
+      ]
+    },
+    {
+      "name": "Wesel",
+      "slug": "wesel",
+      "km": 32,
+      "plz": "46483",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Büderich",
+        "Flüren",
+        "Lackhausen",
+        "Obrighoven"
+      ]
+    },
+    {
+      "name": "Bochum",
+      "slug": "bochum",
+      "km": 18,
+      "plz": "44787",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Wattenscheid",
+        "Langendreer",
+        "Linden",
+        "Querenburg",
+        "Stiepel",
+        "Harpen",
+        "Riemke",
+        "Gerthe"
+      ]
+    },
+    {
+      "name": "Dortmund",
+      "slug": "dortmund",
+      "km": 35,
+      "plz": "44135",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Hörde",
+        "Aplerbeck",
+        "Brackel",
+        "Scharnhorst",
+        "Eving",
+        "Dorstfeld",
+        "Hombruch",
+        "Lütgendortmund",
+        "Mengede",
+        "Kirchlinde"
+      ]
+    },
+    {
+      "name": "Hagen",
+      "slug": "hagen",
+      "km": 40,
+      "plz": "58095",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Haspe",
+        "Vorhalle",
+        "Eilpe",
+        "Halden",
+        "Boele"
+      ]
+    },
+    {
+      "name": "Witten",
+      "slug": "witten",
+      "km": 27,
+      "plz": "58452",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Annen",
+        "Herbede",
+        "Bommern",
+        "Heven"
+      ]
+    },
+    {
+      "name": "Hamm",
+      "slug": "hamm",
+      "km": 48,
+      "plz": "59065",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Heessen",
+        "Rhynern",
+        "Pelkum",
+        "Bockum-Hövel",
+        "Herringen"
+      ]
+    },
+    {
+      "name": "Lünen",
+      "slug": "luenen",
+      "km": 28,
+      "plz": "44532",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Alstedde",
+        "Brambauer",
+        "Wethmar"
+      ]
+    },
+    {
+      "name": "Bergkamen",
+      "slug": "bergkamen",
+      "km": 33,
+      "plz": "59192",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Rünthe",
+        "Overberge",
+        "Weddinghofen"
+      ]
+    },
+    {
+      "name": "Kamen",
+      "slug": "kamen",
+      "km": 38,
+      "plz": "59174",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Methler",
+        "Heeren-Werve",
+        "Kaiserau"
+      ]
+    },
+    {
+      "name": "Unna",
+      "slug": "unna",
+      "km": 38,
+      "plz": "59423",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Königsborn",
+        "Massen",
+        "Hemmerde"
+      ]
+    },
+    {
+      "name": "Schwerte",
+      "slug": "schwerte",
+      "km": 37,
+      "plz": "58239",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Westhofen",
+        "Ergste",
+        "Wandhofen"
+      ]
+    },
+    {
+      "name": "Herten",
+      "slug": "herten",
+      "km": 13,
+      "plz": "45699",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Westerholt",
+        "Disteln",
+        "Langenbochum"
+      ]
+    },
+    {
+      "name": "Datteln",
+      "slug": "datteln",
+      "km": 22,
+      "plz": "45711",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Meckinghoven",
+        "Ahsen"
+      ]
+    },
+    {
+      "name": "Oer-Erkenschwick",
+      "slug": "oer-erkenschwick",
+      "km": 24,
+      "plz": "45739",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Oer",
+        "Erkenschwick"
+      ]
+    },
+    {
+      "name": "Selm",
+      "slug": "selm",
+      "km": 26,
+      "plz": "59379",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Bork",
+        "Cappenberg"
+      ]
+    },
+    {
+      "name": "Wetter (Ruhr)",
+      "slug": "wetter-ruhr",
+      "km": 33,
+      "plz": "58300",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Volmarstein",
+        "Wengern",
+        "Esborn"
+      ]
+    },
+    {
+      "name": "Herdecke",
+      "slug": "herdecke",
+      "km": 34,
+      "plz": "58313",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Ende",
+        "Westende"
+      ]
+    },
+    {
+      "name": "Sprockhövel",
+      "slug": "sprockhoevel",
+      "km": 30,
+      "plz": "45549",
+      "region": "Ruhrgebiet",
+      "districts": [
+        "Stadtmitte",
+        "Haßlinghausen",
+        "Niedersprockhövel"
+      ]
+    },
+    {
+      "name": "Moers",
+      "slug": "moers",
+      "km": 27,
+      "plz": "47441",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Rheinkamp",
+        "Repelen",
+        "Kapellen",
+        "Hochstraß",
+        "Hülsdonk"
+      ]
+    },
+    {
+      "name": "Kamp-Lintfort",
+      "slug": "kamp-lintfort",
+      "km": 33,
+      "plz": "47475",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Niersenbruch",
+        "Tönisberg"
+      ]
+    },
+    {
+      "name": "Neukirchen-Vluyn",
+      "slug": "neukirchen-vluyn",
+      "km": 30,
+      "plz": "47506",
+      "region": "Niederrhein",
+      "districts": [
+        "Neukirchen",
+        "Vluyn"
+      ]
+    },
+    {
+      "name": "Rheinberg",
+      "slug": "rheinberg",
+      "km": 36,
+      "plz": "47495",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Orsoy",
+        "Borth",
+        "Ossenberg",
+        "Budberg"
+      ]
+    },
+    {
+      "name": "Xanten",
+      "slug": "xanten",
+      "km": 45,
+      "plz": "46509",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Birten",
+        "Lüttingen",
+        "Marienbaum"
+      ]
+    },
+    {
+      "name": "Alpen",
+      "slug": "alpen",
+      "km": 40,
+      "plz": "46519",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Veen",
+        "Menzelen",
+        "Bönninghardt"
+      ]
+    },
+    {
+      "name": "Sonsbeck",
+      "slug": "sonsbeck",
+      "km": 44,
+      "plz": "47665",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Hamb"
+      ]
+    },
+    {
+      "name": "Hamminkeln",
+      "slug": "hamminkeln",
+      "km": 47,
+      "plz": "46499",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Dingden",
+        "Mehrhoog",
+        "Brünen",
+        "Ringenberg",
+        "Wertherbruch",
+        "Loikum"
+      ]
+    },
+    {
+      "name": "Issum",
+      "slug": "issum",
+      "km": 42,
+      "plz": "47661",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Sevelen",
+        "Kleingerichhausen"
+      ]
+    },
+    {
+      "name": "Kerken",
+      "slug": "kerken",
+      "km": 44,
+      "plz": "47647",
+      "region": "Niederrhein",
+      "districts": [
+        "Aldekerk",
+        "Nieukerk",
+        "Stenden"
+      ]
+    },
+    {
+      "name": "Geldern",
+      "slug": "geldern",
+      "km": 52,
+      "plz": "47608",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Walbeck",
+        "Pont",
+        "Kapellen",
+        "Veert"
+      ]
+    },
+    {
+      "name": "Kleve",
+      "slug": "kleve",
+      "km": 72,
+      "plz": "47533",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Rindern",
+        "Materborn",
+        "Reichswalde",
+        "Kellen"
+      ]
+    },
+    {
+      "name": "Emmerich",
+      "slug": "emmerich",
+      "km": 64,
+      "plz": "46446",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Elten",
+        "Vrasselt",
+        "Hüthum",
+        "Klein-Netterden"
+      ]
+    },
+    {
+      "name": "Düsseldorf",
+      "slug": "duesseldorf",
+      "km": 25,
+      "plz": "40213",
+      "region": "Düsseldorf",
+      "districts": [
+        "Altstadt",
+        "Carlstadt",
+        "Stadtmitte",
+        "Pempelfort",
+        "Derendorf",
+        "Golzheim",
+        "Oberkassel",
+        "Niederkassel",
+        "Heerdt",
+        "Lörick",
+        "Stockum",
+        "Lohausen",
+        "Kaiserswerth",
+        "Wittlaer",
+        "Angermund",
+        "Kalkum",
+        "Lichtenbroich",
+        "Unterrath",
+        "Rath",
+        "Mörsenbroich",
+        "Flingern",
+        "Düsseltal",
+        "Gerresheim",
+        "Grafenberg",
+        "Ludenberg",
+        "Hubbelrath",
+        "Knittkuhl",
+        "Eller",
+        "Vennhausen",
+        "Lierenfeld",
+        "Reisholz",
+        "Benrath",
+        "Urdenbach",
+        "Itter",
+        "Wersten",
+        "Bilk",
+        "Friedrichstadt",
+        "Unterbilk",
+        "Hafen",
+        "Hamm",
+        "Volmerswerth",
+        "Garath",
+        "Hellerhof"
+      ]
+    },
+    {
+      "name": "Ratingen",
+      "slug": "ratingen",
+      "km": 33,
+      "plz": "40878",
+      "region": "Düsseldorf",
+      "districts": [
+        "Stadtmitte",
+        "Homberg",
+        "Lintorf",
+        "Breitscheid",
+        "Tiefenbroich"
+      ]
+    },
+    {
+      "name": "Mettmann",
+      "slug": "mettmann",
+      "km": 45,
+      "plz": "40822",
+      "region": "Düsseldorf",
+      "districts": [
+        "Stadtmitte",
+        "Metzkausen",
+        "Obschwarzbach"
+      ]
+    },
+    {
+      "name": "Velbert",
+      "slug": "velbert",
+      "km": 37,
+      "plz": "42549",
+      "region": "Düsseldorf",
+      "districts": [
+        "Stadtmitte",
+        "Neviges",
+        "Langenberg"
+      ]
+    },
+    {
+      "name": "Langenfeld",
+      "slug": "langenfeld",
+      "km": 60,
+      "plz": "40764",
+      "region": "Düsseldorf",
+      "districts": [
+        "Stadtmitte",
+        "Richrath",
+        "Immigrath",
+        "Reusrath"
+      ]
+    },
+    {
+      "name": "Dormagen",
+      "slug": "dormagen",
+      "km": 60,
+      "plz": "41539",
+      "region": "Düsseldorf",
+      "districts": [
+        "Stadtmitte",
+        "Worringen",
+        "Nievenheim",
+        "Zons",
+        "Hackenbroich"
+      ]
+    },
+    {
+      "name": "Neuss",
+      "slug": "neuss",
+      "km": 53,
+      "plz": "41460",
+      "region": "Düsseldorf",
+      "districts": [
+        "Stadtmitte",
+        "Norf",
+        "Rosellen",
+        "Grefrath",
+        "Holzheim",
+        "Selikum"
+      ]
+    },
+    {
+      "name": "Wuppertal",
+      "slug": "wuppertal",
+      "km": 50,
+      "plz": "42103",
+      "region": "Bergisches Land",
+      "districts": [
+        "Elberfeld",
+        "Barmen",
+        "Vohwinkel",
+        "Cronenberg",
+        "Ronsdorf",
+        "Beyenburg",
+        "Langerfeld",
+        "Oberbarmen"
+      ]
+    },
+    {
+      "name": "Solingen",
+      "slug": "solingen",
+      "km": 52,
+      "plz": "42651",
+      "region": "Bergisches Land",
+      "districts": [
+        "Stadtmitte",
+        "Ohligs",
+        "Wald",
+        "Höhscheid",
+        "Gräfrath",
+        "Merscheid"
+      ]
+    },
+    {
+      "name": "Remscheid",
+      "slug": "remscheid",
+      "km": 55,
+      "plz": "42853",
+      "region": "Bergisches Land",
+      "districts": [
+        "Stadtmitte",
+        "Lennep",
+        "Lüttringhausen",
+        "Hasten"
+      ]
+    },
+    {
+      "name": "Leverkusen",
+      "slug": "leverkusen",
+      "km": 60,
+      "plz": "51373",
+      "region": "Bergisches Land",
+      "districts": [
+        "Stadtmitte",
+        "Opladen",
+        "Schlebusch",
+        "Wiesdorf",
+        "Manfort",
+        "Rheindorf"
+      ]
+    },
+    {
+      "name": "Gevelsberg",
+      "slug": "gevelsberg",
+      "km": 35,
+      "plz": "58285",
+      "region": "Bergisches Land",
+      "districts": [
+        "Stadtmitte",
+        "Vogelsang"
+      ]
+    },
+    {
+      "name": "Ennepetal",
+      "slug": "ennepetal",
+      "km": 38,
+      "plz": "58256",
+      "region": "Bergisches Land",
+      "districts": [
+        "Stadtmitte",
+        "Milspe",
+        "Voerde",
+        "Altenvoerde"
+      ]
+    },
+    {
+      "name": "Krefeld",
+      "slug": "krefeld",
+      "km": 40,
+      "plz": "47798",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Uerdingen",
+        "Hüls",
+        "Fischeln",
+        "Bockum",
+        "Linn",
+        "Traar",
+        "Oppum"
+      ]
+    },
+    {
+      "name": "Mönchengladbach",
+      "slug": "moenchengladbach",
+      "km": 55,
+      "plz": "41061",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Rheydt",
+        "Wickrath",
+        "Odenkirchen",
+        "Giesenkirchen",
+        "Hardt",
+        "Neuwerk"
+      ]
+    },
+    {
+      "name": "Viersen",
+      "slug": "viersen",
+      "km": 58,
+      "plz": "41747",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Dülken",
+        "Süchteln",
+        "Boisheim"
+      ]
+    },
+    {
+      "name": "Grevenbroich",
+      "slug": "grevenbroich",
+      "km": 65,
+      "plz": "41515",
+      "region": "Niederrhein",
+      "districts": [
+        "Stadtmitte",
+        "Neurath",
+        "Kapellen",
+        "Hemmerden",
+        "Gustorf"
+      ]
+    },
+    {
+      "name": "Münster",
+      "slug": "muenster",
+      "km": 70,
+      "plz": "48143",
+      "region": "Münsterland",
+      "districts": [
+        "Stadtmitte",
+        "Hiltrup",
+        "Wolbeck",
+        "Gievenbeck",
+        "Roxel",
+        "Albachten",
+        "Nienberge",
+        "Kinderhaus",
+        "Mauritz"
+      ]
+    },
+    {
+      "name": "Rheine",
+      "slug": "rheine",
+      "km": 98,
+      "plz": "48431",
+      "region": "Münsterland",
+      "districts": [
+        "Stadtmitte",
+        "Mesum",
+        "Elte",
+        "Bentlage"
+      ]
+    },
+    {
+      "name": "Köln",
+      "slug": "koeln",
+      "km": 75,
+      "plz": "50667",
+      "region": "Köln",
+      "districts": [
+        "Innenstadt",
+        "Ehrenfeld",
+        "Nippes",
+        "Chorweiler",
+        "Porz",
+        "Kalk",
+        "Mülheim",
+        "Lindenthal",
+        "Rodenkirchen",
+        "Sülz",
+        "Meschenich",
+        "Ossendorf"
+      ]
+    },
+    {
+      "name": "Iserlohn",
+      "slug": "iserlohn",
+      "km": 50,
+      "plz": "58636",
+      "region": "Sauerland",
+      "districts": [
+        "Stadtmitte",
+        "Letmathe",
+        "Sümmern",
+        "Hemer"
+      ]
+    },
+    {
+      "name": "Lüdenscheid",
+      "slug": "luedenscheid",
+      "km": 65,
+      "plz": "58507",
+      "region": "Sauerland",
+      "districts": [
+        "Stadtmitte",
+        "Brügge",
+        "Lüdenscheid-Nord"
+      ]
+    },
+    {
+      "name": "Fröndenberg",
+      "slug": "froendenberg",
+      "km": 43,
+      "plz": "58730",
+      "region": "Sauerland",
+      "districts": [
+        "Stadtmitte",
+        "Ardey",
+        "Langschede"
+      ]
+    }
+  ]
+}

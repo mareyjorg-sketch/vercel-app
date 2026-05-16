@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 Sitemap: https://kammerjager-bergmann.de/sitemap.xml
+Sitemap: https://kammerjager-bergmann.de/sitemap-cities.xml

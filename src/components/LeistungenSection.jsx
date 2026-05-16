@@ -3,7 +3,7 @@ import { leistungen } from "../data/leistungenData.js";
 import "../components/ServiceCard.css";
 
 export default function LeistungenSection({ cityName, sectionId = "leistungen" }) {
-  const heading = cityName ? `Unsere Leistungen in ${cityName}` : "Unsere Leistungen";
+  const heading = cityName ? `Schädlingsbekämpfung in ${cityName}` : "Unsere Leistungen";
   const lead = cityName
     ? `Professionelle Schädlingsbekämpfung in ${cityName} – für Privat & Gewerbe.`
     : "Professionelle Schädlingsbekämpfung für Privat & Gewerbe – mit modernsten Mitteln und nachhaltigen Methoden.";

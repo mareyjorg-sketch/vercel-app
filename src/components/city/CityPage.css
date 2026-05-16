@@ -1,0 +1,174 @@
+.city-breadcrumb {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.city-breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.city-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.city-breadcrumb__sep {
+  margin: 0 0.25rem;
+}
+
+.city-intro-block__text {
+  max-width: 52rem;
+  line-height: 1.65;
+}
+
+.city-intro-block__meta {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.city-intro-block__back {
+  margin-top: 1rem;
+}
+
+.city-intro-block__back a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.city-section {
+  padding: 2.5rem 0;
+}
+
+.city-section--muted {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.city-section--districts {
+  padding-top: 0;
+}
+
+.city-section__title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  margin-bottom: 1.25rem;
+}
+
+.city-section__title--sm {
+  font-size: 1.125rem;
+}
+
+.city-section__sub {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 48rem;
+}
+
+.city-district-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.city-district-pill {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.city-district-pill:hover {
+  border-color: var(--accent);
+  background: rgba(var(--accent-rgb, 34, 139, 34), 0.06);
+}
+
+.city-nearby-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 28rem;
+}
+
+.city-nearby-links a {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.city-nearby-links a:hover {
+  text-decoration: underline;
+}
+
+.city-nearby-links__km {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.city-seo-text p {
+  max-width: 48rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.city-seo-text a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.city-faq {
+  margin: 0;
+  max-width: 48rem;
+}
+
+.city-faq__item {
+  margin-bottom: 1.25rem;
+}
+
+.city-faq__item dt {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.city-faq__item dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.city-region-links {
+  margin-bottom: 1.25rem;
+}
+
+.city-region-links__heading {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.city-region-links__list {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.city-region-links__list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.city-region-links__list a:hover {
+  text-decoration: underline;
+}
+
+.hero--stadt .hero-content h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
