@@ -7,6 +7,11 @@ export default function SiteLayout({ children }) {
   const year = new Date().getFullYear();
   const { pathname } = useLocation();
   const isSdb = pathname === "/sicherheitsdatenblaetter";
+  const isLeistungen = pathname.startsWith("/leistungen");
+  const isZertifizierung = pathname.startsWith("/zertifizierung");
+  const isUeberUns = pathname.startsWith("/ueber-uns");
+  const isKontakt = pathname.startsWith("/kontakt");
+  const isImpressum = pathname.startsWith("/impressum");
 
   return (
     <>
@@ -35,13 +40,19 @@ export default function SiteLayout({ children }) {
           <nav id="site-navigation" className="main-nav" aria-label="Hauptnavigation">
             <ul>
               <li>
-                <Link to="/leistungen/">Leistungen</Link>
+                <Link to="/leistungen/" aria-current={isLeistungen ? "page" : undefined}>
+                  Leistungen
+                </Link>
               </li>
               <li>
-                <Link to="/zertifizierung/">Zertifizierung</Link>
+                <Link to="/zertifizierung/" aria-current={isZertifizierung ? "page" : undefined}>
+                  Zertifizierung
+                </Link>
               </li>
               <li>
-                <Link to="/ueber-uns/">Über uns</Link>
+                <Link to="/ueber-uns/" aria-current={isUeberUns ? "page" : undefined}>
+                  Über uns
+                </Link>
               </li>
               <li>
                 <Link to="/sicherheitsdatenblaetter" aria-current={isSdb ? "page" : undefined} className={isSdb ? "nav-active" : undefined}>
@@ -49,12 +60,14 @@ export default function SiteLayout({ children }) {
                 </Link>
               </li>
               <li>
-                <Link to="/impressum/" aria-current={pathname.startsWith("/impressum") ? "page" : undefined}>
+                <Link to="/impressum/" aria-current={isImpressum ? "page" : undefined}>
                   Impressum
                 </Link>
               </li>
               <li>
-                <Link to="/kontakt/">Kontakt</Link>
+                <Link to="/kontakt/" aria-current={isKontakt ? "page" : undefined}>
+                  Kontakt
+                </Link>
               </li>
             </ul>
           </nav>

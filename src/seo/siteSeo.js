@@ -248,13 +248,15 @@ export const SECTION_SEO = {
     canonical: `${SITE_ORIGIN}/leistungen/`,
   },
   "ueber-uns": {
-    title: `Über uns | Familienbetrieb Kammerjäger Bergmann – NRW`,
-    description: `Kammerjäger Bergmann – Familienbetrieb aus Bottrop. Erfahrung, TÜV-Zertifizierung und IHK-Qualifikation in ganz NRW.`,
+    title: "Über uns – Kammerjäger Bergmann Bottrop",
+    description:
+      "Jörg Bergmann und sein Team – 25 Jahre Familienbetrieb aus Bottrop. TÜV-zertifiziert, IHK-geprüft, persönlich & diskret.",
     canonical: `${SITE_ORIGIN}/ueber-uns/`,
   },
   zertifizierung: {
-    title: `Zertifizierung | TÜV & IHK – Kammerjäger Bergmann NRW`,
-    description: `TÜV-zertifizierter Fachbetrieb und IHK-geprüft nach § 18 IfSG. Qualität in der Schädlingsbekämpfung für NRW.`,
+    title: "Zertifizierung – Kammerjäger Bergmann | TÜV & IHK geprüft",
+    description:
+      "Kammerjäger Bergmann ist TÜV Süd zertifizierter Fachbetrieb und IHK-geprüft nach § 18 IfSG. Nachweisbare Qualität für Privat, Gewerbe und Versicherungen.",
     canonical: `${SITE_ORIGIN}/zertifizierung/`,
   },
   kontakt: {

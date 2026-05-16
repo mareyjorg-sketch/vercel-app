@@ -104,7 +104,7 @@ export default function AboutFamilySection() {
 
             <div className="mt-9 sm:mt-10">
               <Link
-                to="/#kontakt"
+                to="/kontakt/"
                 className="inline-flex items-center justify-center rounded-full border-2 border-[#2d7a2d] bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-wide text-[#2d7a2d] shadow-sm transition hover:bg-[#2d7a2d] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d7a2d] sm:text-base"
               >
                 Jetzt Kontakt aufnehmen

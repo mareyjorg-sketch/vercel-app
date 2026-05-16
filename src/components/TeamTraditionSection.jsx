@@ -11,7 +11,8 @@ function SealIcon({ className = "" }) {
   );
 }
 
-export default function TeamTraditionSection() {
+/** @param {{ hideCta?: boolean }} props */
+export default function TeamTraditionSection({ hideCta = false }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 py-14 sm:py-20 px-4 sm:px-6" aria-labelledby="team-tradition-heading">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(45,122,45,0.08),transparent_55%)]" aria-hidden />
@@ -46,17 +47,19 @@ export default function TeamTraditionSection() {
               Seit über zwei Jahrzehnten steht der Name Bergmann für zuverlässige Schädlingsbekämpfung im Herzen des Ruhrgebiets. Als inhabergeführter Familienbetrieb setzen wir nicht auf Massenabfertigung, sondern auf individuelle Beratung und nachhaltige Lösungen.
             </p>
             <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-              Ulrich Bergmann und sein Team verbinden traditionelles Handwerk mit moderner Monitoring-Technik. Vertrauen Sie auf 25 Jahre Expertise – direkt aus Bottrop, für die Region.
+              Jörg Bergmann und sein Team verbinden traditionelles Handwerk mit moderner Monitoring-Technik. Vertrauen Sie auf 25 Jahre Expertise – direkt aus Bottrop, für die Region.
             </p>
 
-            <div className="mt-8 sm:mt-10">
-              <Link
-                to="/#ueber-uns"
-                className="inline-flex items-center justify-center rounded-full border-2 border-[#2d7a2d] bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-wide text-[#2d7a2d] shadow-sm transition hover:bg-[#2d7a2d] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d7a2d] sm:text-base"
-              >
-                Mehr über uns erfahren
-              </Link>
-            </div>
+            {!hideCta && (
+              <div className="mt-8 sm:mt-10">
+                <Link
+                  to="/ueber-uns/"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-[#2d7a2d] bg-transparent px-7 py-3 text-sm font-semibold uppercase tracking-wide text-[#2d7a2d] shadow-sm transition hover:bg-[#2d7a2d] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d7a2d] sm:text-base"
+                >
+                  Mehr über uns erfahren
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

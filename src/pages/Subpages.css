@@ -1,0 +1,267 @@
+.subpage-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.subpage-hero {
+  background: linear-gradient(135deg, #1e4d1e 0%, var(--green) 60%, #4caf50 100%);
+  color: var(--white);
+  padding: 56px 24px 48px;
+  text-align: center;
+}
+
+.subpage-hero--light {
+  background: #fff;
+  color: var(--dark);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.subpage-hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.subpage-hero__lead {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.subpage-hero--light .subpage-hero__lead {
+  color: #555;
+  opacity: 1;
+}
+
+.cert-section--page {
+  padding: 48px 24px 56px;
+}
+
+.cert-section--page .cert-glass-grid {
+  margin-top: 0;
+}
+
+.subpage-block {
+  padding: 56px 0;
+  background: #fff;
+}
+
+.subpage-block--muted {
+  background: #f7f7f7;
+}
+
+.subpage-h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.values-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.values-card__icon {
+  font-size: 36px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.values-card__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 10px;
+}
+
+.values-card__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555;
+  margin: 0;
+}
+
+.subpage-stats {
+  background: linear-gradient(135deg, #1e4d1e, var(--green));
+  padding: 40px 24px;
+}
+
+.stats-row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.stats-row__value {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.stats-row__label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.subpage-cta {
+  background: #f7f7f7;
+  padding: 56px 24px 72px;
+  text-align: center;
+}
+
+.subpage-cta__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 24px;
+}
+
+.subpage-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subpage-cta__phone {
+  flex-shrink: 0;
+}
+
+.zert-why-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zert-why-list__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.zert-why-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.zert-why-list__mark {
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: #2d7a2d;
+  line-height: 1.2;
+}
+
+.zert-why-list__title {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.zert-why-list__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555;
+}
+
+.cert-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-data-box {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.cert-data-box__label {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d7a2d;
+  margin: 0 0 16px;
+}
+
+.cert-data-box__dl {
+  margin: 0;
+}
+
+.cert-data-box__dl > div {
+  margin-bottom: 12px;
+}
+
+.cert-data-box__dl > div:last-child {
+  margin-bottom: 0;
+}
+
+.cert-data-box__dl dt {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.cert-data-box__dl dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.subpage-disclaimer-wrap {
+  background: #f7f7f7;
+  padding: 0 24px 48px;
+}
+
+.cert-disclaimer--page {
+  max-width: 860px;
+  margin: 0 auto;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
