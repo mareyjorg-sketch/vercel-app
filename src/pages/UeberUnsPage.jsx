@@ -88,8 +88,8 @@ export default function UeberUnsPage() {
       <section className="subpage-cta">
         <div className="subpage-inner subpage-cta__inner">
           <h2 className="subpage-cta__title">Jetzt kostenlos beraten lassen</h2>
-          <a href={TEL} className="btn-hero btn-hero--call subpage-cta__btn">
-            <PhoneIcon size={22} className="subpage-cta__phone" aria-hidden />
+          <a href={TEL} className="subpage-cta__btn">
+            <PhoneIcon size={24} className="subpage-cta__phone" aria-hidden />
             {TEL_DISPLAY}
           </a>
         </div>

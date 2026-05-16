@@ -133,27 +133,46 @@
 }
 
 .subpage-cta {
-  background: #f7f7f7;
-  padding: 56px 24px 72px;
+  background: linear-gradient(135deg, #1a4a1a, #2d7a2d);
+  padding: 80px 32px;
   text-align: center;
 }
 
 .subpage-cta__title {
   font-family: "Oswald", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--dark);
-  margin: 0 0 24px;
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 28px;
 }
 
 .subpage-cta__btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  background: #fff;
+  color: #2d7a2d;
+  font-weight: 800;
+  font-size: 22px;
+  padding: 16px 48px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--ease-out),
+    box-shadow 0.2s var(--ease-out);
+}
+
+.subpage-cta__btn:hover {
+  color: #1e5c1e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
 }
 
 .subpage-cta__phone {
   flex-shrink: 0;
+  color: #2d7a2d;
 }
 
 .zert-why-list {
