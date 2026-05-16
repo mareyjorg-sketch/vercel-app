@@ -1,5 +1,3 @@
-import { PARTNER_STRIP_SRC } from "../partnerAssets.js";
-
 function Icon24h({ className = "" }) {
   return (
     <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -42,24 +40,6 @@ function IconHouseHeart({ className = "" }) {
 export default function HeroTrustStrip() {
   return (
     <ul className="hero-trust" aria-label="Qualifikation und Service">
-      <li className="hero-trust__tile hero-trust__tile--partners">
-        <div className="hero-trust__partners-panel">
-          <div className="hero-trust__partners-media">
-            <img
-              className="hero-trust__partners-img"
-              src={PARTNER_STRIP_SRC}
-              alt="TÜV SÜD, IHK-Mitgliedsbetrieb und Zertifikat – Übersichtsgrafik"
-              width={640}
-              height={280}
-              loading="eager"
-              decoding="async"
-            />
-            <p className="hero-trust__partners-subline" aria-hidden="true">
-              Geprüfte Qualität &amp; Sicherheit · IHK-Mitgliedsbetrieb
-            </p>
-          </div>
-        </div>
-      </li>
       <li className="hero-trust__tile hero-trust__tile--icon">
         <Icon24h className="hero-trust__glyph" />
         <span className="hero-trust__label">24/7 Notdienst</span>
