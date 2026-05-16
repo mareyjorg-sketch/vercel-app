@@ -3,22 +3,6 @@ import { Link } from "react-router-dom";
 import { TEL, WHATSAPP_URL } from "../siteInfo.js";
 import "./ServiceCard.css";
 
-function useFinePointer() {
-  const [fine, setFine] = useState(() =>
-    typeof window !== "undefined" ? window.matchMedia("(hover: hover) and (pointer: fine)").matches : true,
-  );
-
-  useEffect(() => {
-    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const sync = () => setFine(mq.matches);
-    sync();
-    mq.addEventListener("change", sync);
-    return () => mq.removeEventListener("change", sync);
-  }, []);
-
-  return fine;
-}
-
 function useReducedMotion() {
   const [reduced, setReduced] = useState(() =>
     typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false,
@@ -46,16 +30,12 @@ export default function ServiceCard({
   helpTagline = "Soforthilfe möglich",
   featured = false,
 }) {
-  const finePointer = useFinePointer();
   const reducedMotion = useReducedMotion();
   const [flipped, setFlipped] = useState(false);
 
-  const flip3d = finePointer && !reducedMotion;
-  const expandMode = !flip3d;
-
-  useEffect(() => {
-    setFlipped(false);
-  }, [flip3d]);
+  /* Expand-Panel statt 3D-Flip: verhindert gespiegelten/gedrehten Inhalt (rotateY) */
+  const flip3d = false;
+  const expandMode = true;
 
   const toggle = useCallback(() => setFlipped((v) => !v), []);
 

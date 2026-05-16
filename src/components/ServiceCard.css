@@ -73,10 +73,14 @@
 
 .service-card--flip3d:not(.service-card--flipped) .service-card__face--back {
   pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .service-card--flip3d.service-card--flipped .service-card__face--front {
   pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {

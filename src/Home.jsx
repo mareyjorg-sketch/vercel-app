@@ -1,5 +1,4 @@
 import SiteLayout from "./components/SiteLayout.jsx";
-import ServiceCard from "./components/ServiceCard.jsx";
 import TeamTraditionSection from "./components/TeamTraditionSection.jsx";
 import HeroTrustStrip from "./components/HeroTrustStrip.jsx";
 import AboutFamilySection from "./components/AboutFamilySection.jsx";
@@ -7,10 +6,10 @@ import "./App.css";
 /* Sicherstellen, dass Karten-Styles geladen sind (auch wenn die Komponente ausgelagert wird) */
 import "./components/ServiceCard.css";
 import { TEL, TEL_DISPLAY, WHATSAPP_URL } from "./siteInfo.js";
-import { leistungen } from "./data/leistungenData.js";
 import WhatsAppIcon from "./components/WhatsAppIcon.jsx";
 import PhoneIcon from "./components/PhoneIcon.jsx";
 import CertQualificationCards from "./components/CertQualificationCards.jsx";
+import LeistungenSection from "./components/LeistungenSection.jsx";
 
 const gebiete = [
   "Bottrop",
@@ -54,33 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--leistungen" id="leistungen">
-        <div className="section-inner">
-          <div className="section-header section-header--leistungen">
-            <h2>Unsere Leistungen</h2>
-            <div className="underline" aria-hidden />
-            <p>
-              Professionelle Schädlingsbekämpfung für Privat &amp; Gewerbe – mit modernsten Mitteln und nachhaltigen Methoden.
-            </p>
-          </div>
-
-          <div className="leistungen-bento" role="list" data-leistungen-layout="overlay-v2">
-            {leistungen.map((item, index) => (
-              <ServiceCard
-                key={item.title}
-                title={item.title}
-                summary={item.summary}
-                description={item.description}
-                bullets={item.bullets}
-                image={item.image}
-                imageAlt={item.imageAlt}
-                helpTagline={index % 2 === 0 ? "Soforthilfe möglich" : "Schnelle Hilfe verfügbar"}
-                featured={item.title === "Ratten & Mäuse"}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <LeistungenSection />
 
       <TeamTraditionSection />
 

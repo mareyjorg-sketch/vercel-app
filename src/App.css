@@ -798,6 +798,39 @@ nav.main-nav a[aria-current="page"] {
   }
 }
 
+/* ===================== STADT-LANDINGPAGES ===================== */
+.hero--stadt {
+  min-height: auto;
+  padding: 72px 24px 56px;
+}
+
+.hero--stadt .hero-content {
+  max-width: 720px;
+}
+
+.btn-hero--stadt {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.section--stadt-intro {
+  padding: 32px 24px 48px;
+  background: #f7f7f7;
+}
+
+.stadt-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  text-align: center;
+}
+
+.stadt-intro strong {
+  color: var(--dark);
+}
+
 /* ===================== ZERTIFIZIERUNGEN ===================== */
 .cert-section {
   background: #f7f7f7;
