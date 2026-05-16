@@ -12,6 +12,8 @@ import PhoneIcon from "./components/PhoneIcon.jsx";
 import CertQualificationCards from "./components/CertQualificationCards.jsx";
 import LeistungenSection from "./components/LeistungenSection.jsx";
 import AnfahrtSection from "./components/AnfahrtSection.jsx";
+import RatingsBar from "./components/RatingsBar.jsx";
+import CustomerReviewsSection from "./components/CustomerReviewsSection.jsx";
 
 export default function Home() {
   return (
@@ -44,6 +46,8 @@ export default function Home() {
         </div>
       </section>
 
+      <RatingsBar />
+
       <LeistungenSection />
 
       <AnfahrtSection />
@@ -69,6 +73,8 @@ export default function Home() {
       <AboutFamilySection />
 
       <EinsatzgebietNrwSection />
+
+      <CustomerReviewsSection />
 
       <section className="cta-banner" id="kontakt">
         <h2>Sofort Hilfe – schreiben Sie uns</h2>

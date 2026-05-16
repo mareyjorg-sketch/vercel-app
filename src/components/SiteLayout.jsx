@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { EMAIL, TEL, TEL_DISPLAY, SITE_NAME, SITE_DOMAIN, SITE_ORIGIN, WHATSAPP_URL } from "../siteInfo.js";
 import WhatsAppIcon from "./WhatsAppIcon.jsx";
 import PhoneIcon from "./PhoneIcon.jsx";
+import CtaPopup from "./CtaPopup.jsx";
 
 export default function SiteLayout({ children }) {
   const year = new Date().getFullYear();
@@ -230,6 +231,8 @@ export default function SiteLayout({ children }) {
           <PhoneIcon size={26} className="float-phone__ic" aria-hidden />
         </a>
       </div>
+
+      <CtaPopup />
     </>
   );
 }

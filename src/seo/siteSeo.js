@@ -162,6 +162,13 @@ function localBusinessBase(overrides = {}) {
       "https://www.google.com/maps?cid=DEINE_GOOGLE_MAPS_CID",
       "https://www.facebook.com/kammerjager-bergmann",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.95",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "127",
+    },
     ...overrides,
   };
 }
